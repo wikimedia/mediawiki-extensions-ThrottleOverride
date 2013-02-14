@@ -8,10 +8,7 @@
 
 $specialPageAliases = array();
 
-/**
- * English
- * @author Tyler Romeo
- */
+/** English (English) */
 $specialPageAliases['en'] = array(
-	'ThrottleOverride' => array( 'ThrottleOverride', 'Throttle Override' )
+	'ThrottleOverride' => array( 'ThrottleOverride', 'Throttle Override' ),
 );
