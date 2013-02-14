@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Internationalisation file for extension TwoFactorAuth
+ * Internationalisation file for extension Throttle Override
  *
  * @file
  * @ingroup Extensions
