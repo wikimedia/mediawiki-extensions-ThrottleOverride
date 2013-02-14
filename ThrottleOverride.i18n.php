@@ -16,20 +16,23 @@ $messages = array();
  */
 $messages['en'] = array(
 	'overridethrottle' => 'Override the account creation throttle',
+	'throttleoverride-desc' => 'Allows overriding of IP address throttles',
 	'throttleoverride-legend' => 'Exemption information',
-	'throttleoverride-text' => 'Enter the IP address or range you want to exempt from certain throttles, and how long the exemption should last for. An optional reason can be given for the logs.',
+	'throttleoverride-text' => 'Enter the IP address or range you want to exempt from certain throttles, and how long the exemption should last for.
+An optional reason can be given for the logs.',
 	'throttleoverride-ipaddress' => 'IP address or range',
 	'throttleoverride-success' => 'The exemption was applied.',
 	'throttleoverride-types' => 'Throttle types:',
 	'throttleoverride-types-actcreate' => 'Account creation',
 	'throttleoverride-types-edit' => 'Page edits',
 	'throttleoverride-types-move' => 'Page moves',
-	'throttleoverride-types-mailpassword' => 'Password recovery emails',
-	'throttleoverride-types-emailuser' => 'User emails'
+	'throttleoverride-types-mailpassword' => 'Password recovery e-mails',
+	'throttleoverride-types-emailuser' => 'User e-mails'
 );
 
 $messages['qqq'] = array(
 	'overridethrottle' => 'Title for Special:OverrideThrottle',
+	'throttleoverride-desc' => '{{desc}}',
 	'throttleoverride-legend' => 'Label for the legend on Special:OverrideThrottle',
 	'throttleoverride-text' => 'Intro text on Special:OverrideThrottle',
 	'throttleoverride-ipaddress' => 'Label for the IP address field on Special:OverrideThrottle',
