@@ -31,10 +31,11 @@ An optional reason can be given for the logs.',
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
 	'overridethrottle' => 'Title for Special:OverrideThrottle',
-	'throttleoverride-desc' => '{{desc}}',
+	'throttleoverride-desc' => '{{desc|name=Throttle Override|url=http://www.mediawiki.org/wiki/Extension:ThrottleOverride}}',
 	'throttleoverride-legend' => 'Label for the legend on Special:OverrideThrottle',
 	'throttleoverride-text' => 'Intro text on Special:OverrideThrottle',
 	'throttleoverride-ipaddress' => 'Label for the IP address field on Special:OverrideThrottle',
@@ -83,6 +84,58 @@ Un motif facultatif peut être fourni pour les journaux.',
 	'throttleoverride-types-move' => 'Déplacements de page',
 	'throttleoverride-types-mailpassword' => 'Courriels de récupération de mot de passe',
 	'throttleoverride-types-emailuser' => 'Courriels utilisateur',
+);
+
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'throttleoverride-legend' => 'Información sobre a exención',
+	'throttleoverride-ipaddress' => 'Enderezo IP ou rango',
+	'throttleoverride-success' => 'Aplicouse a exención.',
+	'throttleoverride-types-actcreate' => 'Creación de contas',
+	'throttleoverride-types-edit' => 'Edicións da páxina',
+	'throttleoverride-types-move' => 'Traslados da páxina',
+	'throttleoverride-types-mailpassword' => 'Correos electrónicos de recuperación do contrasinal',
+	'throttleoverride-types-emailuser' => 'Correos electrónicos do usuario',
+);
+
+/** Japanese (日本語)
+ * @author Shirayuki
+ */
+$messages['ja'] = array(
+	'overridethrottle' => 'アカウント作成の制限の回避',
+	'throttleoverride-desc' => 'IP アドレスの制限を回避できるようにする',
+	'throttleoverride-legend' => '免除の情報',
+	'throttleoverride-text' => '制限を免除する IP アドレスまたは範囲、およびその制限の期間を入力してください。
+記録用の理由は省略できます。',
+	'throttleoverride-ipaddress' => 'IP アドレスまたは範囲',
+	'throttleoverride-success' => '免除を適用しました。',
+	'throttleoverride-types' => '制限の種類:',
+	'throttleoverride-types-actcreate' => 'アカウント作成',
+	'throttleoverride-types-edit' => 'ページの編集',
+	'throttleoverride-types-move' => 'ページの移動',
+	'throttleoverride-types-mailpassword' => 'パスワード再発行メールの送信',
+	'throttleoverride-types-emailuser' => '利用者へのメール送信',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'overridethrottle' => 'Избегни го ограничувањето за создавање сметки',
+	'throttleoverride-desc' => 'Овозможува избегнување на ограничувања на IP-адреси',
+	'throttleoverride-legend' => 'Информации за изземањето',
+	'throttleoverride-text' => 'Внесете IP-адреса или опсег од адреси што сакате да ги изземете од ограничувања и колку долго да трае изземањето.
+За евиденција во дневниците, можете да дадете и образложение.',
+	'throttleoverride-ipaddress' => 'IP-адреса или опсег',
+	'throttleoverride-success' => 'Изземањето е применето.',
+	'throttleoverride-types' => 'Типови на ограничувања:',
+	'throttleoverride-types-actcreate' => 'Создавање на сметка',
+	'throttleoverride-types-edit' => 'Уредување на страници',
+	'throttleoverride-types-move' => 'Преместување на страници',
+	'throttleoverride-types-mailpassword' => 'Повраќање на лозинка по е-пошта',
+	'throttleoverride-types-emailuser' => 'Е-пошта од корисникот',
 );
 
 /** Telugu (తెలుగు)
