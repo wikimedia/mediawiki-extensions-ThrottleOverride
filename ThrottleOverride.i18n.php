@@ -119,6 +119,17 @@ $messages['ja'] = array(
 	'throttleoverride-types-emailuser' => '利用者へのメール送信',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'throttleoverride-legend' => "Informatioun iwwert d'Ausnam",
+	'throttleoverride-ipaddress' => 'IP-Adress oder Range',
+	'throttleoverride-types-edit' => 'Säitenännerungen',
+	'throttleoverride-types-move' => 'Geréckelt Säiten',
+	'throttleoverride-types-emailuser' => 'E-Mailen u Benotzer',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
