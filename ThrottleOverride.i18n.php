@@ -149,6 +149,20 @@ $messages['mk'] = array(
 	'throttleoverride-types-emailuser' => 'Е-пошта од корисникот',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'throttleoverride-ipaddress' => 'IP-adres of -reeks',
+	'throttleoverride-success' => 'De uitzondering is toegepast.',
+	'throttleoverride-types' => 'Beperkingstypen:',
+	'throttleoverride-types-actcreate' => 'Gebruikers aanmaken',
+	'throttleoverride-types-edit' => "Pagina's bewerken",
+	'throttleoverride-types-move' => "Pagina's hernoemen",
+	'throttleoverride-types-mailpassword' => 'Wachtwoord per e-mail verzenden',
+	'throttleoverride-types-emailuser' => 'E-mails naar gebruikers',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
