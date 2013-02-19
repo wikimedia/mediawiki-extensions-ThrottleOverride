@@ -90,9 +90,14 @@ Un motif facultatif peut être fourni pour les journaux.',
  * @author Toliño
  */
 $messages['gl'] = array(
+	'overridethrottle' => 'Ignorar a restrición de creación de contas',
+	'throttleoverride-desc' => 'Permite ignorar as restricións dos enderezos IP',
 	'throttleoverride-legend' => 'Información sobre a exención',
+	'throttleoverride-text' => 'Insira o enderezo IP ou o rango que queira eximir de certas restricións, así como a duración da exención.
+Pode especificar un motivo opcional para os rexistros.',
 	'throttleoverride-ipaddress' => 'Enderezo IP ou rango',
 	'throttleoverride-success' => 'Aplicouse a exención.',
+	'throttleoverride-types' => 'Tipo de restrición:',
 	'throttleoverride-types-actcreate' => 'Creación de contas',
 	'throttleoverride-types-edit' => 'Edicións da páxina',
 	'throttleoverride-types-move' => 'Traslados da páxina',
@@ -170,6 +175,25 @@ $messages['te'] = array(
 	'throttleoverride-types-actcreate' => 'ఖాతా సృష్టింపు',
 	'throttleoverride-types-edit' => 'పేజీ మార్పులు',
 	'throttleoverride-types-move' => 'పేజీల తరలింపులు',
+);
+
+/** Ukrainian (українська)
+ * @author Base
+ */
+$messages['uk'] = array(
+	'overridethrottle' => 'Обхід обмеження частоти створення облікових записів',
+	'throttleoverride-desc' => 'Дозволити обходити обмеження частоти створення облікових записів',
+	'throttleoverride-legend' => 'Інформація про звільнення',
+	'throttleoverride-text' => "Введіть IP-адресу або діапазон, який Ви хочете звільнити від обмеження частоти, і як довго звільнення повинне тривати.
+Не обов'язково можна вказати причину для вказання у журналах.",
+	'throttleoverride-ipaddress' => 'IP-адреса або діапазон',
+	'throttleoverride-success' => 'Звільнення було застосовано.',
+	'throttleoverride-types' => 'Типи обмеження частоти:',
+	'throttleoverride-types-actcreate' => 'Створення облікових записів',
+	'throttleoverride-types-edit' => 'Редагування сторінок',
+	'throttleoverride-types-move' => 'Перейменування сторінок',
+	'throttleoverride-types-mailpassword' => 'Відновлення паролю електронною поштою',
+	'throttleoverride-types-emailuser' => 'Листи користувачам електронною поштою',
 );
 
 /** Simplified Chinese (中文（简体）‎)
