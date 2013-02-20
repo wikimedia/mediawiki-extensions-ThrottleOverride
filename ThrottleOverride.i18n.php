@@ -48,6 +48,14 @@ $messages['qqq'] = array(
 	'throttleoverride-types-emailuser' => 'Label for the throttle type for user emails',
 );
 
+/** Breton (brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'throttleoverride-types-actcreate' => 'Krouiñ kontoù',
+	'throttleoverride-types-emailuser' => 'Posteloù implijer',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
