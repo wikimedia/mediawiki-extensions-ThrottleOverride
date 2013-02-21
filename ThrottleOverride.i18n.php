@@ -138,6 +138,7 @@ $messages['ja'] = array(
 $messages['lb'] = array(
 	'throttleoverride-legend' => "Informatioun iwwert d'Ausnam",
 	'throttleoverride-ipaddress' => 'IP-Adress oder Range',
+	'throttleoverride-types-actcreate' => 'Benotzerkont opmaachen',
 	'throttleoverride-types-edit' => 'Säitenännerungen',
 	'throttleoverride-types-move' => 'Geréckelt Säiten',
 	'throttleoverride-types-emailuser' => 'E-Mailen u Benotzer',
