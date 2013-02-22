@@ -13,7 +13,17 @@ $specialPageAliases['en'] = array(
 	'ThrottleOverride' => array( 'ThrottleOverride', 'Throttle Override' ),
 );
 
+/** German (Deutsch) */
+$specialPageAliases['de'] = array(
+	'ThrottleOverride' => array( 'Beschränkungsumgehung' ),
+);
+
 /** Japanese (日本語) */
 $specialPageAliases['ja'] = array(
 	'ThrottleOverride' => array( '制限の回避' ),
+);
+
+/** Korean (한국어) */
+$specialPageAliases['ko'] = array(
+	'ThrottleOverride' => array( '제한회피' ),
 );

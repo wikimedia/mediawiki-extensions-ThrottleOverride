@@ -132,6 +132,25 @@ $messages['ja'] = array(
 	'throttleoverride-types-emailuser' => '利用者へのメール送信',
 );
 
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'overridethrottle' => '계정 만들기 제한 회피',
+	'throttleoverride-desc' => 'IP 주소의 제한을 회피할 수 있습니다',
+	'throttleoverride-legend' => '면제 정보',
+	'throttleoverride-text' => '제한을 면재할 IP 주소나 범위와 제한할 기간을 입력하세요.
+선택적인 이유는 기록에 제공할 수 있습니다.',
+	'throttleoverride-ipaddress' => 'IP 주소나 범위',
+	'throttleoverride-success' => '면제를 적용했습니다.',
+	'throttleoverride-types' => '제한 유형:',
+	'throttleoverride-types-actcreate' => '계정 만들기',
+	'throttleoverride-types-edit' => '문서 편집',
+	'throttleoverride-types-move' => '문서 옮기기',
+	'throttleoverride-types-mailpassword' => '비밀번호 복구 이메일',
+	'throttleoverride-types-emailuser' => '사용자 이메일',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
