@@ -186,6 +186,11 @@ $messages['mk'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
+	'overridethrottle' => 'Beperkingen voor aanmaken gebruikers negeren',
+	'throttleoverride-desc' => 'Maakt het mogelijk de beperkingen voor IP-adressen te negeren',
+	'throttleoverride-legend' => 'Gegevens over uitzonderingen',
+	'throttleoverride-text' => 'Voer een IP-adres of een IP-reeks in waar u uitzonderingen voor wilt instellen, en hoe lang de uitzondering moet duren.
+U kunt optioneel een reden opgeven voor in het logboek.',
 	'throttleoverride-ipaddress' => 'IP-adres of -reeks',
 	'throttleoverride-success' => 'De uitzondering is toegepast.',
 	'throttleoverride-types' => 'Beperkingstypen:',
