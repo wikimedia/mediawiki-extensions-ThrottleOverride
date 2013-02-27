@@ -26,8 +26,8 @@ An optional reason can be given for the logs.',
 	'throttleoverride-types-actcreate' => 'Account creation',
 	'throttleoverride-types-edit' => 'Page edits',
 	'throttleoverride-types-move' => 'Page moves',
-	'throttleoverride-types-mailpassword' => 'Password recovery e-mails',
-	'throttleoverride-types-emailuser' => 'User e-mails'
+	'throttleoverride-types-mailpassword' => 'Password recovery emails',
+	'throttleoverride-types-emailuser' => 'User emails'
 );
 
 /** Message documentation (Message documentation)
