@@ -247,3 +247,10 @@ $messages['zh-hans'] = array(
 	'throttleoverride-types-mailpassword' => '密码恢复邮件',
 	'throttleoverride-types-emailuser' => '用户电子邮箱',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Simon Shek
+ */
+$messages['zh-hant'] = array(
+	'throttleoverride-types-mailpassword' => '密碼恢復郵件',
+);
