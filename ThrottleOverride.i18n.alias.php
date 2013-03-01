@@ -28,6 +28,11 @@ $specialPageAliases['ko'] = array(
 	'ThrottleOverride' => array( '제한회피' ),
 );
 
+/** Macedonian (македонски) */
+$specialPageAliases['mk'] = array(
+	'ThrottleOverride' => array( 'НаметниПрезапис' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'ThrottleOverride' => array( '节流阀覆盖' ),
