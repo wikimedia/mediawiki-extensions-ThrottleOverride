@@ -211,6 +211,25 @@ $messages['te'] = array(
 	'throttleoverride-types-move' => 'పేజీల తరలింపులు',
 );
 
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'overridethrottle' => 'Pangibabawan ang pagpigil sa paglikha ng akawnt',
+	'throttleoverride-desc' => 'Nagpapahintulot sa pangingibabaw sa mga pampigil ng tirahang IP',
+	'throttleoverride-legend' => 'Kabatiran sa hindi pagsasali',
+	'throttleoverride-text' => 'Ipasok ang tirahang IP o saklaw na nais mong hindi isali mula sa partikular na mga pagpipigil, at kung hanggang kailan dapat magtagal ang hindi pagsasali.
+Maaaring magbigay o hindi magbigay ng dahilan para sa mga talaan.',
+	'throttleoverride-ipaddress' => 'Tirahang IP o saklaw',
+	'throttleoverride-success' => 'Nailapat na ang hindi pagsasali.',
+	'throttleoverride-types' => 'Mga uri ng pagpigil:',
+	'throttleoverride-types-actcreate' => 'Paglikha ng akawnt',
+	'throttleoverride-types-edit' => 'Mga pagbago sa pahina',
+	'throttleoverride-types-move' => 'Mga paglipat ng pahina',
+	'throttleoverride-types-mailpassword' => 'Mga elektronikong liham sa muling pagpapanumbalik ng hudyat',
+	'throttleoverride-types-emailuser' => 'Mga elektronikong liham ng tagagamit',
+);
+
 /** Ukrainian (українська)
  * @author Base
  */
