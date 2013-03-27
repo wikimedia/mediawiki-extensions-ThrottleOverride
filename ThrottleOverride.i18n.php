@@ -34,7 +34,7 @@ An optional reason can be given for the logs.',
  * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'overridethrottle' => 'Title for Special:OverrideThrottle',
+	'overridethrottle' => '{{doc-special|OverrideThrottle}}',
 	'throttleoverride-desc' => '{{desc|name=Throttle Override|url=http://www.mediawiki.org/wiki/Extension:ThrottleOverride}}',
 	'throttleoverride-legend' => 'Label for the legend on Special:OverrideThrottle',
 	'throttleoverride-text' => 'Intro text on Special:OverrideThrottle',
