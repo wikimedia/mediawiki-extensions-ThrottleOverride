@@ -33,6 +33,11 @@ $specialPageAliases['mk'] = array(
 	'ThrottleOverride' => array( 'НаметниПрезапис' ),
 );
 
+/** Dutch (Nederlands) */
+$specialPageAliases['nl'] = array(
+	'ThrottleOverride' => array( 'LimietenAanpassen' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'ThrottleOverride' => array( '节流阀覆盖' ),
