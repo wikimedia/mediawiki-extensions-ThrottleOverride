@@ -221,6 +221,14 @@ U kunt optioneel een reden opgeven voor in het logboek.',
 	'throttleoverride-types-emailuser' => 'E-mails naar gebruikers',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'throttleoverride-ipaddress' => 'Indirizze IP o indervalle',
+	'throttleoverride-success' => "L'eccezzione ha state applicate.",
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
