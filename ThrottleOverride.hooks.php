@@ -71,8 +71,14 @@ class ThrottleOverrideHooks {
 	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
 		$updater->addExtensionTable(
 			'throttle_override',
-			__DIR__ . '/table.sql'
+			__DIR__ . '/patches/table.sql'
 		);
+		$updater->addExtensionIndex(
+			'throttle_override',
+			'thr_expiry',
+			__DIR__ . '/patches/expiry_index.sql'
+		);
+
 		return true;
 	}
 }

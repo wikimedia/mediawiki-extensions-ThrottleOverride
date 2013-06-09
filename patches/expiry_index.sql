@@ -1,0 +1,1 @@
+CREATE INDEX /*i*/thr_expiry ON /*_*/throttle_override (thr_expiry);

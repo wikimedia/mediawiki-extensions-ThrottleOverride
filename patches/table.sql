@@ -20,3 +20,4 @@ CREATE TABLE /*_*/throttle_override (
 ) /*$wgDBTableOptions*/;
 
 CREATE INDEX /*i*/thr_range ON /*_*/throttle_override (thr_range_start(8), thr_range_end(8));
+CREATE INDEX /*i*/thr_expiry ON /*_*/throttle_override (thr_expiry);

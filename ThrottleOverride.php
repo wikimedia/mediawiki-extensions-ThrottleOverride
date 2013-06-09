@@ -31,8 +31,11 @@ $wgExtensionCredits['other'][] = array(
 // Hooks and classes
 $wgAutoloadClasses['ThrottleOverrideHooks'] = __DIR__ . '/ThrottleOverride.hooks.php';
 $wgAutoloadClasses['SpecialOverrideThrottle'] = __DIR__ . '/SpecialOverrideThrottle.php';
+$wgAutoloadClasses['SpecialThrottleOverrideList'] = __DIR__ . '/SpecialThrottleOverrideList.php';
+$wgAutoloadClasses['ThrottleOverridePager'] = __DIR__ . '/SpecialThrottleOverrideList.php';
 
 $wgSpecialPages['OverrideThrottle'] = 'SpecialOverrideThrottle';
+$wgSpecialPages['ThrottleOverrideList'] = 'SpecialThrottleOverrideList';
 $wgSpecialPageGroups['OverrideThrottle'] = 'users';
 
 Hooks::register( 'PingLimiter', 'ThrottleOverrideHooks::onPingLimiter' );
