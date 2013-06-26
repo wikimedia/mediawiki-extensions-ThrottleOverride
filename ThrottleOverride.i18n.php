@@ -227,6 +227,10 @@ U kunt optioneel een reden opgeven voor in het logboek.',
 $messages['roa-tara'] = array(
 	'throttleoverride-ipaddress' => 'Indirizze IP o indervalle',
 	'throttleoverride-success' => "L'eccezzione ha state applicate.",
+	'throttleoverride-types-edit' => "Cangiaminde d'a pàgene",
+	'throttleoverride-types-move' => "Spustaminde d'a pàgene",
+	'throttleoverride-types-mailpassword' => "Recupere d'a password cu l'email",
+	'throttleoverride-types-emailuser' => "Email de l'utende",
 );
 
 /** Telugu (తెలుగు)
