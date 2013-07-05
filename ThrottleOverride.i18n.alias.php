@@ -1,6 +1,6 @@
 <?php
 /**
- * Aliases for Special:OverrideThrottle
+ * Aliases for extension Throttle Override
  *
  * @file
  * @ingroup Extensions
@@ -11,6 +11,7 @@ $specialPageAliases = array();
 /** English (English) */
 $specialPageAliases['en'] = array(
 	'ThrottleOverride' => array( 'ThrottleOverride', 'Throttle Override' ),
+	'ThrottleOverrideList' => array( 'ThrottleOverrideList', 'Throttle Override List' ),
 );
 
 /** German (Deutsch) */
