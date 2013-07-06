@@ -48,26 +48,32 @@ $messages['qqq'] = array(
 	'overridethrottle' => '{{doc-special|OverrideThrottle}}',
 	'throttleoverridelist' => '{{doc-special|ThrottleOverrideList}}',
 	'throttleoverride-desc' => '{{desc|name=Throttle Override|url=http://www.mediawiki.org/wiki/Extension:ThrottleOverride}}',
-	'throttleoverride-legend' => 'Label for the legend on Special:OverrideThrottle',
-	'throttleoverride-text' => 'Intro text on Special:OverrideThrottle',
-	'throttleoverride-ipaddress' => 'Label for the IP address field on Special:OverrideThrottle',
-	'throttleoverride-success' => 'Text displayed after a successful submission on Special:OverrideThrottle',
-	'throttleoverride-types' => 'Label for the types of throttles that can be overridden',
-	'throttleoverride-types-all' => 'Label for the throttle type representing all types (used in Special:ThrottleOverrideList)',
+	'throttleoverride-legend' => 'Label for the legend on [[Special:OverrideThrottle]]',
+	'throttleoverride-text' => 'Intro text on [[Special:OverrideThrottle]]',
+	'throttleoverride-ipaddress' => 'Label for the IP address field on [[Special:OverrideThrottle]]',
+	'throttleoverride-success' => 'Text displayed after a successful submission on [[Special:OverrideThrottle]]',
+	'throttleoverride-types' => 'Label for the types of throttles that can be overridden.
+{{Identical|Throttle type}}',
+	'throttleoverride-types-all' => 'Label for the throttle type representing all types (used in [[Special:ThrottleOverrideList]]).
+{{Identical|All types}}',
 	'throttleoverride-types-actcreate' => 'Label for the throttle type for account creations',
 	'throttleoverride-types-edit' => 'Label for the throttle type for page edits',
 	'throttleoverride-types-move' => 'Label for the throttle type for page moves',
 	'throttleoverride-types-mailpassword' => 'Label for the throttle type for password recovery requests',
 	'throttleoverride-types-emailuser' => 'Label for the throttle type for user emails',
-	'throttleoverride-list-throttletype' => 'Label for the throttle type on Special:ThrottleOverrideList',
-	'throttleoverride-list-legend' => 'Fieldset legend on Special:ThrottleOverrideList',
+	'throttleoverride-list-throttletype' => 'Label for the throttle type on [[Special:ThrottleOverrideList]].
+{{Identical|Throttle type}}',
+	'throttleoverride-list-legend' => 'Fieldset legend on [[Special:ThrottleOverrideList]]',
 	'throttleoverride-list-rangestart' => 'Table header in the throttle override list for the starting IP address of a throttle override',
 	'throttleoverride-list-rangeend' => 'Table header in the throttle override list for the ending IP address of a throttle override',
-	'throttleoverride-list-expiry' => 'Table header in the throttle override list for the expiry date and time of a throttle override',
+	'throttleoverride-list-expiry' => 'Table header in the throttle override list for the expiry date and time of a throttle override.
+{{Identical|Expiry}}',
 	'throttleoverride-list-type' => 'Table header in the throttle override list for the actions allowed by a throttle override',
-	'throttleoverride-list-reason' => 'Table header in the throttle override list for the reason of a throttle override',
-	'throttleoverride-list-search' => 'Label for the sumbit button on Special:ThrottleOverrideList',
-	'throttleoverride-list-noresults' => 'Message displayed on Special:ThrottleOverrideList when the pager returns no results',
+	'throttleoverride-list-reason' => 'Table header in the throttle override list for the reason of a throttle override.
+{{Identical|Reason}}',
+	'throttleoverride-list-search' => 'Label for the sumbit button on [[Special:ThrottleOverrideList]].
+{{Identical|Search}}',
+	'throttleoverride-list-noresults' => 'Message displayed on [[Special:ThrottleOverrideList]] when the pager returns no results',
 );
 
 /** Breton (brezhoneg)
@@ -83,6 +89,7 @@ $messages['br'] = array(
  */
 $messages['de'] = array(
 	'overridethrottle' => 'Die Kontenerstellungsbeschränkung umgehen',
+	'throttleoverridelist' => 'Liste von Beschränkungsumgehungen',
 	'throttleoverride-desc' => 'Ermöglicht das Umgehen von IP-Adressbeschränkungen',
 	'throttleoverride-legend' => 'Ausnahmeinformationen',
 	'throttleoverride-text' => 'Gib die IP-Adresse oder den Adressbereich an, die du von bestimmten Beschränkungen ausnehmen willst und wie lange die Ausnahme gelten soll.
@@ -90,11 +97,21 @@ Für die Logbücher kann eine optionale Begründung angegeben werden.',
 	'throttleoverride-ipaddress' => 'IP-Adresse oder Adressenbereich',
 	'throttleoverride-success' => 'Die Ausnahme wurde angewandt.',
 	'throttleoverride-types' => 'Beschränkungstypen:',
+	'throttleoverride-types-all' => 'Alle Typen',
 	'throttleoverride-types-actcreate' => 'Kontenerstellung',
 	'throttleoverride-types-edit' => 'Seitenbearbeitungen',
 	'throttleoverride-types-move' => 'Seitenverschiebungen',
 	'throttleoverride-types-mailpassword' => 'Passwortwiederherstellungs-Mails',
 	'throttleoverride-types-emailuser' => 'Benutzer-Mails',
+	'throttleoverride-list-throttletype' => 'Beschränkungstyp:',
+	'throttleoverride-list-legend' => 'Ausnahmefilterung',
+	'throttleoverride-list-rangestart' => 'Start des IP-Adressbereichs',
+	'throttleoverride-list-rangeend' => 'Ende des IP-Adressbereichs',
+	'throttleoverride-list-expiry' => 'Ablauf',
+	'throttleoverride-list-type' => 'Erlaubte Aktionen',
+	'throttleoverride-list-reason' => 'Grund',
+	'throttleoverride-list-search' => 'Suchen',
+	'throttleoverride-list-noresults' => 'Die Liste der Beschränkungsumgehungen ist leer.',
 );
 
 /** French (français)
@@ -166,11 +183,19 @@ $messages['ja'] = array(
 	'throttleoverride-ipaddress' => 'IP アドレスまたは範囲',
 	'throttleoverride-success' => '免除を適用しました。',
 	'throttleoverride-types' => '制限の種類:',
+	'throttleoverride-types-all' => 'すべての種類',
 	'throttleoverride-types-actcreate' => 'アカウント作成',
 	'throttleoverride-types-edit' => 'ページの編集',
 	'throttleoverride-types-move' => 'ページの移動',
 	'throttleoverride-types-mailpassword' => 'パスワード再発行メールの送信',
 	'throttleoverride-types-emailuser' => '利用者へのメール送信',
+	'throttleoverride-list-throttletype' => '制限の種類:',
+	'throttleoverride-list-legend' => 'フィルタリングの免除',
+	'throttleoverride-list-rangestart' => 'IP 範囲の始点',
+	'throttleoverride-list-rangeend' => 'IP 範囲の終点',
+	'throttleoverride-list-expiry' => '有効期限',
+	'throttleoverride-list-type' => '許可された操作',
+	'throttleoverride-list-reason' => '理由',
 );
 
 /** Korean (한국어)
@@ -210,6 +235,7 @@ $messages['lb'] = array(
  */
 $messages['mk'] = array(
 	'overridethrottle' => 'Избегни го ограничувањето за создавање сметки',
+	'throttleoverridelist' => 'Список на наметнати презапишувања',
 	'throttleoverride-desc' => 'Овозможува избегнување на ограничувања на IP-адреси',
 	'throttleoverride-legend' => 'Информации за изземањето',
 	'throttleoverride-text' => 'Внесете IP-адреса или опсег од адреси што сакате да ги изземете од ограничувања и колку долго да трае изземањето.
@@ -217,11 +243,21 @@ $messages['mk'] = array(
 	'throttleoverride-ipaddress' => 'IP-адреса или опсег',
 	'throttleoverride-success' => 'Изземањето е применето.',
 	'throttleoverride-types' => 'Типови на ограничувања:',
+	'throttleoverride-types-all' => 'Сите видови',
 	'throttleoverride-types-actcreate' => 'Создавање на сметка',
 	'throttleoverride-types-edit' => 'Уредување на страници',
 	'throttleoverride-types-move' => 'Преместување на страници',
 	'throttleoverride-types-mailpassword' => 'Повраќање на лозинка по е-пошта',
 	'throttleoverride-types-emailuser' => 'Е-пошта од корисникот',
+	'throttleoverride-list-throttletype' => 'Вид на наметнување:',
+	'throttleoverride-list-legend' => 'Филтрирање по изземања',
+	'throttleoverride-list-rangestart' => 'Почеток на IP-опсегот',
+	'throttleoverride-list-rangeend' => 'Крај на IP-опсегот',
+	'throttleoverride-list-expiry' => 'Истек',
+	'throttleoverride-list-type' => 'Дозволени дејства:',
+	'throttleoverride-list-reason' => 'Причина',
+	'throttleoverride-list-search' => 'Пребарај',
+	'throttleoverride-list-noresults' => 'Списокот за наметнати презапишувања е празен.',
 );
 
 /** Dutch (Nederlands)
