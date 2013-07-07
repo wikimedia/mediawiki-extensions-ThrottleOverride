@@ -116,6 +116,7 @@ Für die Logbücher kann eine optionale Begründung angegeben werden.',
 
 /** French (français)
  * @author Gomoko
+ * @author Louperivois
  */
 $messages['fr'] = array(
 	'overridethrottle' => 'Écraser la restriction de création de compte',
@@ -131,6 +132,10 @@ Un motif facultatif peut être fourni pour les journaux.',
 	'throttleoverride-types-move' => 'Déplacements de page',
 	'throttleoverride-types-mailpassword' => 'Courriels de récupération de mot de passe',
 	'throttleoverride-types-emailuser' => 'Courriels utilisateur',
+	'throttleoverride-list-rangestart' => "Début de la plage d'adresses IP",
+	'throttleoverride-list-rangeend' => "Fin de la plage d'adresses IP",
+	'throttleoverride-list-reason' => 'Motif',
+	'throttleoverride-list-search' => 'Rechercher',
 );
 
 /** Galician (galego)
