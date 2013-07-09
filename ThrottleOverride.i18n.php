@@ -120,6 +120,7 @@ Für die Logbücher kann eine optionale Begründung angegeben werden.',
  */
 $messages['fr'] = array(
 	'overridethrottle' => 'Écraser la restriction de création de compte',
+	'throttleoverridelist' => 'Liste des outrepassements de limites',
 	'throttleoverride-desc' => 'Permet l’écrasement des restrictions d’adresses IP',
 	'throttleoverride-legend' => 'Information sur l’exemption',
 	'throttleoverride-text' => 'Entrez l’adresse IP ou la plage que vous voulez exempter de certaines restrictions, et la durée de vie de l’exemption.
@@ -127,15 +128,21 @@ Un motif facultatif peut être fourni pour les journaux.',
 	'throttleoverride-ipaddress' => 'Adresse IP ou plage',
 	'throttleoverride-success' => 'L’exemption a été appliquée.',
 	'throttleoverride-types' => 'Types de restriction:',
+	'throttleoverride-types-all' => 'Tous les types',
 	'throttleoverride-types-actcreate' => 'Création de compte',
 	'throttleoverride-types-edit' => 'Modifications de page',
 	'throttleoverride-types-move' => 'Déplacements de page',
 	'throttleoverride-types-mailpassword' => 'Courriels de récupération de mot de passe',
 	'throttleoverride-types-emailuser' => 'Courriels utilisateur',
+	'throttleoverride-list-throttletype' => 'Type de limite :',
+	'throttleoverride-list-legend' => 'Filtrage des exemptions',
 	'throttleoverride-list-rangestart' => "Début de la plage d'adresses IP",
 	'throttleoverride-list-rangeend' => "Fin de la plage d'adresses IP",
+	'throttleoverride-list-expiry' => 'Expiration',
+	'throttleoverride-list-type' => 'Actions autorisées',
 	'throttleoverride-list-reason' => 'Motif',
 	'throttleoverride-list-search' => 'Rechercher',
+	'throttleoverride-list-noresults' => 'La liste des outrepassements de limites est vide.',
 );
 
 /** Galician (galego)
