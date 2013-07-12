@@ -288,6 +288,7 @@ $messages['mk'] = array(
  */
 $messages['nl'] = array(
 	'overridethrottle' => 'Beperkingen voor aanmaken gebruikers negeren',
+	'throttleoverridelist' => 'Lijst met drempelwaardebeperkingen',
 	'throttleoverride-desc' => 'Maakt het mogelijk de beperkingen voor IP-adressen te negeren',
 	'throttleoverride-legend' => 'Gegevens over uitzonderingen',
 	'throttleoverride-text' => 'Voer een IP-adres of een IP-reeks in waar u uitzonderingen voor wilt instellen, en hoe lang de uitzondering moet duren.
@@ -300,6 +301,9 @@ U kunt optioneel een reden opgeven voor in het logboek.',
 	'throttleoverride-types-move' => "Pagina's hernoemen",
 	'throttleoverride-types-mailpassword' => 'Wachtwoord per e-mail verzenden',
 	'throttleoverride-types-emailuser' => 'E-mails naar gebruikers',
+	'throttleoverride-list-legend' => 'Vrijstellingsfilters',
+	'throttleoverride-list-rangestart' => 'Begin van IP-reeks',
+	'throttleoverride-list-noresults' => 'De lijst met drempelwaardebeperkingen is leeg.',
 );
 
 /** tarandíne (tarandíne)
