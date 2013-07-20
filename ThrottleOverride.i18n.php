@@ -84,6 +84,13 @@ $messages['br'] = array(
 	'throttleoverride-types-emailuser' => 'Posteloù implijer',
 );
 
+/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
+ * @author ОйЛ
+ */
+$messages['cu'] = array(
+	'throttleoverride-list-search' => 'ищи',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
