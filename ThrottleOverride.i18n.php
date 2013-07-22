@@ -244,7 +244,7 @@ $messages['ko'] = array(
 	'throttleoverride-types-edit' => '문서 편집',
 	'throttleoverride-types-move' => '문서 옮기기',
 	'throttleoverride-types-mailpassword' => '비밀번호 복구 이메일',
-	'throttleoverride-types-emailuser' => '사용자 이메일',
+	'throttleoverride-types-emailuser' => '사용자에게 이메일 보내기',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
