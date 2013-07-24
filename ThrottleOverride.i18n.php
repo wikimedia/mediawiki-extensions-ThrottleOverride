@@ -332,6 +332,20 @@ $messages['roa-tara'] = array(
 	'throttleoverride-types-emailuser' => "Email de l'utende",
 );
 
+/** Swedish (svenska)
+ * @author Jopparn
+ */
+$messages['sv'] = array(
+	'throttleoverride-types-all' => 'Alla typer',
+	'throttleoverride-types-actcreate' => 'Kontoskapning',
+	'throttleoverride-types-edit' => 'Redigeringar på sidan',
+	'throttleoverride-types-move' => 'Flyttningar av sidan',
+	'throttleoverride-types-mailpassword' => 'E-post för återhämtning av e-post',
+	'throttleoverride-list-type' => 'Tillåtna åtgärder',
+	'throttleoverride-list-reason' => 'Orsak',
+	'throttleoverride-list-search' => 'Sök',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
