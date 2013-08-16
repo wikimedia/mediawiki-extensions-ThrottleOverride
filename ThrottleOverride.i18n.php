@@ -375,10 +375,12 @@ Maaaring magbigay o hindi magbigay ng dahilan para sa mga talaan.',
 );
 
 /** Ukrainian (українська)
+ * @author Andriykopanytsia
  * @author Base
  */
 $messages['uk'] = array(
 	'overridethrottle' => 'Обхід обмеження частоти створення облікових записів',
+	'throttleoverridelist' => 'Список обходів обмеження частоти',
 	'throttleoverride-desc' => 'Дозволити обходити обмеження частоти створення облікових записів',
 	'throttleoverride-legend' => 'Інформація про звільнення',
 	'throttleoverride-text' => "Введіть IP-адресу або діапазон, який Ви хочете звільнити від обмеження частоти, і як довго звільнення повинне тривати.
@@ -386,11 +388,21 @@ $messages['uk'] = array(
 	'throttleoverride-ipaddress' => 'IP-адреса або діапазон',
 	'throttleoverride-success' => 'Звільнення було застосовано.',
 	'throttleoverride-types' => 'Типи обмеження частоти:',
+	'throttleoverride-types-all' => 'Всі типи',
 	'throttleoverride-types-actcreate' => 'Створення облікових записів',
 	'throttleoverride-types-edit' => 'Редагування сторінок',
 	'throttleoverride-types-move' => 'Перейменування сторінок',
 	'throttleoverride-types-mailpassword' => 'Відновлення паролю електронною поштою',
 	'throttleoverride-types-emailuser' => 'Листи користувачам електронною поштою',
+	'throttleoverride-list-throttletype' => 'Тип обмеження частоти:',
+	'throttleoverride-list-legend' => 'Звільнення фільтрації',
+	'throttleoverride-list-rangestart' => 'Початок діапазону IP',
+	'throttleoverride-list-rangeend' => 'Кінець діапазону IP',
+	'throttleoverride-list-expiry' => 'Закінчення',
+	'throttleoverride-list-type' => 'Дозволені дії',
+	'throttleoverride-list-reason' => 'Причина',
+	'throttleoverride-list-search' => 'Пошук',
+	'throttleoverride-list-noresults' => 'Список обходів обмеження частоти - порожній.',
 );
 
 /** Simplified Chinese (中文（简体）‎)
