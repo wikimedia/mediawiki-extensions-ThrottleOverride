@@ -406,6 +406,7 @@ $messages['uk'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Shirayuki
  * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
@@ -422,6 +423,7 @@ $messages['zh-hans'] = array(
 	'throttleoverride-types-move' => '移动页面',
 	'throttleoverride-types-mailpassword' => '密码恢复邮件',
 	'throttleoverride-types-emailuser' => '用户电子邮箱',
+	'throttleoverride-list-reason' => '原因',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
