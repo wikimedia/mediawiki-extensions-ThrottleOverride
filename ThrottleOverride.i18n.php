@@ -320,6 +320,16 @@ U kunt optioneel een reden opgeven voor in het logboek.',
 	'throttleoverride-list-noresults' => 'De lijst met drempelwaardebeperkingen is leeg.',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Luckas
+ */
+$messages['pt-br'] = array(
+	'throttleoverride-types-all' => 'Todos os tipos',
+	'throttleoverride-list-type' => 'Ações permitidas',
+	'throttleoverride-list-reason' => 'Motivo',
+	'throttleoverride-list-search' => 'Pesquisar',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
