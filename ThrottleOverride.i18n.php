@@ -320,6 +320,34 @@ U kunt optioneel een reden opgeven voor in het logboek.',
 	'throttleoverride-list-noresults' => 'De lijst met drempelwaardebeperkingen is leeg.',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'overridethrottle' => 'Espotir la restriccion de creacion de compte',
+	'throttleoverridelist' => 'Lista dels otrapassaments de limits',
+	'throttleoverride-desc' => 'Permet l’espotiment de las restriccions d’adreças IP',
+	'throttleoverride-legend' => 'Informacion sus l’exempcion',
+	'throttleoverride-ipaddress' => 'Adreça IP o plaja',
+	'throttleoverride-success' => 'L’exempcion es estada aplicada.',
+	'throttleoverride-types' => 'Tipes de restriccion :',
+	'throttleoverride-types-all' => 'Totes los tipes',
+	'throttleoverride-types-actcreate' => 'Creacion de compte',
+	'throttleoverride-types-edit' => 'Modificacions de pagina',
+	'throttleoverride-types-move' => 'Desplaçaments de pagina',
+	'throttleoverride-types-mailpassword' => 'Corrièrs electronics de recuperacion de senhal',
+	'throttleoverride-types-emailuser' => 'Corrièrs electronics utilizaire',
+	'throttleoverride-list-throttletype' => 'Tipe de limit :',
+	'throttleoverride-list-legend' => 'Filtratge de las exempcions',
+	'throttleoverride-list-rangestart' => "Començament de la plaja d'adreças IP",
+	'throttleoverride-list-rangeend' => "Fin de la plaja d'adreças IP",
+	'throttleoverride-list-expiry' => 'Expiracion',
+	'throttleoverride-list-type' => 'Accions autorizadas',
+	'throttleoverride-list-reason' => 'Motiu',
+	'throttleoverride-list-search' => 'Recercar',
+	'throttleoverride-list-noresults' => 'La lista dels otrapassaments de limits es voida.',
+);
+
 /** Brazilian Portuguese (português do Brasil)
  * @author Luckas
  */
