@@ -249,9 +249,10 @@ $messages['ko'] = array(
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
-	'throttleoverride-legend' => "Informatioun iwwert d'Ausnam",
+	'throttleoverride-legend' => "Informatioun iwwer d'Ausnam",
 	'throttleoverride-ipaddress' => 'IP-Adress oder Range',
 	'throttleoverride-success' => "D'Ausnahm gouf applizéiert.",
 	'throttleoverride-types-actcreate' => 'Benotzerkont opmaachen',
