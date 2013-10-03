@@ -121,6 +121,13 @@ Für die Logbücher kann eine optionale Begründung angegeben werden.',
 	'throttleoverride-list-noresults' => 'Die Liste der Beschränkungsumgehungen ist leer.',
 );
 
+/** Spanish (español)
+ * @author Ovruni
+ */
+$messages['es'] = array(
+	'throttleoverride-list-search' => 'Buscar',
+);
+
 /** French (français)
  * @author Gomoko
  * @author Louperivois
