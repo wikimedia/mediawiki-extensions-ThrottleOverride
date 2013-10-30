@@ -26,7 +26,7 @@ $specialPageAliases['ja'] = array(
 
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
-	'ThrottleOverride' => array( '제한회피' ),
+	'ThrottleOverride' => array( '제한회피', '제한_회피' ),
 );
 
 /** Macedonian (македонски) */
