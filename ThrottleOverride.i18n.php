@@ -454,6 +454,7 @@ $messages['uk'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Shirayuki
+ * @author Xiaomingyan
  * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
@@ -465,7 +466,7 @@ $messages['zh-hans'] = array(
 	'throttleoverride-ipaddress' => 'IP地址或范围',
 	'throttleoverride-success' => '此豁免已应用。',
 	'throttleoverride-types' => '节流阀类型：',
-	'throttleoverride-types-actcreate' => '创建帐户',
+	'throttleoverride-types-actcreate' => '账户创建',
 	'throttleoverride-types-edit' => '编辑页面',
 	'throttleoverride-types-move' => '移动页面',
 	'throttleoverride-types-mailpassword' => '密码恢复邮件',
