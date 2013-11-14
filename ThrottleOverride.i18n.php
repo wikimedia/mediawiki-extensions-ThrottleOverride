@@ -378,6 +378,24 @@ $messages['roa-tara'] = array(
 	'throttleoverride-types-emailuser' => "Email de l'utende",
 );
 
+/** Russian (русский)
+ * @author Okras
+ */
+$messages['ru'] = array(
+	'throttleoverride-ipaddress' => 'IP-адрес или диапазон',
+	'throttleoverride-types-all' => 'Все типы',
+	'throttleoverride-types-actcreate' => 'Создание учётной записи',
+	'throttleoverride-types-edit' => 'Правки страницы',
+	'throttleoverride-types-move' => 'Переименования страницы',
+	'throttleoverride-types-emailuser' => 'Пользовательские адреса электронной почты',
+	'throttleoverride-list-rangestart' => 'Начало диапазона IP-адресов',
+	'throttleoverride-list-rangeend' => 'Конец диапазона IP-адресов',
+	'throttleoverride-list-expiry' => 'Срок действия',
+	'throttleoverride-list-type' => 'Допустимые действия',
+	'throttleoverride-list-reason' => 'Причина',
+	'throttleoverride-list-search' => 'Найти',
+);
+
 /** Swedish (svenska)
  * @author Jopparn
  */
