@@ -382,18 +382,30 @@ $messages['roa-tara'] = array(
  * @author Okras
  */
 $messages['ru'] = array(
+	'overridethrottle' => 'Переопределить ограничения на создание учётных записей',
+	'throttleoverridelist' => 'Список переопределений ограничений',
+	'throttleoverride-desc' => 'Позволяет переопределение ограничения для IP-адреса',
+	'throttleoverride-legend' => 'Информация об исключениях',
+	'throttleoverride-text' => 'Введите IP-адрес или диапазон адресов, для которых вы хотите сделать исключение по некоторым ограничениям, и как долго должен длиться это исключение.
+Можно указать дополнительные причины для журналов.',
 	'throttleoverride-ipaddress' => 'IP-адрес или диапазон',
+	'throttleoverride-success' => 'Исключение было применено.',
+	'throttleoverride-types' => 'Типы ограничений:',
 	'throttleoverride-types-all' => 'Все типы',
 	'throttleoverride-types-actcreate' => 'Создание учётной записи',
 	'throttleoverride-types-edit' => 'Правки страницы',
 	'throttleoverride-types-move' => 'Переименования страницы',
+	'throttleoverride-types-mailpassword' => 'Адреса восстановления пароля',
 	'throttleoverride-types-emailuser' => 'Пользовательские адреса электронной почты',
+	'throttleoverride-list-throttletype' => 'Типы ограничений:',
+	'throttleoverride-list-legend' => 'Фильтрация исключений',
 	'throttleoverride-list-rangestart' => 'Начало диапазона IP-адресов',
 	'throttleoverride-list-rangeend' => 'Конец диапазона IP-адресов',
 	'throttleoverride-list-expiry' => 'Срок действия',
 	'throttleoverride-list-type' => 'Допустимые действия',
 	'throttleoverride-list-reason' => 'Причина',
 	'throttleoverride-list-search' => 'Найти',
+	'throttleoverride-list-noresults' => 'Список переопределений ограничений пуст.',
 );
 
 /** Swedish (svenska)
