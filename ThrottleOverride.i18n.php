@@ -84,6 +84,13 @@ $messages['br'] = array(
 	'throttleoverride-types-emailuser' => 'Posteloù implijer',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'throttleoverride-list-search' => 'Лаха',
+);
+
 /** Church Slavic (словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
