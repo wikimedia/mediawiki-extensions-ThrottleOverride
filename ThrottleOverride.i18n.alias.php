@@ -14,6 +14,11 @@ $specialPageAliases['en'] = array(
 	'ThrottleOverride' => array( 'ThrottleOverride', 'Throttle Override' ),
 );
 
+/** Arabic (العربية) */
+$specialPageAliases['ar'] = array(
+	'ThrottleOverride' => array( 'تجاوز_الحد' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'ThrottleOverride' => array( 'Beschränkungsumgehung' ),
