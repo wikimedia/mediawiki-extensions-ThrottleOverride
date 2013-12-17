@@ -496,6 +496,7 @@ $messages['uk'] = array(
  */
 $messages['zh-hans'] = array(
 	'overridethrottle' => '覆盖帐户创建节流阀',
+	'throttleoverridelist' => '节流阀覆盖列表',
 	'throttleoverride-desc' => '允许IP地址覆盖节流阀',
 	'throttleoverride-legend' => '豁免信息',
 	'throttleoverride-text' => '输入您想从某些节流阀中排除的IP地址或范围，以及豁免要持续多久。
@@ -503,12 +504,21 @@ $messages['zh-hans'] = array(
 	'throttleoverride-ipaddress' => 'IP地址或范围',
 	'throttleoverride-success' => '此豁免已应用。',
 	'throttleoverride-types' => '节流阀类型：',
+	'throttleoverride-types-all' => '所有类型',
 	'throttleoverride-types-actcreate' => '账户创建',
 	'throttleoverride-types-edit' => '编辑页面',
 	'throttleoverride-types-move' => '移动页面',
 	'throttleoverride-types-mailpassword' => '密码恢复邮件',
 	'throttleoverride-types-emailuser' => '用户电子邮箱',
+	'throttleoverride-list-throttletype' => '节流阀类型：',
+	'throttleoverride-list-legend' => '豁免筛选',
+	'throttleoverride-list-rangestart' => 'IP范围的开始',
+	'throttleoverride-list-rangeend' => 'IP范围的结束',
+	'throttleoverride-list-expiry' => '截止日期',
+	'throttleoverride-list-type' => '允许的动作',
 	'throttleoverride-list-reason' => '原因',
+	'throttleoverride-list-search' => '搜索',
+	'throttleoverride-list-noresults' => '节流阀覆盖列表是空的。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
