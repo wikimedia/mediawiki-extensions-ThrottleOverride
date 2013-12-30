@@ -135,6 +135,14 @@ $messages['es'] = array(
 	'throttleoverride-list-search' => 'Buscar',
 );
 
+/** Persian (فارسی)
+ * @author Reza1615
+ */
+$messages['fa'] = array(
+	'throttleoverride-list-reason' => 'دلیل',
+	'throttleoverride-list-search' => 'جستجو',
+);
+
 /** French (français)
  * @author Gomoko
  * @author Louperivois
