@@ -99,10 +99,22 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		$this->getOutput()->addWikiMsg( 'throttleoverride-success' );
 	}
 
+	/**
+	 * @param $value
+	 * @param array $allData
+	 * @param HTMLForm $form
+	 * @return bool
+	 */
 	public static function validateTargetField( $value, array $allData, HTMLForm $form ) {
 		return $value !== array( false, false );
 	}
 
+	/**
+	 * @param $value
+	 * @param array $allDatam
+	 * @param HTMLForm $form
+	 * @return bool
+	 */
 	public static function validateExpiryField( $value, array $allDatam, HTMLForm $form ) {
 		return (bool)$value;
 	}

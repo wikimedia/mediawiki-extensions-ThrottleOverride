@@ -33,6 +33,7 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 	function getFormFields() {
 		global $wgRateLimits;
 
+		$throttles = array();
 		foreach ( array( 'all', 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ) as $type ) {
 			if ( $type == 'all' || $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
 				// For grepping. The following messages are used here:
@@ -178,7 +179,6 @@ class ThrottleOverridePager extends TablePager {
 
 			default:
 				throw new MWException( "Unknown field $name." );
-				return '';
 		}
 	}
 }

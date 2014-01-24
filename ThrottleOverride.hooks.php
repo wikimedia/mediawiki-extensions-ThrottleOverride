@@ -19,13 +19,24 @@
  */
 
 class ThrottleOverrideHooks {
+	/**
+	 * @param string $ip
+	 * @return bool
+	 */
 	public static function onExemptFromAccountCreationThrottle( $ip ) {
 		$result = false;
 		$user = RequestContext::getMain()->getUser();
 		return self::onPingLimiter( $user, 'actcreate', $result, $ip );
 	}
 
-	public static function onPingLimiter( User &$user, $action, $result, $ip = null ) {
+	/**
+	 * @param User $user
+	 * @param string $action
+	 * @param $result
+	 * @param null|string $ip
+	 * @return bool
+	 */
+	public static function onPingLimiter( User &$user, $action, &$result, $ip = null ) {
 		global $wgRateLimits;
 		assert( $action == 'actcreate' || isset( $wgRateLimits[$action] ) );
 
@@ -68,6 +79,10 @@ class ThrottleOverrideHooks {
 		return true;
 	}
 
+	/**
+	 * @param DatabaseUpdater $updater
+	 * @return bool
+	 */
 	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
 		$updater->addExtensionTable(
 			'throttle_override',
