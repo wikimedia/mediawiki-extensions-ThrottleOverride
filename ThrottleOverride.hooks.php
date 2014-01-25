@@ -30,35 +30,41 @@ class ThrottleOverrideHooks {
 	}
 
 	/**
+	 * @throws InvalidArgumentException If $action is invalid
+	 *
 	 * @param User $user
 	 * @param string $action
 	 * @param $result
 	 * @param null|string $ip
+	 *
 	 * @return bool
 	 */
 	public static function onPingLimiter( User &$user, $action, &$result, $ip = null ) {
 		global $wgRateLimits;
-		assert( $action == 'actcreate' || isset( $wgRateLimits[$action] ) );
+
+		if ( $action !== 'actcreate' && !isset( $wgRateLimits[$action] ) ) {
+			return true;
+		}
 
 		$dbr = wfGetDB( DB_SLAVE );
 
-		if( $ip === null ) {
+		if ( $user->isAnon() && IP::isValid( $user->getName() ) ) {
+			$ip = $user->getName();
+		} elseif ( $ip === null ) {
 			$ip = RequestContext::getMain()->getRequest()->getIP();
 		}
+
 		$quotedIp = $dbr->addQuotes( IP::toHex( $ip ) );
-		$cond = $dbr->makeList(
-			array(
-				"thr_range_start <= $quotedIp",
-				"thr_range_end >= $quotedIp",
-				'thr_type' . $dbr->buildLike( $dbr->anyString(), $action, $dbr->anyString() )
-			),
-			LIST_AND
+		$conds = array(
+			"thr_range_start <= $quotedIp",
+			"thr_range_end >= $quotedIp",
+			'thr_type' . $dbr->buildLike( $dbr->anyString(), $action, $dbr->anyString() )
 		);
 
 		$expiry = $dbr->selectField(
 			'throttle_override',
 			'thr_expiry',
-			$cond,
+			$conds,
 			__METHOD__,
 			array( 'ORDER BY' => 'thr_expiry DESC' )
 		);
@@ -66,12 +72,13 @@ class ThrottleOverrideHooks {
 		if( $expiry > wfTimestampNow() ) {
 			// Valid exemption. Disable the throttle.
 			$result = false;
+
 			return false;
 		} elseif( $expiry !== false ) {
 			// Expired exemption. Delete it from the DB.
 			wfGetDB( DB_MASTER )->delete(
 				'throttle_override',
-				$cond,
+				$conds,
 				__METHOD__
 			);
 		}
