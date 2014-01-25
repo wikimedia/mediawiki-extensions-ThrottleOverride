@@ -39,6 +39,9 @@ An optional reason can be given for the logs.',
 	'throttleoverride-list-reason' => 'Reason',
 	'throttleoverride-list-search' => 'Search',
 	'throttleoverride-list-noresults' => 'The throttle override list is empty.',
+	'throttleoverride-validation-ipinvalid' => 'Invalid IP or IP range.',
+	'throttleoverride-validation-rangedisabled' => 'The ability to create throttle exemptions on ranges of IP addresses is disabled.',
+	'throttleoverride-validation-rangetoolarge' => 'Throttle exemptions over an IP range larger than $1 are not allowed.',
 );
 
 /** Message documentation (Message documentation)
@@ -74,6 +77,12 @@ $messages['qqq'] = array(
 	'throttleoverride-list-search' => 'Label for the sumbit button on [[Special:ThrottleOverrideList]].
 {{Identical|Search}}',
 	'throttleoverride-list-noresults' => 'Message displayed on [[Special:ThrottleOverrideList]] when the pager returns no results',
+	'throttleoverride-validation-ipinvalid' => 'Validation error displayed on Special:ThrottleOverride when an invalid IP address or IP range is given',
+	'throttleoverride-validation-rangedisabled' => 'Validation error displayed on Special:ThrottleOverride when a user tries to give an IP range to override for, but all range exemptions are disabled',
+	'throttleoverride-validation-rangetoolarge' => 'Validation error displayed on Special:ThrottleOverride when the IP range provided exceeds the configured allowable size.
+
+Parameters:
+$1 - The CIDR limit as configured',
 );
 
 /** Breton (brezhoneg)
