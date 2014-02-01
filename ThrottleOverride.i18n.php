@@ -136,9 +136,24 @@ $messages['es'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Armin1392
  * @author Reza1615
  */
 $messages['fa'] = array(
+	'throttleoverride-legend' => 'اطلاعات معافیت',
+	'throttleoverride-ipaddress' => 'آدرس آی‌پی یا محدوده',
+	'throttleoverride-success' => 'معافیت اجرا شد.',
+	'throttleoverride-types-all' => 'همهٔ انواع',
+	'throttleoverride-types-actcreate' => 'ایجاد حساب',
+	'throttleoverride-types-edit' => 'ویرایش‌های صفحه',
+	'throttleoverride-types-move' => 'حرکات صفحه',
+	'throttleoverride-types-mailpassword' => 'رایانامه‌های بازیابی رمز عبور',
+	'throttleoverride-types-emailuser' => 'رایانامه‌های کاربر',
+	'throttleoverride-list-legend' => 'فیلتر معافیت',
+	'throttleoverride-list-rangestart' => 'آغاز محدودهٔ آی‌پی',
+	'throttleoverride-list-rangeend' => 'پایان محدودهٔ‌ آی‌پی',
+	'throttleoverride-list-expiry' => 'انقضاء',
+	'throttleoverride-list-type' => 'عملیات مجاز',
 	'throttleoverride-list-reason' => 'دلیل',
 	'throttleoverride-list-search' => 'جستجو',
 );
