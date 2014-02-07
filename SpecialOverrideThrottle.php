@@ -56,8 +56,6 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'type' => 'text',
 				'label-message' => 'throttleoverride-ipaddress',
 				'required' => true,
-				'filter-callback' => 'IP::parseRange',
-				'validation-callback' => __CLASS__ . '::validateTargetField'
 			),
 			'Expiry' => array(
 				'type' => SpecialBlock::getSuggestedDurations() ? 'selectorother' : 'text',
@@ -66,7 +64,9 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'options' => SpecialBlock::getSuggestedDurations(),
 				'other' => $this->msg( 'ipbother' )->text(),
 				'filter-callback' => 'SpecialBlock::parseExpiryInput',
-				'validation-callback' => __CLASS__ . '::validateExpiryField',
+				'validation-callback' => function ( $value ) {
+						return (bool)$value;
+					},
 				'default' => $this->msg( 'ipb-default-expiry' )->inContentLanguage()->text()
 			),
 			'Reason' => array(
@@ -82,11 +82,17 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	}
 
 	function onSubmit( array $data ) {
+		$status = self::validateTarget( $data['Target'] );
+
+		if ( !$status->isOK() ) {
+			return $status;
+		}
+
 		return wfGetDB( DB_MASTER )->insert(
 			'throttle_override',
 			array(
-				'thr_range_start' => $data['Target'][0],
-				'thr_range_end' => $data['Target'][1],
+				'thr_range_start' => $status->value[0],
+				'thr_range_end' => $status->value[1],
 				'thr_expiry' => $data['Expiry'],
 				'thr_reason' => $data['Reason'],
 				'thr_type' => implode( ',', $data['Throttles'] )
@@ -100,22 +106,49 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	}
 
 	/**
-	 * @param $value
-	 * @param array $allData
-	 * @param HTMLForm $form
-	 * @return bool
+	 * @param $target
+	 *
+	 * @return Status
 	 */
-	public static function validateTargetField( $value, array $allData, HTMLForm $form ) {
-		return $value !== array( false, false );
-	}
+	public static function validateTarget( $target ) {
+		global $wgThrottleOverrideCIDRLimit;
 
-	/**
-	 * @param $value
-	 * @param array $allDatam
-	 * @param HTMLForm $form
-	 * @return bool
-	 */
-	public static function validateExpiryField( $value, array $allDatam, HTMLForm $form ) {
-		return (bool)$value;
+		$parsedRange = IP::parseRange( $target );
+
+		$status = Status::newGood( $parsedRange );
+
+		if ( $parsedRange === array( false, false ) ) {
+			$status->fatal( 'throttleoverride-validation-ipinvalid' );
+		} elseif ( $parsedRange[0] !== $parsedRange[1] ) {
+			list( $ip, $range ) = explode( '/', IP::sanitizeRange( $target ), 2 );
+
+			if (
+				( IP::isIPv4( $ip ) && $wgThrottleOverrideCIDRLimit['IPv4'] == 32 ) ||
+				( IP::isIPv6( $ip ) && $wgThrottleOverrideCIDRLimit['IPv6'] == 128 )
+			) {
+				// Range block effectively disabled
+				$status->fatal( 'throttleoverride-validation-rangedisabled' );
+			}
+
+			if (
+				( IP::isIPv4( $ip ) && $range > 32 ) ||
+				( IP::isIPv6( $ip ) && $range > 128 )
+			) {
+				// Dodgy range
+				$status->fatal( 'throttleoverride-validation-ipinvalid' );
+			}
+
+			if ( IP::isIPv4( $ip ) && $range < $wgThrottleOverrideCIDRLimit['IPv4'] ) {
+				$status->fatal( 'throttleoverride-validation-rangetoolarge',
+					$wgThrottleOverrideCIDRLimit['IPv4'] );
+			}
+
+			if ( IP::isIPv6( $ip ) && $range < $wgThrottleOverrideCIDRLimit['IPv6'] ) {
+				$status->fatal( 'throttleoverride-validation-rangetoolarge',
+					$wgThrottleOverrideCIDRLimit['IPv6'] );
+			}
+		}
+
+		return $status;
 	}
 }

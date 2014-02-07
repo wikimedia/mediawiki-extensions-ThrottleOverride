@@ -28,6 +28,17 @@ $wgExtensionCredits['other'][] = array(
 	'version' => 0.5,
 );
 
+/**
+ * Limits to be sit on range-exemptions
+ *
+ * This sets the CIDR range limit, i.e., the biggest possible CIDR range that
+ * can be used for each type of IP address.
+ */
+$wgThrottleOverrideCIDRLimit = array(
+	'IPv4' => 16,
+	'IPv6' => 19,
+);
+
 // Hooks and classes
 $wgAutoloadClasses['ThrottleOverrideHooks'] = __DIR__ . '/ThrottleOverride.hooks.php';
 $wgAutoloadClasses['SpecialOverrideThrottle'] = __DIR__ . '/SpecialOverrideThrottle.php';
