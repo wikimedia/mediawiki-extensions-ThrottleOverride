@@ -135,6 +135,9 @@ Für die Logbücher kann eine optionale Begründung angegeben werden.',
 	'throttleoverride-list-reason' => 'Grund',
 	'throttleoverride-list-search' => 'Suchen',
 	'throttleoverride-list-noresults' => 'Die Liste der Beschränkungsumgehungen ist leer.',
+	'throttleoverride-validation-ipinvalid' => 'Ungültige IP-Adresse oder ungültiger IP-Adressenbereich.',
+	'throttleoverride-validation-rangedisabled' => 'Die Möglichkeit zur Erstellung von Drosselungsausnahmen bei IP-Adressbereichen ist deaktiviert.',
+	'throttleoverride-validation-rangetoolarge' => 'Drosselungsausnahmen bei IP-Adressbereichen größer als $1 sind nicht erlaubt.',
 );
 
 /** Spanish (español)
@@ -196,6 +199,9 @@ Un motif facultatif peut être fourni pour les journaux.',
 	'throttleoverride-list-reason' => 'Motif',
 	'throttleoverride-list-search' => 'Rechercher',
 	'throttleoverride-list-noresults' => 'La liste des outrepassements de limites est vide.',
+	'throttleoverride-validation-ipinvalid' => 'Adresse IP non valide ou plage d’adresse IP.',
+	'throttleoverride-validation-rangedisabled' => 'La possibilité de créer des exemptions d’accélérateur sur des plages d’adresses IP est désactivée.',
+	'throttleoverride-validation-rangetoolarge' => 'Les exemptions d’accélérateur sur une plage d’adresses IP plus grande que $1 ne sont pas autorisées.',
 );
 
 /** Galician (galego)
@@ -347,6 +353,9 @@ $messages['mk'] = array(
 	'throttleoverride-list-reason' => 'Причина',
 	'throttleoverride-list-search' => 'Пребарај',
 	'throttleoverride-list-noresults' => 'Списокот за наметнати презапишувања е празен.',
+	'throttleoverride-validation-ipinvalid' => 'Неважечка IP-адреса или IP-опсег.',
+	'throttleoverride-validation-rangedisabled' => 'Можноста за создавање на исклучоци од ограничувањето на IP-опсези е исклучена.',
+	'throttleoverride-validation-rangetoolarge' => 'Не се одзволени исклучоци од ограничувањето по IP-опсег поголем од $1.',
 );
 
 /** Dutch (Nederlands)
@@ -457,6 +466,9 @@ $messages['ru'] = array(
 	'throttleoverride-list-reason' => 'Причина',
 	'throttleoverride-list-search' => 'Найти',
 	'throttleoverride-list-noresults' => 'Список переопределений ограничений пуст.',
+	'throttleoverride-validation-ipinvalid' => 'Недопустимый IP-адрес или диапазон IP.',
+	'throttleoverride-validation-rangedisabled' => 'Возможность создания исключений с ограничением по IP-диапазону отключена.',
+	'throttleoverride-validation-rangetoolarge' => 'Исключения с ограничением в IP-диапазонах больше, чем $1, не разрешены.',
 );
 
 /** Swedish (svenska)
