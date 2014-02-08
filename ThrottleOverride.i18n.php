@@ -517,6 +517,7 @@ Maaaring magbigay o hindi magbigay ng dahilan para sa mga talaan.',
 /** Ukrainian (українська)
  * @author Andriykopanytsia
  * @author Base
+ * @author Ата
  */
 $messages['uk'] = array(
 	'overridethrottle' => 'Обхід обмеження частоти створення облікових записів',
@@ -543,6 +544,9 @@ $messages['uk'] = array(
 	'throttleoverride-list-reason' => 'Причина',
 	'throttleoverride-list-search' => 'Пошук',
 	'throttleoverride-list-noresults' => 'Список обходів обмеження частоти - порожній.',
+	'throttleoverride-validation-ipinvalid' => 'Неприпустима IP-адреса або діапазон IP.',
+	'throttleoverride-validation-rangedisabled' => 'Можливість створювати винятки з діапазонів IP-адрес відключена.',
+	'throttleoverride-validation-rangetoolarge' => 'Винятки з обмеженнями у діапазонах IP-адрес більших, ніж $1, не дозволяються.',
 );
 
 /** Simplified Chinese (中文（简体）‎)
