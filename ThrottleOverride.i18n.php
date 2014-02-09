@@ -77,12 +77,12 @@ $messages['qqq'] = array(
 	'throttleoverride-list-search' => 'Label for the sumbit button on [[Special:ThrottleOverrideList]].
 {{Identical|Search}}',
 	'throttleoverride-list-noresults' => 'Message displayed on [[Special:ThrottleOverrideList]] when the pager returns no results',
-	'throttleoverride-validation-ipinvalid' => 'Validation error displayed on Special:ThrottleOverride when an invalid IP address or IP range is given',
-	'throttleoverride-validation-rangedisabled' => 'Validation error displayed on Special:ThrottleOverride when a user tries to give an IP range to override for, but all range exemptions are disabled',
-	'throttleoverride-validation-rangetoolarge' => 'Validation error displayed on Special:ThrottleOverride when the IP range provided exceeds the configured allowable size.
+	'throttleoverride-validation-ipinvalid' => 'Validation error displayed on [[Special:ThrottleOverride]] when an invalid IP address or IP range is given.',
+	'throttleoverride-validation-rangedisabled' => 'Validation error displayed on [[Special:ThrottleOverride]] when a user tries to give an IP range to override for, but all range exemptions are disabled.',
+	'throttleoverride-validation-rangetoolarge' => 'Validation error displayed on [[Special:ThrottleOverride]] when the IP range provided exceeds the configured allowable size.
 
 Parameters:
-$1 - The CIDR limit as configured',
+* $1 - The CIDR limit as configured',
 );
 
 /** Breton (brezhoneg)
@@ -278,6 +278,8 @@ $messages['ja'] = array(
 	'throttleoverride-list-expiry' => '有効期限',
 	'throttleoverride-list-type' => '許可された操作',
 	'throttleoverride-list-reason' => '理由',
+	'throttleoverride-list-search' => '検索',
+	'throttleoverride-validation-ipinvalid' => 'IP アドレスまたは IP 範囲が無効です。',
 );
 
 /** Korean (한국어)
