@@ -232,6 +232,9 @@ Pode especificar un motivo opcional para os rexistros.',
 	'throttleoverride-list-reason' => 'Motivo',
 	'throttleoverride-list-search' => 'Procurar',
 	'throttleoverride-list-noresults' => 'A lista de restricións ignoradas está baleira.',
+	'throttleoverride-validation-ipinvalid' => 'O enderezo IP ou o rango do enderezo IP non é válido.',
+	'throttleoverride-validation-rangedisabled' => 'Está desactivada a posibilidade de crear exencións de restricións nos rangos dos enderezos IP.',
+	'throttleoverride-validation-rangetoolarge' => 'Non están permitidas as restricións nun rango de enderezos IP maior que $1.',
 );
 
 /** Italian (italiano)
