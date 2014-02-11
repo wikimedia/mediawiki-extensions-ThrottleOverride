@@ -421,6 +421,13 @@ $messages['oc'] = array(
 	'throttleoverride-list-noresults' => 'La lista dels otrapassaments de limits es voida.',
 );
 
+/** Polish (polski)
+ * @author Chrumps
+ */
+$messages['pl'] = array(
+	'throttleoverride-validation-ipinvalid' => 'Nieprawidłowy adres IP lub zakres adresów IP.',
+);
+
 /** Brazilian Portuguese (português do Brasil)
  * @author Luckas
  */
