@@ -562,6 +562,7 @@ $messages['uk'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Liuxinyu970226
  * @author Shirayuki
  * @author Xiaomingyan
  * @author Yfdyh000
@@ -591,6 +592,7 @@ $messages['zh-hans'] = array(
 	'throttleoverride-list-reason' => '原因',
 	'throttleoverride-list-search' => '搜索',
 	'throttleoverride-list-noresults' => '节流阀覆盖列表是空的。',
+	'throttleoverride-validation-ipinvalid' => '无效IP或IP段。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
