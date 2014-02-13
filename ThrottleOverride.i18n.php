@@ -314,6 +314,9 @@ $messages['ko'] = array(
 	'throttleoverride-list-reason' => '이유',
 	'throttleoverride-list-search' => '검색',
 	'throttleoverride-list-noresults' => '스로틀 무시 목록이 비었습니다.',
+	'throttleoverride-validation-ipinvalid' => '올바르지 않은 IP 또는 IP 대역.',
+	'throttleoverride-validation-rangedisabled' => 'IP 주소 대역에 대해 문서 생성 제한을 면제할 수 있는 권한이 비활성화 됐습니다.',
+	'throttleoverride-validation-rangetoolarge' => '$1보다 더 큰 IP 대역에 대해 문서 생성 제한 면제는 허용되지 않습니다.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
