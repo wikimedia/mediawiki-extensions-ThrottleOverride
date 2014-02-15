@@ -428,6 +428,7 @@ $messages['oc'] = array(
  * @author Chrumps
  */
 $messages['pl'] = array(
+	'throttleoverride-list-reason' => 'Powód',
 	'throttleoverride-validation-ipinvalid' => 'Nieprawidłowy adres IP lub zakres adresów IP.',
 );
 
