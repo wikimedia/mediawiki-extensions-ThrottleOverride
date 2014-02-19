@@ -19,6 +19,11 @@ $specialPageAliases['ar'] = array(
 	'ThrottleOverride' => array( 'تجاوز_الحد' ),
 );
 
+/** Egyptian Spoken Arabic (مصرى) */
+$specialPageAliases['arz'] = array(
+	'ThrottleOverride' => array( 'تجاوز_الحد' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'ThrottleOverride' => array( 'Beschränkungsumgehung' ),
