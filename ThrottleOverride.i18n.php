@@ -98,6 +98,7 @@ $messages['br'] = array(
  */
 $messages['ce'] = array(
 	'throttleoverride-list-search' => 'Лаха',
+	'throttleoverride-validation-ipinvalid' => 'Магийна доцу IP-адрес я диапазон IP.',
 );
 
 /** Church Slavic (словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
