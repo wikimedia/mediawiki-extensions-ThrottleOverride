@@ -493,8 +493,8 @@ $messages['ru'] = array(
  */
 $messages['sco'] = array(
 	'throttleoverride-validation-ipinvalid' => 'Invalid IP or IP range.',
-	'throttleoverride-validation-rangedisabled' => 'The abeelity tae create throttle exemptions on ranges o IP addresses is disabled.',
-	'throttleoverride-validation-rangetoolarge' => "Throttle exemptions o'er aen IP range muckler than $1 ar no allow'd.",
+	'throttleoverride-validation-rangedisabled' => 'The abeelitie tae mak throttle exemptions oan ranges o IP addresses is disabled.',
+	'throttleoverride-validation-rangetoolarge' => 'Throttle exemptions ower aen IP range muckler than $1 ar no permited.',
 );
 
 /** Swedish (svenska)
@@ -513,6 +513,7 @@ $messages['sv'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Chaduvari
  * @author Ravichandra
  * @author Veeven
  */
@@ -520,7 +521,7 @@ $messages['te'] = array(
 	'throttleoverride-types-actcreate' => 'ఖాతా సృష్టింపు',
 	'throttleoverride-types-edit' => 'పేజీ మార్పులు',
 	'throttleoverride-types-move' => 'పేజీల తరలింపులు',
-	'throttleoverride-validation-ipinvalid' => 'ఐపీ లేదా ఐపీ వ్యాప్తి సరైంది కాదు.',
+	'throttleoverride-validation-ipinvalid' => 'చెల్లని ఐపీ లేదా ఐపీ శ్రేణి.',
 );
 
 /** Tagalog (Tagalog)
