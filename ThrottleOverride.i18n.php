@@ -157,6 +157,8 @@ $messages['fa'] = array(
 	'throttleoverridelist' => 'فهرست لغوهای دریچه گاز',
 	'throttleoverride-desc' => 'اجازه لغو آدرس آی‌پی دریچه‌های گاز',
 	'throttleoverride-legend' => 'اطلاعات معافیت',
+	'throttleoverride-text' => 'آدرس آی‌پی یا محدوده‌ای را که می‌خواهید از برخی دریچه‌های گاز معاف کنید را وارد کنید، و چه مدت معافیت باید طول بکشد.
+یک دلیل اختیاری می‌تواند برای سیاهه‌ها داده شود.',
 	'throttleoverride-ipaddress' => 'آدرس آی‌پی یا محدوده',
 	'throttleoverride-success' => 'معافیت اجرا شد.',
 	'throttleoverride-types' => 'انواع گاز:',
