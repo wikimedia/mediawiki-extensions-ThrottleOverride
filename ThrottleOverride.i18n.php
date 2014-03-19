@@ -39,7 +39,7 @@ An optional reason can be given for the logs.',
 	'throttleoverride-list-reason' => 'Reason',
 	'throttleoverride-list-search' => 'Search',
 	'throttleoverride-list-noresults' => 'The throttle override list is empty.',
-	'throttleoverride-validation-ipinvalid' => 'Invalid IP or IP range.',
+	'throttleoverride-validation-ipinvalid' => 'Invalid IP address or IP range.',
 	'throttleoverride-validation-rangedisabled' => 'The ability to create throttle exemptions on ranges of IP addresses is disabled.',
 	'throttleoverride-validation-rangetoolarge' => 'Throttle exemptions over an IP range larger than $1 are not allowed.',
 );
