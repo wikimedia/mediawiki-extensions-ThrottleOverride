@@ -508,6 +508,13 @@ $messages['sco'] = array(
 	'throttleoverride-validation-rangetoolarge' => 'Throttle exemptions ower aen IP range muckler than $1 ar no permited.',
 );
 
+/** Sinhala (සිංහල)
+ * @author Sahan.ssw
+ */
+$messages['si'] = array(
+	'throttleoverride-validation-ipinvalid' => 'IP ලිපිනය හෝ IP පරාසය වලංගු නැත.',
+);
+
 /** Swedish (svenska)
  * @author Jopparn
  */
