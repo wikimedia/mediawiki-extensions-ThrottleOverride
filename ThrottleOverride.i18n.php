@@ -343,6 +343,7 @@ $messages['lb'] = array(
 	'throttleoverride-types-edit' => 'Säitenännerungen',
 	'throttleoverride-types-move' => 'Geréckelt Säiten',
 	'throttleoverride-types-emailuser' => 'E-Mailen u Benotzer',
+	'throttleoverride-validation-ipinvalid' => 'Net valabel IP-Adress oder IP-Range.',
 );
 
 /** Macedonian (македонски)
