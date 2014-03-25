@@ -545,6 +545,7 @@ $messages['te'] = array(
 
 /** Tagalog (Tagalog)
  * @author AnakngAraw
+ * @author Jojit fb
  */
 $messages['tl'] = array(
 	'overridethrottle' => 'Pangibabawan ang pagpigil sa paglikha ng akawnt',
@@ -558,7 +559,7 @@ Maaaring magbigay o hindi magbigay ng dahilan para sa mga talaan.',
 	'throttleoverride-types-actcreate' => 'Paglikha ng akawnt',
 	'throttleoverride-types-edit' => 'Mga pagbago sa pahina',
 	'throttleoverride-types-move' => 'Mga paglipat ng pahina',
-	'throttleoverride-types-mailpassword' => 'Mga elektronikong liham sa muling pagpapanumbalik ng hudyat',
+	'throttleoverride-types-mailpassword' => 'Mga email sa muling pagpapanumbalik ng password',
 	'throttleoverride-types-emailuser' => 'Mga elektronikong liham ng tagagamit',
 );
 
