@@ -1,0 +1,33 @@
+{
+    "@metadata": {
+        "authors": [
+            "Metalhead64"
+        ]
+    },
+    "overridethrottle": "Die Kontenerstellungsbeschränkung umgehen",
+    "throttleoverridelist": "Liste von Beschränkungsumgehungen",
+    "throttleoverride-desc": "Ermöglicht das Umgehen von IP-Adressbeschränkungen",
+    "throttleoverride-legend": "Ausnahmeinformationen",
+    "throttleoverride-text": "Gib die IP-Adresse oder den Adressbereich an, die du von bestimmten Beschränkungen ausnehmen willst und wie lange die Ausnahme gelten soll.\nFür die Logbücher kann eine optionale Begründung angegeben werden.",
+    "throttleoverride-ipaddress": "IP-Adresse oder Adressenbereich",
+    "throttleoverride-success": "Die Ausnahme wurde angewandt.",
+    "throttleoverride-types": "Beschränkungstypen:",
+    "throttleoverride-types-all": "Alle Typen",
+    "throttleoverride-types-actcreate": "Kontenerstellung",
+    "throttleoverride-types-edit": "Seitenbearbeitungen",
+    "throttleoverride-types-move": "Seitenverschiebungen",
+    "throttleoverride-types-mailpassword": "Passwortwiederherstellungs-Mails",
+    "throttleoverride-types-emailuser": "Benutzer-Mails",
+    "throttleoverride-list-throttletype": "Beschränkungstyp:",
+    "throttleoverride-list-legend": "Ausnahmefilterung",
+    "throttleoverride-list-rangestart": "Start des IP-Adressbereichs",
+    "throttleoverride-list-rangeend": "Ende des IP-Adressbereichs",
+    "throttleoverride-list-expiry": "Ablauf",
+    "throttleoverride-list-type": "Erlaubte Aktionen",
+    "throttleoverride-list-reason": "Grund",
+    "throttleoverride-list-search": "Suchen",
+    "throttleoverride-list-noresults": "Die Liste der Beschränkungsumgehungen ist leer.",
+    "throttleoverride-validation-ipinvalid": "Ungültige IP-Adresse oder ungültiger IP-Adressenbereich.",
+    "throttleoverride-validation-rangedisabled": "Die Möglichkeit zur Erstellung von Drosselungsausnahmen bei IP-Adressbereichen ist deaktiviert.",
+    "throttleoverride-validation-rangetoolarge": "Drosselungsausnahmen bei IP-Adressbereichen größer als $1 sind nicht erlaubt."
+}

@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Chaduvari",
+            "Ravichandra",
+            "Veeven"
+        ]
+    },
+    "throttleoverride-types-actcreate": "ఖాతా సృష్టింపు",
+    "throttleoverride-types-edit": "పేజీ మార్పులు",
+    "throttleoverride-types-move": "పేజీల తరలింపులు",
+    "throttleoverride-validation-ipinvalid": "చెల్లని ఐపీ లేదా ఐపీ శ్రేణి."
+}

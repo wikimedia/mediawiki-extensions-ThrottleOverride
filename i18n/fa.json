@@ -1,0 +1,34 @@
+{
+    "@metadata": {
+        "authors": [
+            "Armin1392",
+            "Reza1615"
+        ]
+    },
+    "overridethrottle": "لغو گاز ایجاد حساب کاربری",
+    "throttleoverridelist": "فهرست لغوهای دریچه گاز",
+    "throttleoverride-desc": "اجازه لغو آدرس آی‌پی دریچه‌های گاز",
+    "throttleoverride-legend": "اطلاعات معافیت",
+    "throttleoverride-text": "آدرس آی‌پی یا محدوده‌ای را که می‌خواهید از برخی دریچه‌های گاز معاف کنید را وارد کنید، و چه مدت معافیت باید طول بکشد.\nیک دلیل اختیاری می‌تواند برای سیاهه‌ها داده شود.",
+    "throttleoverride-ipaddress": "آدرس آی‌پی یا محدوده",
+    "throttleoverride-success": "معافیت اجرا شد.",
+    "throttleoverride-types": "انواع گاز:",
+    "throttleoverride-types-all": "همهٔ انواع",
+    "throttleoverride-types-actcreate": "ایجاد حساب",
+    "throttleoverride-types-edit": "ویرایش‌های صفحه",
+    "throttleoverride-types-move": "حرکات صفحه",
+    "throttleoverride-types-mailpassword": "رایانامه‌های بازیابی رمز عبور",
+    "throttleoverride-types-emailuser": "رایانامه‌های کاربر",
+    "throttleoverride-list-throttletype": "نوع گاز:",
+    "throttleoverride-list-legend": "فیلتر معافیت",
+    "throttleoverride-list-rangestart": "آغاز محدودهٔ آی‌پی",
+    "throttleoverride-list-rangeend": "پایان محدودهٔ‌ آی‌پی",
+    "throttleoverride-list-expiry": "انقضاء",
+    "throttleoverride-list-type": "عملیات مجاز",
+    "throttleoverride-list-reason": "دلیل",
+    "throttleoverride-list-search": "جستجو",
+    "throttleoverride-list-noresults": "فهرست لغو دریچه گاز خالی است.",
+    "throttleoverride-validation-ipinvalid": "آی‌پی نامعتبر یا دامنه آی‌پی.",
+    "throttleoverride-validation-rangedisabled": "توانایی برای ایجاد معافیت‌های گاز در محدوده‌های آدرس آی‌پی غیرفعال شده‌است.",
+    "throttleoverride-validation-rangetoolarge": "معافیت‌های دریچه گاز بیش از محدوده آی‌پی بزرگتر از $1 مجاز نیستند."
+}

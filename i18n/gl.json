@@ -1,0 +1,33 @@
+{
+    "@metadata": {
+        "authors": [
+            "Toliño"
+        ]
+    },
+    "overridethrottle": "Ignorar a restrición de creación de contas",
+    "throttleoverridelist": "Lista de restricións ignoradas",
+    "throttleoverride-desc": "Permite ignorar as restricións dos enderezos IP",
+    "throttleoverride-legend": "Información sobre a exención",
+    "throttleoverride-text": "Insira o enderezo IP ou o rango que queira eximir de certas restricións, así como a duración da exención.\nPode especificar un motivo opcional para os rexistros.",
+    "throttleoverride-ipaddress": "Enderezo IP ou rango",
+    "throttleoverride-success": "Aplicouse a exención.",
+    "throttleoverride-types": "Tipos de restrición:",
+    "throttleoverride-types-all": "Todos os tipos",
+    "throttleoverride-types-actcreate": "Creación de contas",
+    "throttleoverride-types-edit": "Edicións da páxina",
+    "throttleoverride-types-move": "Traslados da páxina",
+    "throttleoverride-types-mailpassword": "Correos electrónicos de recuperación do contrasinal",
+    "throttleoverride-types-emailuser": "Correos electrónicos do usuario",
+    "throttleoverride-list-throttletype": "Tipo de restrición:",
+    "throttleoverride-list-legend": "Filtro de exencións",
+    "throttleoverride-list-rangestart": "Inicio do rango de enderezos IP",
+    "throttleoverride-list-rangeend": "Fin do rango de enderezos IP",
+    "throttleoverride-list-expiry": "Caducidade",
+    "throttleoverride-list-type": "Accións permitidas",
+    "throttleoverride-list-reason": "Motivo",
+    "throttleoverride-list-search": "Procurar",
+    "throttleoverride-list-noresults": "A lista de restricións ignoradas está baleira.",
+    "throttleoverride-validation-ipinvalid": "O enderezo IP ou o rango do enderezo IP non é válido.",
+    "throttleoverride-validation-rangedisabled": "Está desactivada a posibilidade de crear exencións de restricións nos rangos dos enderezos IP.",
+    "throttleoverride-validation-rangetoolarge": "Non están permitidas as restricións nun rango de enderezos IP maior que $1."
+}

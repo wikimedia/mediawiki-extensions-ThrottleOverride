@@ -1,0 +1,33 @@
+{
+    "@metadata": {
+        "authors": [
+            "Shirayuki"
+        ]
+    },
+    "overridethrottle": "{{doc-special|OverrideThrottle}}",
+    "throttleoverridelist": "{{doc-special|ThrottleOverrideList}}",
+    "throttleoverride-desc": "{{desc|name=Throttle Override|url=http://www.mediawiki.org/wiki/Extension:ThrottleOverride}}",
+    "throttleoverride-legend": "Label for the legend on [[Special:OverrideThrottle]]",
+    "throttleoverride-text": "Intro text on [[Special:OverrideThrottle]]",
+    "throttleoverride-ipaddress": "Label for the IP address field on [[Special:OverrideThrottle]]",
+    "throttleoverride-success": "Text displayed after a successful submission on [[Special:OverrideThrottle]]",
+    "throttleoverride-types": "Label for the types of throttles that can be overridden.\n{{Identical|Throttle type}}",
+    "throttleoverride-types-all": "Label for the throttle type representing all types (used in [[Special:ThrottleOverrideList]]).\n{{Identical|All types}}",
+    "throttleoverride-types-actcreate": "Label for the throttle type for account creations",
+    "throttleoverride-types-edit": "Label for the throttle type for page edits",
+    "throttleoverride-types-move": "Label for the throttle type for page moves",
+    "throttleoverride-types-mailpassword": "Label for the throttle type for password recovery requests",
+    "throttleoverride-types-emailuser": "Label for the throttle type for user emails",
+    "throttleoverride-list-throttletype": "Label for the throttle type on [[Special:ThrottleOverrideList]].\n{{Identical|Throttle type}}",
+    "throttleoverride-list-legend": "Fieldset legend on [[Special:ThrottleOverrideList]]",
+    "throttleoverride-list-rangestart": "Table header in the throttle override list for the starting IP address of a throttle override",
+    "throttleoverride-list-rangeend": "Table header in the throttle override list for the ending IP address of a throttle override",
+    "throttleoverride-list-expiry": "Table header in the throttle override list for the expiry date and time of a throttle override.\n{{Identical|Expiry}}",
+    "throttleoverride-list-type": "Table header in the throttle override list for the actions allowed by a throttle override",
+    "throttleoverride-list-reason": "Table header in the throttle override list for the reason of a throttle override.\n{{Identical|Reason}}",
+    "throttleoverride-list-search": "Label for the sumbit button on [[Special:ThrottleOverrideList]].\n{{Identical|Search}}",
+    "throttleoverride-list-noresults": "Message displayed on [[Special:ThrottleOverrideList]] when the pager returns no results",
+    "throttleoverride-validation-ipinvalid": "Validation error displayed on [[Special:ThrottleOverride]] when an invalid IP address or IP range is given.",
+    "throttleoverride-validation-rangedisabled": "Validation error displayed on [[Special:ThrottleOverride]] when a user tries to give an IP range to override for, but all range exemptions are disabled.",
+    "throttleoverride-validation-rangetoolarge": "Validation error displayed on [[Special:ThrottleOverride]] when the IP range provided exceeds the configured allowable size.\n\nParameters:\n* $1 - The CIDR limit as configured"
+}

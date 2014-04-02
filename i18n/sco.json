@@ -1,0 +1,10 @@
+{
+    "@metadata": {
+        "authors": [
+            "John Reid"
+        ]
+    },
+    "throttleoverride-validation-ipinvalid": "Invalid IP or IP range.",
+    "throttleoverride-validation-rangedisabled": "The abeelitie tae mak throttle exemptions oan ranges o IP addresses is disabled.",
+    "throttleoverride-validation-rangetoolarge": "Throttle exemptions ower aen IP range muckler than $1 ar no permited."
+}

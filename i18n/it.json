@@ -1,0 +1,19 @@
+{
+    "@metadata": {
+        "authors": [
+            "Beta16"
+        ]
+    },
+    "overridethrottle": "Ignora la limitazione nella creazione di utenze",
+    "throttleoverride-desc": "Consente di ignorare le limitazioni per indirizzo IP",
+    "throttleoverride-legend": "Informazioni sull'esenzione",
+    "throttleoverride-text": "Inserisci l'indirizzo IP o l'intervallo che si vuole rendere esente da alcune limitazioni, e per quanto tempo l'esenzione deve durare.\nPuoi indicare anche un motivo che sarà visibile nei registri.",
+    "throttleoverride-ipaddress": "Indirizzo IP o intervallo",
+    "throttleoverride-success": "L'esenzione è stata applicata.",
+    "throttleoverride-types": "Tipi di limitazioni:",
+    "throttleoverride-types-actcreate": "Creazione di utenze",
+    "throttleoverride-types-edit": "Modifiche alle pagine",
+    "throttleoverride-types-move": "Spostamenti di pagine",
+    "throttleoverride-types-mailpassword": "Email di recupero password",
+    "throttleoverride-types-emailuser": "Email agli utenti"
+}

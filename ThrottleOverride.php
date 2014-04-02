@@ -1,5 +1,4 @@
 <?php
-
 /**
  * MediaWiki extension to temporarily lift throttles.
  * Copyright (C) 2013 Tyler Romeo <tylerromeo@gmail.com>
@@ -25,7 +24,7 @@ $wgExtensionCredits['other'][] = array(
 	'author' => 'Tyler Romeo',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:ThrottleOverride',
 	'descriptionmsg' => 'throttleoverride-desc',
-	'version' => 0.5,
+	'version' => '0.6.0',
 );
 
 /**
@@ -53,5 +52,6 @@ Hooks::register( 'PingLimiter', 'ThrottleOverrideHooks::onPingLimiter' );
 Hooks::register( 'ExemptFromAccountCreationThrottle', 'ThrottleOverrideHooks::onExemptFromAccountCreationThrottle' );
 Hooks::register( 'LoadExtensionSchemaUpdates', 'ThrottleOverrideHooks::onLoadExtensionSchemaUpdates' );
 
+$wgMessagesDirs['OverrideThrottle'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['OverrideThrottle'] = __DIR__ . '/ThrottleOverride.i18n.php';
 $wgExtensionMessagesFiles['OverrideThrottleAlias'] = __DIR__ . '/ThrottleOverride.i18n.alias.php';
