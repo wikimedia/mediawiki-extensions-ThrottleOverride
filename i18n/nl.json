@@ -1,7 +1,8 @@
 {
     "@metadata": {
         "authors": [
-            "Siebrand"
+            "Siebrand",
+            "Southparkfan"
         ]
     },
     "overridethrottle": "Beperkingen voor aanmaken gebruikers negeren",
@@ -26,5 +27,6 @@
     "throttleoverride-list-type": "Toegestane handelingen",
     "throttleoverride-list-reason": "Reden",
     "throttleoverride-list-search": "Zoeken",
-    "throttleoverride-list-noresults": "De lijst met drempelwaardebeperkingen is leeg."
+    "throttleoverride-list-noresults": "De lijst met drempelwaardebeperkingen is leeg.",
+    "throttleoverride-validation-ipinvalid": "Ongeldig IP-adres of IP-range."
 }
