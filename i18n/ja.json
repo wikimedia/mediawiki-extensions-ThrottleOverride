@@ -1,29 +1,29 @@
 {
-    "@metadata": {
-        "authors": [
-            "Shirayuki"
-        ]
-    },
-    "overridethrottle": "アカウント作成の制限の回避",
-    "throttleoverride-desc": "IP アドレスの制限を回避できるようにする",
-    "throttleoverride-legend": "免除の情報",
-    "throttleoverride-text": "制限を免除する IP アドレスまたは範囲、およびその制限の期間を入力してください。\n記録用の理由は省略できます。",
-    "throttleoverride-ipaddress": "IP アドレスまたは範囲",
-    "throttleoverride-success": "免除を適用しました。",
-    "throttleoverride-types": "制限の種類:",
-    "throttleoverride-types-all": "すべての種類",
-    "throttleoverride-types-actcreate": "アカウント作成",
-    "throttleoverride-types-edit": "ページの編集",
-    "throttleoverride-types-move": "ページの移動",
-    "throttleoverride-types-mailpassword": "パスワード再発行メールの送信",
-    "throttleoverride-types-emailuser": "利用者へのメール送信",
-    "throttleoverride-list-throttletype": "制限の種類:",
-    "throttleoverride-list-legend": "フィルタリングの免除",
-    "throttleoverride-list-rangestart": "IP 範囲の始点",
-    "throttleoverride-list-rangeend": "IP 範囲の終点",
-    "throttleoverride-list-expiry": "有効期限",
-    "throttleoverride-list-type": "許可された操作",
-    "throttleoverride-list-reason": "理由",
-    "throttleoverride-list-search": "検索",
-    "throttleoverride-validation-ipinvalid": "IP アドレスまたは IP 範囲が無効です。"
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"overridethrottle": "アカウント作成の制限の回避",
+	"throttleoverride-desc": "IP アドレスの制限を回避できるようにする",
+	"throttleoverride-legend": "免除の情報",
+	"throttleoverride-text": "制限を免除する IP アドレスまたは範囲、およびその制限の期間を入力してください。\n記録用の理由は省略できます。",
+	"throttleoverride-ipaddress": "IP アドレスまたは範囲",
+	"throttleoverride-success": "免除を適用しました。",
+	"throttleoverride-types": "制限の種類:",
+	"throttleoverride-types-all": "すべての種類",
+	"throttleoverride-types-actcreate": "アカウント作成",
+	"throttleoverride-types-edit": "ページの編集",
+	"throttleoverride-types-move": "ページの移動",
+	"throttleoverride-types-mailpassword": "パスワード再発行メールの送信",
+	"throttleoverride-types-emailuser": "利用者へのメール送信",
+	"throttleoverride-list-throttletype": "制限の種類:",
+	"throttleoverride-list-legend": "フィルタリングの免除",
+	"throttleoverride-list-rangestart": "IP 範囲の始点",
+	"throttleoverride-list-rangeend": "IP 範囲の終点",
+	"throttleoverride-list-expiry": "有効期限",
+	"throttleoverride-list-type": "許可された操作",
+	"throttleoverride-list-reason": "理由",
+	"throttleoverride-list-search": "検索",
+	"throttleoverride-validation-ipinvalid": "IP アドレスまたは IP 範囲が無効です。"
 }

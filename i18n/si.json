@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Sahan.ssw"
-        ]
-    },
-    "throttleoverride-validation-ipinvalid": "IP ලිපිනය හෝ IP පරාසය වලංගු නැත."
+	"@metadata": {
+		"authors": [
+			"Sahan.ssw"
+		]
+	},
+	"throttleoverride-validation-ipinvalid": "IP ලිපිනය හෝ IP පරාසය වලංගු නැත."
 }

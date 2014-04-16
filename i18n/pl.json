@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Chrumps"
-        ]
-    },
-    "throttleoverride-list-reason": "Powód",
-    "throttleoverride-validation-ipinvalid": "Nieprawidłowy adres IP lub zakres adresów IP."
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"throttleoverride-list-reason": "Powód",
+	"throttleoverride-validation-ipinvalid": "Nieprawidłowy adres IP lub zakres adresów IP."
 }

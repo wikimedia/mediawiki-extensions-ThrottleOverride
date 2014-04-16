@@ -1,33 +1,33 @@
 {
-    "@metadata": {
-        "authors": [
-            "Bjankuloski06"
-        ]
-    },
-    "overridethrottle": "Избегни го ограничувањето за создавање сметки",
-    "throttleoverridelist": "Список на наметнати презапишувања",
-    "throttleoverride-desc": "Овозможува избегнување на ограничувања на IP-адреси",
-    "throttleoverride-legend": "Информации за изземањето",
-    "throttleoverride-text": "Внесете IP-адреса или опсег од адреси што сакате да ги изземете од ограничувања и колку долго да трае изземањето.\nЗа евиденција во дневниците, можете да дадете и образложение.",
-    "throttleoverride-ipaddress": "IP-адреса или опсег",
-    "throttleoverride-success": "Изземањето е применето.",
-    "throttleoverride-types": "Типови на ограничувања:",
-    "throttleoverride-types-all": "Сите видови",
-    "throttleoverride-types-actcreate": "Создавање на сметка",
-    "throttleoverride-types-edit": "Уредување на страници",
-    "throttleoverride-types-move": "Преместување на страници",
-    "throttleoverride-types-mailpassword": "Повраќање на лозинка по е-пошта",
-    "throttleoverride-types-emailuser": "Е-пошта од корисникот",
-    "throttleoverride-list-throttletype": "Вид на наметнување:",
-    "throttleoverride-list-legend": "Филтрирање по изземања",
-    "throttleoverride-list-rangestart": "Почеток на IP-опсегот",
-    "throttleoverride-list-rangeend": "Крај на IP-опсегот",
-    "throttleoverride-list-expiry": "Истек",
-    "throttleoverride-list-type": "Дозволени дејства:",
-    "throttleoverride-list-reason": "Причина",
-    "throttleoverride-list-search": "Пребарај",
-    "throttleoverride-list-noresults": "Списокот за наметнати презапишувања е празен.",
-    "throttleoverride-validation-ipinvalid": "Неважечка IP-адреса или IP-опсег.",
-    "throttleoverride-validation-rangedisabled": "Можноста за создавање на исклучоци од ограничувањето на IP-опсези е исклучена.",
-    "throttleoverride-validation-rangetoolarge": "Не се одзволени исклучоци од ограничувањето по IP-опсег поголем од $1."
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"overridethrottle": "Избегни го ограничувањето за создавање сметки",
+	"throttleoverridelist": "Список на наметнати презапишувања",
+	"throttleoverride-desc": "Овозможува избегнување на ограничувања на IP-адреси",
+	"throttleoverride-legend": "Информации за изземањето",
+	"throttleoverride-text": "Внесете IP-адреса или опсег од адреси што сакате да ги изземете од ограничувања и колку долго да трае изземањето.\nЗа евиденција во дневниците, можете да дадете и образложение.",
+	"throttleoverride-ipaddress": "IP-адреса или опсег",
+	"throttleoverride-success": "Изземањето е применето.",
+	"throttleoverride-types": "Типови на ограничувања:",
+	"throttleoverride-types-all": "Сите видови",
+	"throttleoverride-types-actcreate": "Создавање на сметка",
+	"throttleoverride-types-edit": "Уредување на страници",
+	"throttleoverride-types-move": "Преместување на страници",
+	"throttleoverride-types-mailpassword": "Повраќање на лозинка по е-пошта",
+	"throttleoverride-types-emailuser": "Е-пошта од корисникот",
+	"throttleoverride-list-throttletype": "Вид на наметнување:",
+	"throttleoverride-list-legend": "Филтрирање по изземања",
+	"throttleoverride-list-rangestart": "Почеток на IP-опсегот",
+	"throttleoverride-list-rangeend": "Крај на IP-опсегот",
+	"throttleoverride-list-expiry": "Истек",
+	"throttleoverride-list-type": "Дозволени дејства:",
+	"throttleoverride-list-reason": "Причина",
+	"throttleoverride-list-search": "Пребарај",
+	"throttleoverride-list-noresults": "Списокот за наметнати презапишувања е празен.",
+	"throttleoverride-validation-ipinvalid": "Неважечка IP-адреса или IP-опсег.",
+	"throttleoverride-validation-rangedisabled": "Можноста за создавање на исклучоци од ограничувањето на IP-опсези е исклучена.",
+	"throttleoverride-validation-rangetoolarge": "Не се одзволени исклучоци од ограничувањето по IP-опсег поголем од $1."
 }

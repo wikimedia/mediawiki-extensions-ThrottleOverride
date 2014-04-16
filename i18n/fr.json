@@ -1,34 +1,34 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gomoko",
-            "Louperivois"
-        ]
-    },
-    "overridethrottle": "Écraser la restriction de création de compte",
-    "throttleoverridelist": "Liste des outrepassements de limites",
-    "throttleoverride-desc": "Permet l’écrasement des restrictions d’adresses IP",
-    "throttleoverride-legend": "Information sur l’exemption",
-    "throttleoverride-text": "Entrez l’adresse IP ou la plage que vous voulez exempter de certaines restrictions, et la durée de vie de l’exemption.\nUn motif facultatif peut être fourni pour les journaux.",
-    "throttleoverride-ipaddress": "Adresse IP ou plage",
-    "throttleoverride-success": "L’exemption a été appliquée.",
-    "throttleoverride-types": "Types de restriction:",
-    "throttleoverride-types-all": "Tous les types",
-    "throttleoverride-types-actcreate": "Création de compte",
-    "throttleoverride-types-edit": "Modifications de page",
-    "throttleoverride-types-move": "Déplacements de page",
-    "throttleoverride-types-mailpassword": "Courriels de récupération de mot de passe",
-    "throttleoverride-types-emailuser": "Courriels utilisateur",
-    "throttleoverride-list-throttletype": "Type de limite :",
-    "throttleoverride-list-legend": "Filtrage des exemptions",
-    "throttleoverride-list-rangestart": "Début de la plage d'adresses IP",
-    "throttleoverride-list-rangeend": "Fin de la plage d'adresses IP",
-    "throttleoverride-list-expiry": "Expiration",
-    "throttleoverride-list-type": "Actions autorisées",
-    "throttleoverride-list-reason": "Motif",
-    "throttleoverride-list-search": "Rechercher",
-    "throttleoverride-list-noresults": "La liste des outrepassements de limites est vide.",
-    "throttleoverride-validation-ipinvalid": "Adresse IP non valide ou plage d’adresse IP.",
-    "throttleoverride-validation-rangedisabled": "La possibilité de créer des exemptions d’accélérateur sur des plages d’adresses IP est désactivée.",
-    "throttleoverride-validation-rangetoolarge": "Les exemptions d’accélérateur sur une plage d’adresses IP plus grande que $1 ne sont pas autorisées."
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Louperivois"
+		]
+	},
+	"overridethrottle": "Écraser la restriction de création de compte",
+	"throttleoverridelist": "Liste des outrepassements de limites",
+	"throttleoverride-desc": "Permet l’écrasement des restrictions d’adresses IP",
+	"throttleoverride-legend": "Information sur l’exemption",
+	"throttleoverride-text": "Entrez l’adresse IP ou la plage que vous voulez exempter de certaines restrictions, et la durée de vie de l’exemption.\nUn motif facultatif peut être fourni pour les journaux.",
+	"throttleoverride-ipaddress": "Adresse IP ou plage",
+	"throttleoverride-success": "L’exemption a été appliquée.",
+	"throttleoverride-types": "Types de restriction:",
+	"throttleoverride-types-all": "Tous les types",
+	"throttleoverride-types-actcreate": "Création de compte",
+	"throttleoverride-types-edit": "Modifications de page",
+	"throttleoverride-types-move": "Déplacements de page",
+	"throttleoverride-types-mailpassword": "Courriels de récupération de mot de passe",
+	"throttleoverride-types-emailuser": "Courriels utilisateur",
+	"throttleoverride-list-throttletype": "Type de limite :",
+	"throttleoverride-list-legend": "Filtrage des exemptions",
+	"throttleoverride-list-rangestart": "Début de la plage d'adresses IP",
+	"throttleoverride-list-rangeend": "Fin de la plage d'adresses IP",
+	"throttleoverride-list-expiry": "Expiration",
+	"throttleoverride-list-type": "Actions autorisées",
+	"throttleoverride-list-reason": "Motif",
+	"throttleoverride-list-search": "Rechercher",
+	"throttleoverride-list-noresults": "La liste des outrepassements de limites est vide.",
+	"throttleoverride-validation-ipinvalid": "Adresse IP non valide ou plage d’adresse IP.",
+	"throttleoverride-validation-rangedisabled": "La possibilité de créer des exemptions d’accélérateur sur des plages d’adresses IP est désactivée.",
+	"throttleoverride-validation-rangetoolarge": "Les exemptions d’accélérateur sur une plage d’adresses IP plus grande que $1 ne sont pas autorisées."
 }

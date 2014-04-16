@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Y-M D"
-        ]
-    },
-    "throttleoverride-types-actcreate": "Krouiñ kontoù",
-    "throttleoverride-types-emailuser": "Posteloù implijer"
+	"@metadata": {
+		"authors": [
+			"Y-M D"
+		]
+	},
+	"throttleoverride-types-actcreate": "Krouiñ kontoù",
+	"throttleoverride-types-emailuser": "Posteloù implijer"
 }

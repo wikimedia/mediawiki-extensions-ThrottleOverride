@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Luckas"
-        ]
-    },
-    "throttleoverride-types-all": "Todos os tipos",
-    "throttleoverride-list-type": "Ações permitidas",
-    "throttleoverride-list-reason": "Motivo",
-    "throttleoverride-list-search": "Pesquisar"
+	"@metadata": {
+		"authors": [
+			"Luckas"
+		]
+	},
+	"throttleoverride-types-all": "Todos os tipos",
+	"throttleoverride-list-type": "Ações permitidas",
+	"throttleoverride-list-reason": "Motivo",
+	"throttleoverride-list-search": "Pesquisar"
 }

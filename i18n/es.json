@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ovruni",
-            "Fitoschido"
-        ]
-    },
-    "throttleoverride-list-rangestart": "Inicio del intervalo de IP",
-    "throttleoverride-list-rangeend": "Fin del intervalo de IP",
-    "throttleoverride-list-expiry": "Caducidad",
-    "throttleoverride-list-type": "Acciones permitidas",
-    "throttleoverride-list-reason": "Motivo",
-    "throttleoverride-list-search": "Buscar",
-    "throttleoverride-validation-ipinvalid": "La dirección o el intervalo de IP no es válido."
+	"@metadata": {
+		"authors": [
+			"Ovruni",
+			"Fitoschido"
+		]
+	},
+	"throttleoverride-list-rangestart": "Inicio del intervalo de IP",
+	"throttleoverride-list-rangeend": "Fin del intervalo de IP",
+	"throttleoverride-list-expiry": "Caducidad",
+	"throttleoverride-list-type": "Acciones permitidas",
+	"throttleoverride-list-reason": "Motivo",
+	"throttleoverride-list-search": "Buscar",
+	"throttleoverride-validation-ipinvalid": "La dirección o el intervalo de IP no es válido."
 }
