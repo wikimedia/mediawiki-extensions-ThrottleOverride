@@ -14,7 +14,7 @@
 	"throttleoverride-types": "Label for the types of throttles that can be overridden.\n{{Identical|Throttle type}}",
 	"throttleoverride-types-all": "Label for the throttle type representing all types (used in [[Special:ThrottleOverrideList]]).\n{{Identical|All types}}",
 	"throttleoverride-types-actcreate": "Label for the throttle type for account creations",
-	"throttleoverride-types-edit": "Label for the throttle type for page edits",
+	"throttleoverride-types-edit": "Label for the throttle type for page edits.\n{{Identical|Page edit}}",
 	"throttleoverride-types-move": "Label for the throttle type for page moves",
 	"throttleoverride-types-mailpassword": "Label for the throttle type for password recovery requests",
 	"throttleoverride-types-emailuser": "Label for the throttle type for user emails",
