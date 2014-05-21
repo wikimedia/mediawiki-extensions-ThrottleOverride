@@ -5,6 +5,8 @@
 			"Fitoschido"
 		]
 	},
+	"throttleoverride-types-all": "Todos los tipos",
+	"throttleoverride-types-actcreate": "Creación de cuentas",
 	"throttleoverride-list-rangestart": "Inicio del intervalo de IP",
 	"throttleoverride-list-rangeend": "Fin del intervalo de IP",
 	"throttleoverride-list-expiry": "Caducidad",
