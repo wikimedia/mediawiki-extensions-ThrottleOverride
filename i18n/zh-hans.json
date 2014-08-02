@@ -30,5 +30,6 @@
 	"throttleoverride-list-reason": "原因",
 	"throttleoverride-list-search": "搜索",
 	"throttleoverride-list-noresults": "节流阀覆盖列表是空的。",
-	"throttleoverride-validation-ipinvalid": "无效IP或IP段。"
+	"throttleoverride-validation-ipinvalid": "无效IP或IP段。",
+	"throttleoverride-validation-rangedisabled": "创建IP地址域的阀例外被禁用。"
 }
