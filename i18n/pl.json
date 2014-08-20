@@ -1,9 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Alan ffm"
 		]
 	},
+	"throttleoverride-ipaddress": "Adres IP lub zakres",
+	"throttleoverride-types-actcreate": "Tworzenie konta",
+	"throttleoverride-types-edit": "Edycje strony",
+	"throttleoverride-list-expiry": "Wygasa",
 	"throttleoverride-list-reason": "Powód",
+	"throttleoverride-list-search": "Szukaj",
 	"throttleoverride-validation-ipinvalid": "Nieprawidłowy adres IP lub zakres adresów IP."
 }
