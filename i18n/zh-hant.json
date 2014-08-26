@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Simon Shek"
+			"Simon Shek",
+			"Liuxinyu970226"
 		]
 	},
-	"throttleoverride-types-mailpassword": "密碼恢復郵件"
+	"throttleoverride-types-mailpassword": "密碼恢復郵件",
+	"throttleoverride-list-reason": "原因"
 }
