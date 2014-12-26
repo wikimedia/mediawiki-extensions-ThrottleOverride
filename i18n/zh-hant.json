@@ -6,5 +6,6 @@
 		]
 	},
 	"throttleoverride-types-mailpassword": "密碼恢復郵件",
-	"throttleoverride-list-reason": "原因"
+	"throttleoverride-list-reason": "原因",
+	"throttleoverride-list-search": "搜尋"
 }
