@@ -20,7 +20,7 @@
 
 class SpecialOverrideThrottle extends FormSpecialPage {
 	function __construct() {
-		parent::__construct( 'OverrideThrottle', 'noratelimit' );
+		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
 	}
 
 	function getMessagePrefix() {

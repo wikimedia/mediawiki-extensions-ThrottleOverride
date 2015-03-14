@@ -48,6 +48,8 @@ $wgSpecialPages['OverrideThrottle'] = 'SpecialOverrideThrottle';
 $wgSpecialPages['ThrottleOverrideList'] = 'SpecialThrottleOverrideList';
 $wgSpecialPageGroups['OverrideThrottle'] = 'users';
 
+$wgAvailableRights[] = 'throttleoverride';
+
 Hooks::register( 'PingLimiter', 'ThrottleOverrideHooks::onPingLimiter' );
 Hooks::register( 'ExemptFromAccountCreationThrottle', 'ThrottleOverrideHooks::onExemptFromAccountCreationThrottle' );
 Hooks::register( 'LoadExtensionSchemaUpdates', 'ThrottleOverrideHooks::onLoadExtensionSchemaUpdates' );
