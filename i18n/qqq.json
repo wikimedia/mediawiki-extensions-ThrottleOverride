@@ -5,8 +5,8 @@
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
-	"action-throttleoverride" : "{{doc-action|throttleoverride}}",
-	"right-throttleoverride" : "{{doc-right|throttleoverride}}",
+	"action-throttleoverride": "{{doc-action|throttleoverride}}",
+	"right-throttleoverride": "{{doc-right|throttleoverride}}",
 	"throttleoverridelist": "{{doc-special|ThrottleOverrideList}}",
 	"throttleoverride-desc": "{{desc|name=Throttle Override|url=http://www.mediawiki.org/wiki/Extension:ThrottleOverride}}",
 	"throttleoverride-legend": "Label for the legend on [[Special:OverrideThrottle]]",

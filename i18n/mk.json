@@ -5,6 +5,8 @@
 		]
 	},
 	"overridethrottle": "Избегни го ограничувањето за создавање сметки",
+	"action-throttleoverride": "додавање на изземања од ограничувања на стапки",
+	"right-throttleoverride": "Изземање на извесни IP-адреси или опсежни  од ограничувања на стапки",
 	"throttleoverridelist": "Список на наметнати презапишувања",
 	"throttleoverride-desc": "Овозможува избегнување на ограничувања на IP-адреси",
 	"throttleoverride-legend": "Информации за изземањето",
