@@ -8,6 +8,7 @@
 		]
 	},
 	"overridethrottle": "覆盖帐户创建节流阀",
+	"action-throttleoverride": "添加例外至费用限制",
 	"throttleoverridelist": "节流阀覆盖列表",
 	"throttleoverride-desc": "允许IP地址覆盖节流阀",
 	"throttleoverride-legend": "豁免信息",

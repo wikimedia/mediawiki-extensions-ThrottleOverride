@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Toadino2"
 		]
 	},
 	"overridethrottle": "Ignora la limitazione nella creazione di utenze",
+	"right-throttleoverride": "Esenta alcuni indirizzi IP o serie dal controllo del traffico Internet",
 	"throttleoverride-desc": "Consente di ignorare le limitazioni per indirizzo IP",
 	"throttleoverride-legend": "Informazioni sull'esenzione",
 	"throttleoverride-text": "Inserisci l'indirizzo IP o l'intervallo che si vuole rendere esente da alcune limitazioni, e per quanto tempo l'esenzione deve durare.\nPuoi indicare anche un motivo che sarà visibile nei registri.",
