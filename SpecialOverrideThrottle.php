@@ -19,6 +19,12 @@
  */
 
 class SpecialOverrideThrottle extends FormSpecialPage {
+	/** @var string Sanitized target IP address or range */
+	protected $target;
+
+	/** @var int value of thr_id */
+	protected $throttleId;
+
 	function __construct() {
 		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
 	}
@@ -34,14 +40,17 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	function getFormFields() {
 		global $wgRateLimits;
 
-		// Construct an array of message => type. The types are:
+		// The types are:
 		// actcreate - An account is created (not ping-limiter)
 		// edit - A page is edited (ping-limiter)
 		// move - A page is moved (ping-limiter)
 		// mailpassword - User requests a password recovery (ping-limiter)
 		// emailuser - User emails another user (ping-limiter)
+		$throttleTypes = [ 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ];
+
+		// Construct an array of message => type.
 		$throttles = [];
-		foreach ( [ 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ] as $type ) {
+		foreach ( $throttleTypes as $type ) {
 			if ( $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
 				// For grepping. The following messages are used here:
 				// throttleoverride-types-actcreate, throttleoverride-types-edit,
@@ -51,7 +60,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			}
 		}
 
-		return [
+		$data = [
 			'Target' => [
 				'type' => 'text',
 				'label-message' => 'throttleoverride-ipaddress',
@@ -65,8 +74,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'options' => SpecialBlock::getSuggestedDurations(),
 				'other' => $this->msg( 'ipbother' )->text(),
 				'filter-callback' => 'SpecialBlock::parseExpiryInput',
-				'validation-callback' => function ( $value ) {
-					if ( !$value ) {
+				'validation-callback' => function ( $input ) {
+					if ( !$input ) {
 						return $this->msg( 'throttleoverride-validation-expiryinvalid' )->parse();
 					}
 					return true;
@@ -81,82 +90,186 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'type' => 'multiselect',
 				'label-message' => 'throttleoverride-types',
 				'options' => $throttles,
-				'validation-callback' => function ( $value ) {
-					if ( !count( $value ) ) {
+				'validation-callback' => function ( $input ) {
+					if ( !count( $input ) ) {
 						return $this->msg( 'throttleoverride-validation-notypes' )->parse();
 					}
 					return true;
 				},
-			]
+			],
+			'Modify' => [
+				'type' => 'hidden',
+				'default' => '',
+			],
 		];
+
+		$request = $this->getRequest();
+		// thr_target is sanitized so sanitize wpTarget before checking
+		$this->target = IP::sanitizeRange(
+			IP::sanitizeIP( $request->getText( 'wpTarget' ) )
+		);
+		// Check for an existing exemption in the master database
+		$this->throttleId = self::getThrottleOverrideId( $this->target, DB_MASTER );
+		if ( $request->wasPosted() && $this->throttleId ) {
+			$data['Modify']['default'] = 1;
+		}
+
+		// If this site was called as Special:OverrideThrottle/$this->par ...
+		if ( $this->par ) {
+			// Fill in the given name no matter whether an override is already in the db.
+			$data['Target']['default'] = $this->par;
+
+			// We need the most recent data here, we're about to change the throttle.
+			$dbw = wfGetDB( DB_MASTER );
+			$row = $dbw->selectRow(
+				'throttle_override',
+				[ 'thr_expiry', 'thr_reason', 'thr_type' ],
+				[ 'thr_target' => $this->par ],
+				__METHOD__
+			);
+
+			if ( $row ) {
+				$data['Expiry']['default'] = $row->thr_expiry;
+				$data['Reason']['default'] = $row->thr_reason;
+
+				$types = explode( ',', $row->thr_type );
+				$types = array_intersect( $types, $throttleTypes );
+				$data['Throttles']['default'] = $types;
+
+				// If a row exists and we've filled in it's data, don't show
+				// the warning about "There already is an exemption".
+				$data['Modify']['default'] = 1;
+			}
+		}
+		return $data;
 	}
 
 	function onSubmit( array $data ) {
-		$status = self::validateTarget( $data['Target'] );
+		$types = implode( ',', $data['Throttles'] );
+		$parsedRange = IP::parseRange( $data['Target'] );
+		$errors = self::validateFields(
+			$data['Target'],
+			$data['Expiry'],
+			$types,
+			$parsedRange
+		);
 
-		if ( !$status->isOK() ) {
-			return $status;
+		if ( !$data['Modify'] && $this->throttleId ) {
+			$errors[] = [ 'throttleoverride-rule-alreadyexists', $this->target ];
 		}
 
-		return wfGetDB( DB_MASTER )->insert(
+		if ( $errors ) {
+			return $errors;
+		}
+
+		$dbw = wfGetDB( DB_MASTER );
+		$row = [
+			'thr_target' => $this->target,
+			'thr_expiry' => $dbw->encodeExpiry( $data['Expiry'] ),
+			'thr_reason' => trim( $data['Reason'] ),
+			'thr_type' => $types,
+			'thr_range_start' => $parsedRange[0],
+			'thr_range_end' => $parsedRange[1],
+		];
+
+		if ( $data['Modify'] && $this->throttleId ) {
+			$dbw->update( 'throttle_override',
+				$row,
+				[ 'thr_id' => $this->throttleId ],
+				__METHOD__ );
+		} else {
+			$dbw->insert( 'throttle_override', $row, __METHOD__ );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Returns the value of thr_id in the database or returns 0
+	 * if it doesn't exist.
+	 *
+	 * @param string $ip
+	 * @param int $dbtype either DB_SLAVE or DB_MASTER
+	 * @return int
+	 */
+	public static function getThrottleOverrideId( $ip, $dbtype = DB_SLAVE ) {
+		$db = wfGetDB( $dbtype );
+		$field = $db->selectField(
 			'throttle_override',
-			[
-				'thr_range_start' => $status->value[0],
-				'thr_range_end' => $status->value[1],
-				'thr_expiry' => $data['Expiry'],
-				'thr_reason' => $data['Reason'],
-				'thr_type' => implode( ',', $data['Throttles'] )
-			],
+			'thr_id',
+			[ 'thr_target' => $ip ],
 			__METHOD__
 		);
+		return $field === false ? 0 : $field;
+	}
+
+	/**
+	 * Do some basic validation on form fields
+	 *
+	 * @param string $target IP address or range
+	 * @param string|bool $expiry
+	 * @param string $types
+	 * $param array $parsedRange
+	 * @return array
+	 */
+	public static function validateFields( $target, $expiry, $types, $parsedRange ) {
+		global $wgThrottleOverrideCIDRLimit;
+		$errors = [];
+		$ip = IP::sanitizeIP( $target );
+		if ( !IP::isIPAddress( $ip ) ) {
+			// Invalid IP address.
+			$errors[] = [ 'throttleoverride-validation-ipinvalid', $ip ];
+		}
+
+		if ( $expiry === false ) {
+			// Invalid expiry.
+			$errors[] = [ 'throttleoverride-validation-expiryinvalid' ];
+		}
+
+		if ( empty( $types ) ) {
+			// No throttle type given.
+			$errors[] = [ 'throttleoverride-validation-typesempty' ];
+		}
+
+		if ( $parsedRange[0] !== $parsedRange[1] ) {
+			$ip = IP::sanitizeRange( $ip );
+			list( $iprange, $range ) = explode( '/', $ip, 2 );
+			if (
+				( IP::isIPv4( $ip ) && $range > 32 ) ||
+				( IP::isIPv6( $ip ) && $range > 128 )
+			) {
+				// Range exemptions effectively disabled.
+				$errors[] = [ 'throttleoverride-validation-rangedisabled' ];
+			} elseif ( IP::isIPv4( $iprange ) &&
+				$range < $wgThrottleOverrideCIDRLimit['IPv4']
+			) {
+				// Target range larger than limit.
+				$errors[] = [
+					'throttleoverride-validation-rangetoolarge',
+					$wgThrottleOverrideCIDRLimit['IPv4']
+				];
+			} elseif ( IP::isIPv6( $iprange ) &&
+				$range < $wgThrottleOverrideCIDRLimit['IPv6']
+			) {
+				$errors[] = [
+					'throttleoverride-validation-rangetoolarge',
+					$wgThrottleOverrideCIDRLimit['IPv6']
+				];
+			}
+		}
+
+		return $errors;
 	}
 
 	function onSuccess() {
 		$this->getOutput()->addWikiMsg( 'throttleoverride-success' );
 	}
 
-	/**
-	 * @param $target
-	 *
-	 * @return Status
-	 */
-	public static function validateTarget( $target ) {
-		global $wgThrottleOverrideCIDRLimit;
-
-		$parsedRange = IP::parseRange( $target );
-
-		$status = Status::newGood( $parsedRange );
-
-		if ( $parsedRange === [ false, false ] ) {
-			$status->fatal( 'throttleoverride-validation-ipinvalid' );
-		} elseif ( $parsedRange[0] !== $parsedRange[1] ) {
-			list( $ip, $range ) = explode( '/', IP::sanitizeRange( $target ), 2 );
-
-			if (
-				( IP::isIPv4( $ip ) && $wgThrottleOverrideCIDRLimit['IPv4'] == 32 ) ||
-				( IP::isIPv6( $ip ) && $wgThrottleOverrideCIDRLimit['IPv6'] == 128 )
-			) {
-				// Range block effectively disabled
-				$status->fatal( 'throttleoverride-validation-rangedisabled' );
-			}
-
-			if ( IP::isIPv4( $ip ) && $range < $wgThrottleOverrideCIDRLimit['IPv4'] ) {
-				$status->fatal( 'throttleoverride-validation-rangetoolarge',
-					$wgThrottleOverrideCIDRLimit['IPv4']
-				);
-			}
-
-			if ( IP::isIPv6( $ip ) && $range < $wgThrottleOverrideCIDRLimit['IPv6'] ) {
-				$status->fatal( 'throttleoverride-validation-rangetoolarge',
-					$wgThrottleOverrideCIDRLimit['IPv6']
-				);
-			}
-		}
-
-		return $status;
-	}
-
 	protected function getGroupName() {
 		return 'users';
+	}
+
+	protected function getDisplayFormat() {
+		return 'ooui';
 	}
 }

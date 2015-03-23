@@ -18,16 +18,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use MediaWiki\MediaWikiServices;
+
 class ThrottleOverridePager extends TablePager {
 	function __construct( SpecialPage $page, $conds = [] ) {
 		parent::__construct( $page->getContext() );
 		$this->throttleType = isset( $conds['throttleType'] ) ? $conds['throttleType'] : 'all';
+
+		$out = $this->getOutput();
+		$out->addModules( 'ext.throttleoverride.list' );
 	}
 
 	function getFieldNames() {
 		return [
-			'thr_range_start' => $this->msg( 'throttleoverride-list-rangestart' )->text(),
-			'thr_range_end' => $this->msg( 'throttleoverride-list-rangeend' )->text(),
+			'thr_target' => $this->msg( 'throttleoverride-list-target' )->text(),
 			'thr_expiry' => $this->msg( 'throttleoverride-list-expiry' )->text(),
 			'thr_type' => $this->msg( 'throttleoverride-list-type' )->text(),
 			'thr_reason' => $this->msg( 'throttleoverride-list-reason' )->text(),
@@ -51,8 +55,7 @@ class ThrottleOverridePager extends TablePager {
 			'tables' => 'throttle_override',
 			'fields' => [
 				'thr_type',
-				'thr_range_start',
-				'thr_range_end',
+				'thr_target',
 				'thr_expiry',
 				'thr_reason',
 			],
@@ -71,6 +74,10 @@ class ThrottleOverridePager extends TablePager {
 	}
 
 	function formatValue( $name, $value ) {
+		$row = $this->mCurrentRow;
+		$language = $this->getLanguage();
+		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+
 		switch ( $name ) {
 			case 'thr_type':
 				$types = [];
@@ -81,15 +88,30 @@ class ThrottleOverridePager extends TablePager {
 					// throttleoverride-types-emailuser
 					$types[] = $this->msg( "throttleoverride-types-$type" )->escaped();
 				}
-				return $this->getLanguage()->commaList( $types );
+				return $language->commaList( $types );
 
-			case 'thr_range_start':
-			case 'thr_range_end':
-				return IP::prettifyIP( IP::formatHex( $value ) );
+			case 'thr_target':
+				return IP::prettifyIP( $value );
 
 			case 'thr_expiry':
-				$ts = $this->getLanguage()->userTimeAndDate( $value, $this->getUser() );
-				return htmlspecialchars( $ts );
+				$formatted = htmlspecialchars( $language->formatExpiry( $value,
+					/* User preference timezone */true ) );
+
+				// Show link to Special:ThrottleOverride/$Username if we're allowed to manipulate throttles.
+				if ( $this->getUser()->isAllowed( 'throttleoverride' ) ) {
+					$link = $linkRenderer->makeKnownLink(
+						SpecialPage::getTitleFor( 'ThrottleOverride', IP::prettifyIP( $row->thr_target ) ),
+						$this->msg( 'throttleoverride-list-change' )->text()
+					);
+
+					$formatted .= ' ' . Html::rawElement(
+						'span',
+						[ 'class' => 'mw-throttleoverridelist-actions' ],
+						$this->msg( 'parentheses' )->rawParams( $link )->escaped()
+					);
+				}
+
+				return $formatted;
 
 			case 'thr_reason':
 				return Linker::formatComment( $value );

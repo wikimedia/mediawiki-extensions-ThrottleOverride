@@ -100,6 +100,11 @@ class ThrottleOverrideHooks {
 			'thr_expiry',
 			__DIR__ . '/patches/expiry_index.sql'
 		);
+		$updater->addExtensionField(
+			'throttle_override',
+			'thr_target',
+			__DIR__ . '/patches/patch-thr_target.sql'
+		);
 
 		return true;
 	}

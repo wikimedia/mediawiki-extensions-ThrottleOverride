@@ -57,6 +57,7 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 
 	function alterForm( HTMLForm $form ) {
 		$form->setMethod( 'get' );
+		$form->setWrapperLegendMsg( 'throttleoverride-list-legend' );
 		$form->setSubmitTextMsg( 'throttleoverride-list-search' );
 	}
 
@@ -98,5 +99,9 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 
 	function getGroupName() {
 		return 'users';
+	}
+
+	protected function getDisplayFormat() {
+		return 'ooui';
 	}
 }

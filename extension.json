@@ -46,5 +46,15 @@
 			}
 		}
 	},
+	"ResourceModules": {
+		"ext.throttleoverride.list": {
+			"position": "top",
+			"styles": "ext.throttleoverride.list.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "ThrottleOverride/resources"
+	},
 	"manifest_version": 2
 }

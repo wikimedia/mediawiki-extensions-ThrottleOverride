@@ -3,7 +3,8 @@
 		"authors": [
 			"Shirayuki",
 			"Umherirrender",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Glaisher"
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
@@ -22,10 +23,12 @@
 	"throttleoverride-types-move": "Label for the throttle type for page moves",
 	"throttleoverride-types-mailpassword": "Label for the throttle type for password recovery requests",
 	"throttleoverride-types-emailuser": "Label for the throttle type for user emails",
+	"throttleoverride-list-change": "Shown on the page with all existing throttles, linking to the page where a throttle can be altered.",
 	"throttleoverride-list-throttletype": "Label for the throttle type on [[Special:ThrottleOverrideList]].\n{{Identical|Throttle type}}",
 	"throttleoverride-list-legend": "Fieldset legend on [[Special:ThrottleOverrideList]]",
 	"throttleoverride-list-rangestart": "Table header in the throttle override list for the starting IP address of a throttle override",
 	"throttleoverride-list-rangeend": "Table header in the throttle override list for the ending IP address of a throttle override",
+	"throttleoverride-list-target": "Table header in the throttle override list for the IP address block in CIDR notation of a throttle override",
 	"throttleoverride-list-expiry": "Table header in the throttle override list for the expiry date and time of a throttle override.\n{{Identical|Expiration}}",
 	"throttleoverride-list-type": "Table header in the throttle override list for the actions allowed by a throttle override",
 	"throttleoverride-list-reason": "Table header in the throttle override list for the reason of a throttle override.\n{{Identical|Reason}}",
@@ -35,5 +38,6 @@
 	"throttleoverride-validation-rangedisabled": "Validation error displayed on [[Special:ThrottleOverride]] when a user tries to give an IP address range to override for, but all range exemptions are disabled.",
 	"throttleoverride-validation-rangetoolarge": "Validation error displayed on [[Special:ThrottleOverride]] when the IP address range provided exceeds the configured allowable size.\n\nParameters:\n* $1 - The CIDR limit as configured",
 	"throttleoverride-validation-notypes": "Validation error displayed on [[Special:ThrottleOverride]] when no throttle type checkbox is selected.",
-	"throttleoverride-validation-expiryinvalid": "Validation error displayed on [[Special:ThrottleOverride]] when the expiry time given is invalid."
+	"throttleoverride-validation-expiryinvalid": "Validation error displayed on [[Special:ThrottleOverride]] when the expiry time given is invalid.",
+	"throttleoverride-rule-alreadyexists": "Used as error message on [[Special:ThrottleOverride]] when there is an existing exemption on the given IP address or range. Parameters:\n* $1 - IP address or range"
 }

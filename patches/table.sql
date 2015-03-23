@@ -3,6 +3,9 @@ CREATE TABLE /*_*/throttle_override (
 	-- Primary key for accessing specific exemptions
 	thr_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 
+	-- Throttle override target
+	thr_target VARCHAR(255) NOT NULL,
+
 	-- Type of the throttles being overriden
 	thr_type SET( 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ) NOT NULL,
 
@@ -19,5 +22,6 @@ CREATE TABLE /*_*/throttle_override (
 	thr_reason TINYBLOB
 ) /*$wgDBTableOptions*/;
 
+CREATE INDEX /*i*/thr_target ON /*_*/throttle_override (thr_target);
 CREATE INDEX /*i*/thr_range ON /*_*/throttle_override (thr_range_start(8), thr_range_end(8));
 CREATE INDEX /*i*/thr_expiry ON /*_*/throttle_override (thr_expiry);

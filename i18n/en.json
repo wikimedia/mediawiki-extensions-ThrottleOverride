@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tyler Romeo <tylerromeo@gmail.com>"
+			"Tyler Romeo <tylerromeo@gmail.com>",
+			"Glaisher"
 		]
 	},
 	"overridethrottle": "Override throttles",
@@ -20,10 +21,12 @@
 	"throttleoverride-types-move": "Page moves",
 	"throttleoverride-types-mailpassword": "Password recovery emails",
 	"throttleoverride-types-emailuser": "User emails",
+	"throttleoverride-list-change": "change throttle",
 	"throttleoverride-list-throttletype": "Throttle type:",
 	"throttleoverride-list-legend": "Exemption filtering",
 	"throttleoverride-list-rangestart": "Start of IP address range",
 	"throttleoverride-list-rangeend": "End of IP address range",
+	"throttleoverride-list-target": "Target",
 	"throttleoverride-list-expiry": "Expiration",
 	"throttleoverride-list-type": "Allowed actions",
 	"throttleoverride-list-reason": "Reason",
@@ -33,5 +36,6 @@
 	"throttleoverride-validation-rangedisabled": "The ability to create throttle exemptions on ranges of IP addresses is disabled.",
 	"throttleoverride-validation-rangetoolarge": "Throttle exemptions over an IP address range larger than $1 are not allowed.",
 	"throttleoverride-validation-notypes": "No throttle type selected.",
-	"throttleoverride-validation-expiryinvalid": "Invalid expiration time."
+	"throttleoverride-validation-expiryinvalid": "Invalid expiration time.",
+	"throttleoverride-rule-alreadyexists": "There is an existing exemption for $1. You can view the existing settings on the [[Special:ThrottleOverrideList|list of throttle exemptions]], or modify the settings of the existing rule by re-submitting this form."
 }
