@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
 	"action-throttleoverride": "{{doc-action|throttleoverride}}",
 	"right-throttleoverride": "{{doc-right|throttleoverride}}",
 	"throttleoverridelist": "{{doc-special|ThrottleOverrideList}}",
-	"throttleoverride-desc": "{{desc|name=Throttle Override|url=http://www.mediawiki.org/wiki/Extension:ThrottleOverride}}",
+	"throttleoverride-desc": "{{desc|name=Throttle Override|url=https://www.mediawiki.org/wiki/Extension:ThrottleOverride}}",
 	"throttleoverride-legend": "Label for the legend on [[Special:OverrideThrottle]]",
 	"throttleoverride-text": "Intro text on [[Special:OverrideThrottle]]",
 	"throttleoverride-ipaddress": "Label for the IP address field on [[Special:OverrideThrottle]]",
