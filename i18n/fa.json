@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Armin1392",
-			"Reza1615"
+			"Reza1615",
+			"Mjbmr"
 		]
 	},
 	"overridethrottle": "لغو گاز ایجاد حساب کاربری",
@@ -17,8 +18,8 @@
 	"throttleoverride-types-actcreate": "ایجاد حساب",
 	"throttleoverride-types-edit": "ویرایش‌های صفحه",
 	"throttleoverride-types-move": "حرکات صفحه",
-	"throttleoverride-types-mailpassword": "رایانامه‌های بازیابی رمز عبور",
-	"throttleoverride-types-emailuser": "رایانامه‌های کاربر",
+	"throttleoverride-types-mailpassword": "ایمیل‌های بازیابی رمز عبور",
+	"throttleoverride-types-emailuser": "ایمیل‌های کاربر",
 	"throttleoverride-list-throttletype": "نوع گاز:",
 	"throttleoverride-list-legend": "فیلتر معافیت",
 	"throttleoverride-list-rangestart": "آغاز محدودهٔ آی‌پی",
