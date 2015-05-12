@@ -19,7 +19,7 @@ $specialPageAliases['ar'] = array(
 	'ThrottleOverride' => array( 'تجاوز_الحد' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'ThrottleOverride' => array( 'تجاوز_الحد' ),
 );
