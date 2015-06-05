@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño"
+			"Toliño",
+			"Elisardojm"
 		]
 	},
 	"overridethrottle": "Ignorar a restrición de creación de contas",
+	"action-throttleoverride": "engadir excepción ós límites de frecuencia",
+	"right-throttleoverride": "Excluír certas direccións IP ou rangos de direccións dos límites de frecuencia",
 	"throttleoverridelist": "Lista de restricións ignoradas",
 	"throttleoverride-desc": "Permite ignorar as restricións dos enderezos IP",
 	"throttleoverride-legend": "Información sobre a exención",
