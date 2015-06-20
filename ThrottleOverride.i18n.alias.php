@@ -11,50 +11,51 @@ $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
-	'ThrottleOverride' => array( 'ThrottleOverride', 'Throttle Override' ),
+	'OverrideThrottle' => array( 'OverrideThrottle', 'ThrottleOverride' ),
+	'ThrottleOverrideList' => array( 'ThrottleOverrideList' ),
 );
 
 /** Arabic (العربية) */
 $specialPageAliases['ar'] = array(
-	'ThrottleOverride' => array( 'تجاوز_الحد' ),
+	'OverrideThrottle' => array( 'تجاوز_الحد' ),
 );
 
 /** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
-	'ThrottleOverride' => array( 'تجاوز_الحد' ),
+	'OverrideThrottle' => array( 'تجاوز_الحد' ),
 );
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
-	'ThrottleOverride' => array( 'Beschränkungsumgehung' ),
+	'OverrideThrottle' => array( 'Beschränkungsumgehung' ),
 );
 
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = array(
-	'ThrottleOverride' => array( 'עקיפת_הגבלה' ),
+	'OverrideThrottle' => array( 'עקיפת_הגבלה' ),
 );
 
 /** Japanese (日本語) */
 $specialPageAliases['ja'] = array(
-	'ThrottleOverride' => array( '制限の回避' ),
+	'OverrideThrottle' => array( '制限の回避' ),
 );
 
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
-	'ThrottleOverride' => array( '제한회피', '제한_회피' ),
+	'OverrideThrottle' => array( '제한회피', '제한_회피' ),
 );
 
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
-	'ThrottleOverride' => array( 'НаметниПрезапис' ),
+	'OverrideThrottle' => array( 'НаметниПрезапис' ),
 );
 
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
-	'ThrottleOverride' => array( 'LimietenAanpassen' ),
+	'OverrideThrottle' => array( 'LimietenAanpassen' ),
 );
 
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
-	'ThrottleOverride' => array( '节流阀覆盖' ),
+	'OverrideThrottle' => array( '节流阀覆盖' ),
 );
