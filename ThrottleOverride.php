@@ -46,7 +46,6 @@ $wgAutoloadClasses['ThrottleOverridePager'] = __DIR__ . '/SpecialThrottleOverrid
 
 $wgSpecialPages['OverrideThrottle'] = 'SpecialOverrideThrottle';
 $wgSpecialPages['ThrottleOverrideList'] = 'SpecialThrottleOverrideList';
-$wgSpecialPageGroups['OverrideThrottle'] = 'users';
 
 $wgAvailableRights[] = 'throttleoverride';
 

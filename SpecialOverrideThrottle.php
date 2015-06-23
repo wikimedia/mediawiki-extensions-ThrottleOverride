@@ -151,4 +151,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 		return $status;
 	}
+
+	protected function getGroupName() {
+		return 'users';
+	}
 }
