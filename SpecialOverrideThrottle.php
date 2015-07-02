@@ -56,6 +56,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'type' => 'text',
 				'label-message' => 'throttleoverride-ipaddress',
 				'required' => true,
+				'autofocus' => true
 			),
 			'Expiry' => array(
 				'type' => SpecialBlock::getSuggestedDurations() ? 'selectorother' : 'text',
@@ -65,7 +66,10 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'other' => $this->msg( 'ipbother' )->text(),
 				'filter-callback' => 'SpecialBlock::parseExpiryInput',
 				'validation-callback' => function ( $value ) {
-						return (bool)$value;
+						if ( !$value ) {
+							return $this->msg( 'throttleoverride-validation-expiryinvalid' )->parse();
+						}
+						return true;
 					},
 				'default' => $this->msg( 'ipb-default-expiry' )->inContentLanguage()->text()
 			),
@@ -76,7 +80,13 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			'Throttles' => array(
 				'type' => 'multiselect',
 				'label-message' => 'throttleoverride-types',
-				'options' => $throttles
+				'options' => $throttles,
+				'validation-callback' => function ( $input ) {
+						if ( !count( $input ) ) {
+							return $this->msg( 'throttleoverride-validation-notypes' )->parse();
+						}
+						return true;
+					},
 			)
 		);
 	}
@@ -128,14 +138,6 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			) {
 				// Range block effectively disabled
 				$status->fatal( 'throttleoverride-validation-rangedisabled' );
-			}
-
-			if (
-				( IP::isIPv4( $ip ) && $range > 32 ) ||
-				( IP::isIPv6( $ip ) && $range > 128 )
-			) {
-				// Dodgy range
-				$status->fatal( 'throttleoverride-validation-ipinvalid' );
 			}
 
 			if ( IP::isIPv4( $ip ) && $range < $wgThrottleOverrideCIDRLimit['IPv4'] ) {
