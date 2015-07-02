@@ -31,5 +31,7 @@
 	"throttleoverride-list-noresults": "Die Liste der Beschränkungsumgehungen ist leer.",
 	"throttleoverride-validation-ipinvalid": "Ungültige IP-Adresse oder ungültiger IP-Adressenbereich.",
 	"throttleoverride-validation-rangedisabled": "Die Möglichkeit zur Erstellung von Drosselungsausnahmen bei IP-Adressbereichen ist deaktiviert.",
-	"throttleoverride-validation-rangetoolarge": "Drosselungsausnahmen bei IP-Adressbereichen größer als $1 sind nicht erlaubt."
+	"throttleoverride-validation-rangetoolarge": "Drosselungsausnahmen bei IP-Adressbereichen größer als $1 sind nicht erlaubt.",
+	"throttleoverride-validation-notypes": "Kein Beschränkungstyp ausgewählt.",
+	"throttleoverride-validation-expiryinvalid": "Ungültige Ablaufzeit."
 }
