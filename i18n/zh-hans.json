@@ -34,5 +34,7 @@
 	"throttleoverride-list-noresults": "节流阀覆盖列表是空的。",
 	"throttleoverride-validation-ipinvalid": "无效IP或IP段。",
 	"throttleoverride-validation-rangedisabled": "创建IP地址域的阀例外被禁用。",
-	"throttleoverride-validation-rangetoolarge": "超出$1个IP地址段的阀例外不允许。"
+	"throttleoverride-validation-rangetoolarge": "超出$1个IP地址段的阀例外不允许。",
+	"throttleoverride-validation-notypes": "没有选择节流阀类型。",
+	"throttleoverride-validation-expiryinvalid": "无效的到期时间。"
 }

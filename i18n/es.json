@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ovruni",
-			"Fitoschido"
+			"Fitoschido",
+			"Ncontinanza"
 		]
 	},
 	"throttleoverride-types-all": "Todos los tipos",
@@ -13,5 +14,6 @@
 	"throttleoverride-list-type": "Acciones permitidas",
 	"throttleoverride-list-reason": "Motivo",
 	"throttleoverride-list-search": "Buscar",
-	"throttleoverride-validation-ipinvalid": "La dirección o el intervalo de IP no es válido."
+	"throttleoverride-validation-ipinvalid": "La dirección o el intervalo de IP no es válido.",
+	"throttleoverride-validation-expiryinvalid": "Tiempo de caducidad inválido."
 }
