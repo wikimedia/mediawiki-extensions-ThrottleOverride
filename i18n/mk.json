@@ -31,5 +31,7 @@
 	"throttleoverride-list-noresults": "Списокот за наметнати презапишувања е празен.",
 	"throttleoverride-validation-ipinvalid": "Неважечка IP-адреса или IP-опсег.",
 	"throttleoverride-validation-rangedisabled": "Можноста за создавање на исклучоци од ограничувањето на IP-опсези е исклучена.",
-	"throttleoverride-validation-rangetoolarge": "Не се одзволени исклучоци од ограничувањето по IP-опсег поголем од $1."
+	"throttleoverride-validation-rangetoolarge": "Не се одзволени исклучоци од ограничувањето по IP-опсег поголем од $1.",
+	"throttleoverride-validation-notypes": "Немате избрано тип на истакнување.",
+	"throttleoverride-validation-expiryinvalid": "Неважечко време на истек."
 }
