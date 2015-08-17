@@ -33,5 +33,7 @@
 	"throttleoverride-list-noresults": "Список обходів обмеження частоти - порожній.",
 	"throttleoverride-validation-ipinvalid": "Неприпустима IP-адреса або діапазон IP.",
 	"throttleoverride-validation-rangedisabled": "Можливість створювати винятки з діапазонів IP-адрес відключена.",
-	"throttleoverride-validation-rangetoolarge": "Винятки з обмеженнями у діапазонах IP-адрес більших, ніж $1, не дозволяються."
+	"throttleoverride-validation-rangetoolarge": "Винятки з обмеженнями у діапазонах IP-адрес більших, ніж $1, не дозволяються.",
+	"throttleoverride-validation-notypes": "Не вибрано тип обмеження частоти.",
+	"throttleoverride-validation-expiryinvalid": "Недійсний час закінчення."
 }
