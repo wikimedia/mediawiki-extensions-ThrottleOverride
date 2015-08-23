@@ -7,6 +7,8 @@
 		]
 	},
 	"overridethrottle": "Écraser la restriction de création de compte",
+	"action-throttleoverride": "ajouter des exclusions aux limites de taux",
+	"right-throttleoverride": "Exclu certaines adresses IP ou intervalles des limites des taux",
 	"throttleoverridelist": "Liste des outrepassements de limites",
 	"throttleoverride-desc": "Permet l’écrasement des restrictions d’adresses IP",
 	"throttleoverride-legend": "Information sur l’exemption",
