@@ -5,7 +5,7 @@
 			"Southparkfan"
 		]
 	},
-	"overridethrottle": "Beperkingen voor aanmaken gebruikers negeren",
+	"overridethrottle": "Beperkingen voor aanmaken account negeren",
 	"throttleoverridelist": "Lijst met drempelwaardebeperkingen",
 	"throttleoverride-desc": "Maakt het mogelijk de beperkingen voor IP-adressen te negeren",
 	"throttleoverride-legend": "Gegevens over uitzonderingen",
@@ -14,7 +14,7 @@
 	"throttleoverride-success": "De uitzondering is toegepast.",
 	"throttleoverride-types": "Beperkingstypen:",
 	"throttleoverride-types-all": "Alle typen",
-	"throttleoverride-types-actcreate": "Gebruikers aanmaken",
+	"throttleoverride-types-actcreate": "Accounts aanmaken",
 	"throttleoverride-types-edit": "Pagina's bewerken",
 	"throttleoverride-types-move": "Pagina's hernoemen",
 	"throttleoverride-types-mailpassword": "Wachtwoord per e-mail verzenden",
