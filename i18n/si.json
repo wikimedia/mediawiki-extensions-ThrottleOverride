@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sahan.ssw"
+			"Sahan.ssw",
+			"SusithCM"
 		]
 	},
+	"throttleoverride-types-emailuser": "පරිශීලක ඊමේල්",
 	"throttleoverride-validation-ipinvalid": "IP ලිපිනය හෝ IP පරාසය වලංගු නැත."
 }
