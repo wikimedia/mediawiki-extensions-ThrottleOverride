@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Priviet",
-			"아라"
+			"아라",
+			"Revi"
 		]
 	},
 	"overridethrottle": "계정 만들기 제한 회피",
@@ -16,7 +17,7 @@
 	"throttleoverride-types-all": "모든 종류",
 	"throttleoverride-types-actcreate": "계정 만들기",
 	"throttleoverride-types-edit": "문서 편집",
-	"throttleoverride-types-move": "문서 옮기기",
+	"throttleoverride-types-move": "문서 이동",
 	"throttleoverride-types-mailpassword": "비밀번호 복구 이메일",
 	"throttleoverride-types-emailuser": "사용자에게 이메일 보내기",
 	"throttleoverride-list-throttletype": "스로틀 종류:",
