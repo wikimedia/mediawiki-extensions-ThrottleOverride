@@ -2,15 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Siebrand",
-			"Southparkfan"
+			"Southparkfan",
+			"Sjoerddebruin"
 		]
 	},
 	"overridethrottle": "Beperkingen voor aanmaken account negeren",
 	"throttleoverridelist": "Lijst met drempelwaardebeperkingen",
 	"throttleoverride-desc": "Maakt het mogelijk de beperkingen voor IP-adressen te negeren",
 	"throttleoverride-legend": "Gegevens over uitzonderingen",
-	"throttleoverride-text": "Voer een IP-adres of een IP-reeks in waar u uitzonderingen voor wilt instellen, en hoe lang de uitzondering moet duren.\nU kunt optioneel een reden opgeven voor in het logboek.",
-	"throttleoverride-ipaddress": "IP-adres of -reeks",
+	"throttleoverride-text": "Voer een IP-adres of -range in waar u uitzonderingen voor wilt instellen, en hoe lang de uitzondering moet duren.\nU kunt optioneel een reden opgeven voor in het logboek.",
+	"throttleoverride-ipaddress": "IP-adres of -range",
 	"throttleoverride-success": "De uitzondering is toegepast.",
 	"throttleoverride-types": "Beperkingstypen:",
 	"throttleoverride-types-all": "Alle typen",
@@ -21,8 +22,8 @@
 	"throttleoverride-types-emailuser": "E-mails naar gebruikers",
 	"throttleoverride-list-throttletype": "Beperkingstype:",
 	"throttleoverride-list-legend": "Vrijstellingsfilters",
-	"throttleoverride-list-rangestart": "Begin van IP-reeks",
-	"throttleoverride-list-rangeend": "Einde van IP-reeks",
+	"throttleoverride-list-rangestart": "Begin van IP-range",
+	"throttleoverride-list-rangeend": "Einde van IP-range",
 	"throttleoverride-list-expiry": "Vervalt",
 	"throttleoverride-list-type": "Toegestane handelingen",
 	"throttleoverride-list-reason": "Reden",
