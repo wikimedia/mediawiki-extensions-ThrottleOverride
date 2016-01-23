@@ -24,7 +24,7 @@
 	"throttleoverride-list-legend": "Exemption filtering",
 	"throttleoverride-list-rangestart": "Start of IP range",
 	"throttleoverride-list-rangeend": "End of IP range",
-	"throttleoverride-list-expiry": "Expiry",
+	"throttleoverride-list-expiry": "Expiration",
 	"throttleoverride-list-type": "Allowed actions",
 	"throttleoverride-list-reason": "Reason",
 	"throttleoverride-list-search": "Search",
@@ -33,5 +33,5 @@
 	"throttleoverride-validation-rangedisabled": "The ability to create throttle exemptions on ranges of IP addresses is disabled.",
 	"throttleoverride-validation-rangetoolarge": "Throttle exemptions over an IP range larger than $1 are not allowed.",
 	"throttleoverride-validation-notypes": "No throttle type selected.",
-	"throttleoverride-validation-expiryinvalid": "Invalid expiry time."
+	"throttleoverride-validation-expiryinvalid": "Invalid expiration time."
 }
