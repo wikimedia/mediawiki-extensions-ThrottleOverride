@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ай-Куо"
+		]
+	},
+	"throttleoverride-list-expiry": "үлэ болдьоҕо",
+	"throttleoverride-validation-expiryinvalid": "Недопустимый срок действия\nболдьох атыннык туруорулунна"
+}

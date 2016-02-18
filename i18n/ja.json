@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"Otokoume"
 		]
 	},
 	"overridethrottle": "アカウント作成の制限の回避",
@@ -25,5 +26,6 @@
 	"throttleoverride-list-type": "許可された操作",
 	"throttleoverride-list-reason": "理由",
 	"throttleoverride-list-search": "検索",
-	"throttleoverride-validation-ipinvalid": "IP アドレスまたは IP 範囲が無効です。"
+	"throttleoverride-validation-ipinvalid": "IP アドレスまたは IP 範囲が無効です。",
+	"throttleoverride-validation-expiryinvalid": "有効期限が無効です。"
 }
