@@ -27,5 +27,6 @@
 	"throttleoverride-list-type": "Azioni consentite",
 	"throttleoverride-list-reason": "Motivo",
 	"throttleoverride-list-search": "Cerca",
-	"throttleoverride-validation-ipinvalid": "Indirizzo IP o intervallo non valido."
+	"throttleoverride-validation-ipinvalid": "Indirizzo IP o intervallo non valido.",
+	"throttleoverride-validation-expiryinvalid": "Tempo di scadenza non valido."
 }

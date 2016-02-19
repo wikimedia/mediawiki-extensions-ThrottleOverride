@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Shirayuki",
-			"Umherirrender"
+			"Umherirrender",
+			"Liuxinyu970226"
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
@@ -25,7 +26,7 @@
 	"throttleoverride-list-legend": "Fieldset legend on [[Special:ThrottleOverrideList]]",
 	"throttleoverride-list-rangestart": "Table header in the throttle override list for the starting IP address of a throttle override",
 	"throttleoverride-list-rangeend": "Table header in the throttle override list for the ending IP address of a throttle override",
-	"throttleoverride-list-expiry": "Table header in the throttle override list for the expiry date and time of a throttle override.\n{{Identical|Expiry}}",
+	"throttleoverride-list-expiry": "Table header in the throttle override list for the expiry date and time of a throttle override.\n{{Identical|Expiration}}",
 	"throttleoverride-list-type": "Table header in the throttle override list for the actions allowed by a throttle override",
 	"throttleoverride-list-reason": "Table header in the throttle override list for the reason of a throttle override.\n{{Identical|Reason}}",
 	"throttleoverride-list-search": "Label for the sumbit button on [[Special:ThrottleOverrideList]].\n{{Identical|Search}}",
