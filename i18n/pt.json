@@ -4,5 +4,6 @@
 			"Vitorvicentevalente"
 		]
 	},
+	"throttleoverride-list-expiry": "Expiração",
 	"throttleoverride-validation-expiryinvalid": "Tempo de expiração inválido."
 }
