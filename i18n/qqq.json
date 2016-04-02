@@ -31,9 +31,9 @@
 	"throttleoverride-list-reason": "Table header in the throttle override list for the reason of a throttle override.\n{{Identical|Reason}}",
 	"throttleoverride-list-search": "Label for the sumbit button on [[Special:ThrottleOverrideList]].\n{{Identical|Search}}",
 	"throttleoverride-list-noresults": "Message displayed on [[Special:ThrottleOverrideList]] when the pager returns no results",
-	"throttleoverride-validation-ipinvalid": "Validation error displayed on [[Special:ThrottleOverride]] when an invalid IP address or IP range is given.",
-	"throttleoverride-validation-rangedisabled": "Validation error displayed on [[Special:ThrottleOverride]] when a user tries to give an IP range to override for, but all range exemptions are disabled.",
-	"throttleoverride-validation-rangetoolarge": "Validation error displayed on [[Special:ThrottleOverride]] when the IP range provided exceeds the configured allowable size.\n\nParameters:\n* $1 - The CIDR limit as configured",
+	"throttleoverride-validation-ipinvalid": "Validation error displayed on [[Special:ThrottleOverride]] when an invalid IP address or IP address range is given.",
+	"throttleoverride-validation-rangedisabled": "Validation error displayed on [[Special:ThrottleOverride]] when a user tries to give an IP address range to override for, but all range exemptions are disabled.",
+	"throttleoverride-validation-rangetoolarge": "Validation error displayed on [[Special:ThrottleOverride]] when the IP address range provided exceeds the configured allowable size.\n\nParameters:\n* $1 - The CIDR limit as configured",
 	"throttleoverride-validation-notypes": "Validation error displayed on [[Special:ThrottleOverride]] when no throttle type checkbox is selected.",
 	"throttleoverride-validation-expiryinvalid": "Validation error displayed on [[Special:ThrottleOverride]] when the expiry time given is invalid."
 }
