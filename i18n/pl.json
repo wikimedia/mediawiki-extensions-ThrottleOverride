@@ -8,6 +8,7 @@
 	"throttleoverride-ipaddress": "Adres IP lub zakres",
 	"throttleoverride-types-actcreate": "Tworzenie konta",
 	"throttleoverride-types-edit": "Edycje strony",
+	"throttleoverride-list-rangeend": "Koniec zakresu adresu IP",
 	"throttleoverride-list-expiry": "Wygasa",
 	"throttleoverride-list-reason": "Powód",
 	"throttleoverride-list-search": "Szukaj",
