@@ -31,7 +31,7 @@
 	"throttleoverride-list-reason": "Motif",
 	"throttleoverride-list-search": "Rechercher",
 	"throttleoverride-list-noresults": "La liste des outrepassements de limites est vide.",
-	"throttleoverride-validation-ipinvalid": "Adresse IP non valide ou plage d’adresse IP.",
+	"throttleoverride-validation-ipinvalid": "Adresse IP ou plage d’adresses IP non valide.",
 	"throttleoverride-validation-rangedisabled": "La possibilité de créer des exemptions d’accélérateur sur des plages d’adresses IP est désactivée.",
 	"throttleoverride-validation-rangetoolarge": "Les exemptions d’accélérateur sur une plage d’adresses IP plus grande que $1 ne sont pas autorisées.",
 	"throttleoverride-validation-notypes": "Aucun type d'accélérateur sélectionné.",
