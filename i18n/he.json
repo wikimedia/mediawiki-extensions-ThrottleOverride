@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2"
+		]
+	},
+	"throttleoverride-list-rangestart": "כתובת ה־IP הראשונה בטווח",
+	"throttleoverride-list-rangeend": "כתובת ה־IP האחרונה בטווח",
+	"throttleoverride-validation-ipinvalid": "כתובת IP או טווח כתובות IP לא תקין."
+}
