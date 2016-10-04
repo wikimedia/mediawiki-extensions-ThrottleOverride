@@ -5,8 +5,8 @@
 		]
 	},
 	"overridethrottle": "Override the account creation throttle",
-	"action-throttleoverride" : "add exemptions to rate limits",
-	"right-throttleoverride" : "Exempt certain IP addresses or ranges from rate limits",
+	"action-throttleoverride": "add exemptions to rate limits",
+	"right-throttleoverride": "Exempt certain IP addresses or ranges from rate limits",
 	"throttleoverridelist": "List of throttle overrides",
 	"throttleoverride-desc": "Allows overriding of IP address throttles",
 	"throttleoverride-legend": "Exemption information",
