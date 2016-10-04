@@ -1,0 +1,50 @@
+{
+	"name": "Throttle Override",
+	"version": "0.6.0",
+	"author": "Tyler Romeo",
+	"url": "https://www.mediawiki.org/wiki/Extension:ThrottleOverride",
+	"descriptionmsg": "throttleoverride-desc",
+	"license-name": "GPL-3.0+",
+	"type": "other",
+	"AvailableRights": [
+		"throttleoverride"
+	],
+	"SpecialPages": {
+		"OverrideThrottle": "SpecialOverrideThrottle",
+		"ThrottleOverrideList": "SpecialThrottleOverrideList"
+	},
+	"Hooks": {
+		"PingLimiter": [
+			"ThrottleOverrideHooks::onPingLimiter"
+		],
+		"ExemptFromAccountCreationThrottle": [
+			"ThrottleOverrideHooks::onExemptFromAccountCreationThrottle"
+		],
+		"LoadExtensionSchemaUpdates": [
+			"ThrottleOverrideHooks::onLoadExtensionSchemaUpdates"
+		]
+	},
+	"MessagesDirs": {
+		"OverrideThrottle": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"OverrideThrottleAlias": "ThrottleOverride.i18n.alias.php"
+	},
+	"AutoloadClasses": {
+		"ThrottleOverrideHooks": "ThrottleOverride.hooks.php",
+		"SpecialOverrideThrottle": "SpecialOverrideThrottle.php",
+		"SpecialThrottleOverrideList": "SpecialThrottleOverrideList.php",
+		"ThrottleOverridePager": "SpecialThrottleOverrideList.php"
+	},
+	"config": {
+		"ThrottleOverrideCIDRLimit": {
+			"value": {
+				"IPv4": 16,
+				"IPv6": 19
+			}
+		}
+	},
+	"manifest_version": 2
+}
