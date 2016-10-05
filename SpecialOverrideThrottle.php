@@ -66,11 +66,11 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'other' => $this->msg( 'ipbother' )->text(),
 				'filter-callback' => 'SpecialBlock::parseExpiryInput',
 				'validation-callback' => function ( $value ) {
-						if ( !$value ) {
-							return $this->msg( 'throttleoverride-validation-expiryinvalid' )->parse();
-						}
-						return true;
-					},
+					if ( !$value ) {
+						return $this->msg( 'throttleoverride-validation-expiryinvalid' )->parse();
+					}
+					return true;
+				},
 				'default' => $this->msg( 'ipb-default-expiry' )->inContentLanguage()->text()
 			],
 			'Reason' => [
@@ -81,12 +81,12 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'type' => 'multiselect',
 				'label-message' => 'throttleoverride-types',
 				'options' => $throttles,
-				'validation-callback' => function ( $input ) {
-						if ( !count( $input ) ) {
-							return $this->msg( 'throttleoverride-validation-notypes' )->parse();
-						}
-						return true;
-					},
+				'validation-callback' => function ( $value ) {
+					if ( !count( $value ) ) {
+						return $this->msg( 'throttleoverride-validation-notypes' )->parse();
+					}
+					return true;
+				},
 			]
 		];
 	}
@@ -142,12 +142,14 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 			if ( IP::isIPv4( $ip ) && $range < $wgThrottleOverrideCIDRLimit['IPv4'] ) {
 				$status->fatal( 'throttleoverride-validation-rangetoolarge',
-					$wgThrottleOverrideCIDRLimit['IPv4'] );
+					$wgThrottleOverrideCIDRLimit['IPv4']
+				);
 			}
 
 			if ( IP::isIPv6( $ip ) && $range < $wgThrottleOverrideCIDRLimit['IPv6'] ) {
 				$status->fatal( 'throttleoverride-validation-rangetoolarge',
-					$wgThrottleOverrideCIDRLimit['IPv6'] );
+					$wgThrottleOverrideCIDRLimit['IPv6']
+				);
 			}
 		}
 
