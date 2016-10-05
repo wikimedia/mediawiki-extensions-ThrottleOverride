@@ -19,19 +19,19 @@
  */
 
 class ThrottleOverridePager extends TablePager {
-	function __construct( SpecialPage $page, $conds = array() ) {
+	function __construct( SpecialPage $page, $conds = [] ) {
 		parent::__construct( $page->getContext() );
 		$this->throttleType = isset( $conds['throttleType'] ) ? $conds['throttleType'] : 'all';
 	}
 
 	function getFieldNames() {
-		return array(
+		return [
 			'thr_range_start' => $this->msg( 'throttleoverride-list-rangestart' )->text(),
 			'thr_range_end' => $this->msg( 'throttleoverride-list-rangeend' )->text(),
 			'thr_expiry' => $this->msg( 'throttleoverride-list-expiry' )->text(),
 			'thr_type' => $this->msg( 'throttleoverride-list-type' )->text(),
 			'thr_reason' => $this->msg( 'throttleoverride-list-reason' )->text(),
-		);
+		];
 	}
 
 	function isFieldSortable( $field ) {
@@ -47,16 +47,16 @@ class ThrottleOverridePager extends TablePager {
 	}
 
 	function getQueryInfo() {
-		$a = array(
+		$a = [
 			'tables' => 'throttle_override',
-			'fields' => array(
+			'fields' => [
 				'thr_type',
 				'thr_range_start',
 				'thr_range_end',
 				'thr_expiry',
 				'thr_reason',
-			),
-		);
+			],
+		];
 
 		if ( $this->throttleType !== 'all' ) {
 			$a['conds'][] = $this->mDb->addIdentifierQuotes( 'thr_type' ) .
@@ -73,7 +73,7 @@ class ThrottleOverridePager extends TablePager {
 	function formatValue( $name, $value ) {
 		switch ( $name ) {
 			case 'thr_type':
-				$types = array();
+				$types = [];
 				foreach ( explode( ',', $value ) as $type ) {
 					// For grepping. The following messages are used here:
 					// throttleoverride-types-actcreate, throttleoverride-types-edit,

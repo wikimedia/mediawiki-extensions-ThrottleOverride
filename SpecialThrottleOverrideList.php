@@ -18,9 +18,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- /**
-  * Special page for viewing the list of current throttle overrides
-  */
+/**
+ * Special page for viewing the list of current throttle overrides
+ */
 class SpecialThrottleOverrideList extends FormSpecialPage {
 	function __construct() {
 		parent::__construct( 'ThrottleOverrideList' );
@@ -33,8 +33,8 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 	function getFormFields() {
 		global $wgRateLimits;
 
-		$throttles = array();
-		foreach ( array( 'all', 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ) as $type ) {
+		$throttles = [];
+		foreach ( [ 'all', 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ] as $type ) {
 			if ( $type == 'all' || $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
 				// For grepping. The following messages are used here:
 				// throttleoverride-types-all
@@ -45,14 +45,14 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 			}
 		}
 
-		return array(
-			'ThrottleType' => array(
+		return [
+			'ThrottleType' => [
 				'type' => 'select',
 				'default' => 'all',
 				'label-message' => 'throttleoverride-list-throttletype',
 				'options' => $throttles
-			)
-		);
+			]
+		];
 	}
 
 	function alterForm( HTMLForm $form ) {
@@ -68,19 +68,19 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 			$dbw->onTransactionIdle( function() use ( $dbw, $method ) {
 				$dbw->delete(
 					'throttle_override',
-					array(
+					[
 						$dbw->addIdentifierQuotes( 'thr_expiry' ) .
 						' < ' .
 						$dbw->addQuotes( $dbw->timestamp() )
-					),
+					],
 					$method
 				);
 			} );
 		}
 
-		$pager = new ThrottleOverridePager( $this, array(
+		$pager = new ThrottleOverridePager( $this, [
 			'throttleType' => $data['ThrottleType'],
-		) );
+		] );
 
 		// Add the result as post text so it appears after the form
 		if ( !$pager->getNumRows() ) {

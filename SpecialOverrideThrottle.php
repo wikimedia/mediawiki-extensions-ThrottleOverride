@@ -40,9 +40,9 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		// move - A page is moved (ping-limiter)
 		// mailpassword - User requests a password recovery (ping-limiter)
 		// emailuser - User emails another user (ping-limiter)
-		$throttles = array();
-		foreach( array( 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ) as $type ) {
-			if( $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
+		$throttles = [];
+		foreach ( [ 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ] as $type ) {
+			if ( $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
 				// For grepping. The following messages are used here:
 				// throttleoverride-types-actcreate, throttleoverride-types-edit,
 				// throttleoverride-types-moves, throttleoverride-types-mailpassword,
@@ -51,14 +51,14 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			}
 		}
 
-		return array(
-			'Target' => array(
+		return [
+			'Target' => [
 				'type' => 'text',
 				'label-message' => 'throttleoverride-ipaddress',
 				'required' => true,
 				'autofocus' => true
-			),
-			'Expiry' => array(
+			],
+			'Expiry' => [
 				'type' => SpecialBlock::getSuggestedDurations() ? 'selectorother' : 'text',
 				'label-message' => 'ipbexpiry',
 				'required' => true,
@@ -72,12 +72,12 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 						return true;
 					},
 				'default' => $this->msg( 'ipb-default-expiry' )->inContentLanguage()->text()
-			),
-			'Reason' => array(
+			],
+			'Reason' => [
 				'type' => 'text',
 				'label-message' => 'ipbreason',
-			),
-			'Throttles' => array(
+			],
+			'Throttles' => [
 				'type' => 'multiselect',
 				'label-message' => 'throttleoverride-types',
 				'options' => $throttles,
@@ -87,8 +87,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 						}
 						return true;
 					},
-			)
-		);
+			]
+		];
 	}
 
 	function onSubmit( array $data ) {
@@ -100,13 +100,13 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 		return wfGetDB( DB_MASTER )->insert(
 			'throttle_override',
-			array(
+			[
 				'thr_range_start' => $status->value[0],
 				'thr_range_end' => $status->value[1],
 				'thr_expiry' => $data['Expiry'],
 				'thr_reason' => $data['Reason'],
 				'thr_type' => implode( ',', $data['Throttles'] )
-			),
+			],
 			__METHOD__
 		);
 	}
@@ -127,7 +127,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 		$status = Status::newGood( $parsedRange );
 
-		if ( $parsedRange === array( false, false ) ) {
+		if ( $parsedRange === [ false, false ] ) {
 			$status->fatal( 'throttleoverride-validation-ipinvalid' );
 		} elseif ( $parsedRange[0] !== $parsedRange[1] ) {
 			list( $ip, $range ) = explode( '/', IP::sanitizeRange( $target ), 2 );

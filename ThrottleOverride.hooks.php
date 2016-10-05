@@ -55,26 +55,26 @@ class ThrottleOverrideHooks {
 		}
 
 		$quotedIp = $dbr->addQuotes( IP::toHex( $ip ) );
-		$conds = array(
+		$conds = [
 			"thr_range_start <= $quotedIp",
 			"thr_range_end >= $quotedIp",
 			'thr_type' . $dbr->buildLike( $dbr->anyString(), $action, $dbr->anyString() )
-		);
+		];
 
 		$expiry = $dbr->selectField(
 			'throttle_override',
 			'thr_expiry',
 			$conds,
 			__METHOD__,
-			array( 'ORDER BY' => 'thr_expiry DESC' )
+			[ 'ORDER BY' => 'thr_expiry DESC' ]
 		);
 
-		if( $expiry > wfTimestampNow() ) {
+		if ( $expiry > wfTimestampNow() ) {
 			// Valid exemption. Disable the throttle.
 			$result = false;
 
 			return false;
-		} elseif( $expiry !== false ) {
+		} elseif ( $expiry !== false ) {
 			// Expired exemption. Delete it from the DB.
 			wfGetDB( DB_MASTER )->delete(
 				'throttle_override',
