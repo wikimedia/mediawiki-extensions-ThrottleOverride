@@ -20,7 +20,7 @@
 	"throttleoverride-types-move": "Преместување на страници",
 	"throttleoverride-types-mailpassword": "Повраќање на лозинка по е-пошта",
 	"throttleoverride-types-emailuser": "Е-пошта од корисникот",
-	"throttleoverride-list-throttletype": "Вид на наметнување:",
+	"throttleoverride-list-throttletype": "Вид на стеснување:",
 	"throttleoverride-list-legend": "Филтрирање по изземања",
 	"throttleoverride-list-rangestart": "Почеток на IP-опсегот",
 	"throttleoverride-list-rangeend": "Крај на IP-опсегот",
