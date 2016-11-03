@@ -40,11 +40,9 @@
 	},
 	"config": {
 		"ThrottleOverrideCIDRLimit": {
-			"value": {
-				"IPv4": 16,
-				"IPv6": 19
-			}
+			"IPv4": 16,
+			"IPv6": 19
 		}
 	},
-	"manifest_version": 2
+	"manifest_version": 1
 }
