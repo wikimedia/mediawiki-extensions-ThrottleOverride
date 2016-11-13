@@ -16,6 +16,6 @@
 	"throttleoverride-list-reason": "Motivo",
 	"throttleoverride-list-search": "Buscar",
 	"throttleoverride-validation-ipinvalid": "La dirección o el intervalo de IP no es válido.",
-	"throttleoverride-validation-rangetoolarge": "Acelerador exenciones a través de una dirección IP del rango de más de $1 no están permitidos.",
+	"throttleoverride-validation-rangetoolarge": "No se permiten las exenciones de regulación en intervalos de direcciones IP mayores que $1.",
 	"throttleoverride-validation-expiryinvalid": "Tiempo de caducidad inválido."
 }
