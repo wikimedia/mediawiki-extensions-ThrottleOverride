@@ -9,7 +9,7 @@
 	},
 	"overridethrottle": "계정 만들기 제한 회피",
 	"throttleoverridelist": "스로틀 무시 목록",
-	"throttleoverride-desc": "IP 주소 스로틀의 무효화를 허용합니다",
+	"throttleoverride-desc": "IP 주소 제어를 무시할 수 있게 합니다",
 	"throttleoverride-legend": "면제 정보",
 	"throttleoverride-text": "특정한 스로틀 제한을 면제할 IP 주소나 대역, 그리고 면제가 지속되는 기간을 입력하세요.\n선택적인 이유는 기록에 남길 수 있습니다.",
 	"throttleoverride-ipaddress": "IP 주소나 범위",
