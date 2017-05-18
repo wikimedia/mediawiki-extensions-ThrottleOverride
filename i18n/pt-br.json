@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luckas"
+			"Luckas",
+			"Felipe L. Ewald"
 		]
 	},
 	"throttleoverride-types-all": "Todos os tipos",
+	"throttleoverride-types-actcreate": "Criação de conta",
+	"throttleoverride-list-expiry": "Expiração",
 	"throttleoverride-list-type": "Ações permitidas",
 	"throttleoverride-list-reason": "Motivo",
 	"throttleoverride-list-search": "Pesquisar"
