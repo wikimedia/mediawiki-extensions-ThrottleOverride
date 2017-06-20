@@ -65,7 +65,7 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 			// Purge expired entries on one in every 10 queries
 			$dbw = wfGetDB( DB_MASTER );
 			$method = __METHOD__;
-			$dbw->onTransactionIdle( function() use ( $dbw, $method ) {
+			$dbw->onTransactionIdle( function () use ( $dbw, $method ) {
 				$dbw->delete(
 					'throttle_override',
 					[
