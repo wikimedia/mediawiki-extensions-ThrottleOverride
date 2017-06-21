@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Okras"
+			"Okras",
+			"Facenapalm"
 		]
 	},
 	"overridethrottle": "Переопределить ограничения на создание учётных записей",
+	"action-throttleoverride": "добавление исключений на ограничения скорости",
+	"right-throttleoverride": "Исключить определённый IP-адрес или диапазон из ограничения скорости",
 	"throttleoverridelist": "Список переопределений ограничений",
 	"throttleoverride-desc": "Позволяет переопределение ограничения для IP-адреса",
 	"throttleoverride-legend": "Информация об исключениях",
@@ -29,5 +32,7 @@
 	"throttleoverride-list-noresults": "Список переопределений ограничений пуст.",
 	"throttleoverride-validation-ipinvalid": "Недопустимый IP-адрес или диапазон IP.",
 	"throttleoverride-validation-rangedisabled": "Возможность создания исключений с ограничением по IP-диапазону отключена.",
-	"throttleoverride-validation-rangetoolarge": "Исключения с ограничением в IP-диапазонах больше, чем $1, не разрешены."
+	"throttleoverride-validation-rangetoolarge": "Исключения с ограничением в IP-диапазонах больше, чем $1, не разрешены.",
+	"throttleoverride-validation-notypes": "Не указан тип ограничения.",
+	"throttleoverride-validation-expiryinvalid": "Некорректная дата истечения."
 }
