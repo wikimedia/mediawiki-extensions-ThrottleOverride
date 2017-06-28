@@ -3,7 +3,8 @@
 		"authors": [
 			"Siebrand",
 			"Southparkfan",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"Mainframe98"
 		]
 	},
 	"overridethrottle": "Beperkingen voor aanmaken account negeren",
@@ -29,5 +30,6 @@
 	"throttleoverride-list-reason": "Reden",
 	"throttleoverride-list-search": "Zoeken",
 	"throttleoverride-list-noresults": "De lijst met drempelwaardebeperkingen is leeg.",
-	"throttleoverride-validation-ipinvalid": "Ongeldig IP-adres of IP-adresreeks."
+	"throttleoverride-validation-ipinvalid": "Ongeldig IP-adres of IP-adresreeks.",
+	"throttleoverride-validation-expiryinvalid": "Ongeldige vervaltijd."
 }
