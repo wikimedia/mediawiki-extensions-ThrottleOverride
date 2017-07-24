@@ -1,9 +1,38 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Hamilton Abreu"
 		]
 	},
+	"overridethrottle": "Ultrapassar a regulação de frequência da criação de contas",
+	"action-throttleoverride": "adicionar exceções aos limites de frequência",
+	"right-throttleoverride": "Isentar certos endereços ou gamas de endereços IP dos limites de frequência",
+	"throttleoverridelist": "Lista de alterações às regulações de frequência",
+	"throttleoverride-desc": "Permite ultrapassar as regulações de frequência para endereços IP",
+	"throttleoverride-legend": "Informação sobre a isenção",
+	"throttleoverride-text": "Introduza o endereço ou gama de endereços IP que pretende isentar de certas regulações de frequência e a duração dessa isenção.\nPode especificar um motivo opcional para os registos.",
+	"throttleoverride-ipaddress": "Endereço ou gama IP",
+	"throttleoverride-success": "A isenção foi aplicada.",
+	"throttleoverride-types": "Tipos de regulação de frequência:",
+	"throttleoverride-types-all": "Todos os tipos",
+	"throttleoverride-types-actcreate": "Criação de contas",
+	"throttleoverride-types-edit": "Edições de páginas",
+	"throttleoverride-types-move": "Movimentações de páginas",
+	"throttleoverride-types-mailpassword": "Correios eletrónicos de recuperação da palavra-passe",
+	"throttleoverride-types-emailuser": "Correios eletrónicos do utilizador",
+	"throttleoverride-list-throttletype": "Tipo de regulação de frequência:",
+	"throttleoverride-list-legend": "Filtragem de isenções",
+	"throttleoverride-list-rangestart": "Início da gama de endereços IP",
+	"throttleoverride-list-rangeend": "Fim da gama de endereços IP",
 	"throttleoverride-list-expiry": "Expiração",
-	"throttleoverride-validation-expiryinvalid": "Tempo de expiração inválido."
+	"throttleoverride-list-type": "Ações permitidas:",
+	"throttleoverride-list-reason": "Motivo",
+	"throttleoverride-list-search": "Pesquisar",
+	"throttleoverride-list-noresults": "A lista de alterações às regulações de frequência está vazia.",
+	"throttleoverride-validation-ipinvalid": "Endereço IP inválido ou gama de endereços IP inválida.",
+	"throttleoverride-validation-rangedisabled": "A possibilidade de criar isenções das regulações de frequência para gamas de endereços IP está desativada.",
+	"throttleoverride-validation-rangetoolarge": "Não são permitidas isenções das regulações de frequência para uma gama de endereços IP maior do que $1",
+	"throttleoverride-validation-notypes": "Não foi selecionado nenhum tipo de regulação de frequência.",
+	"throttleoverride-validation-expiryinvalid": "Data de expiração inválida."
 }
