@@ -9,8 +9,6 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 	</rule>
 	<file>.</file>
-	<arg name="encoding" value="utf8" />
+	<arg name="encoding" value="UTF-8" />
 	<arg name="extensions" value="php,php5,inc,sample" />
-	<exclude-pattern>vendor/</exclude-pattern>
-	<exclude-pattern>.git</exclude-pattern>
 </ruleset>
