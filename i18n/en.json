@@ -4,7 +4,7 @@
 			"Tyler Romeo <tylerromeo@gmail.com>"
 		]
 	},
-	"overridethrottle": "Override the account creation throttle",
+	"overridethrottle": "Override throttles",
 	"action-throttleoverride": "add exemptions to rate limits",
 	"right-throttleoverride": "Exempt certain IP addresses or ranges from rate limits",
 	"throttleoverridelist": "List of throttle overrides",
