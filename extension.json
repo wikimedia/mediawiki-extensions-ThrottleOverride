@@ -13,6 +13,12 @@
 		"OverrideThrottle": "SpecialOverrideThrottle",
 		"ThrottleOverrideList": "SpecialThrottleOverrideList"
 	},
+	"LogTypes": [
+		"throttleoverride"
+	],
+	"LogActionsHandlers": {
+		 "throttleoverride/*": "ThrottleOverrideLogFormatter"
+	},
 	"Hooks": {
 		"PingLimiter": [
 			"ThrottleOverrideHooks::onPingLimiter"
@@ -36,7 +42,8 @@
 		"ThrottleOverrideHooks": "ThrottleOverride.hooks.php",
 		"SpecialOverrideThrottle": "SpecialOverrideThrottle.php",
 		"SpecialThrottleOverrideList": "SpecialThrottleOverrideList.php",
-		"ThrottleOverridePager": "ThrottleOverridePager.php"
+		"ThrottleOverridePager": "ThrottleOverridePager.php",
+		"ThrottleOverrideLogFormatter": "ThrottleOverrideLogFormatter.php"
 	},
 	"config": {
 		"ThrottleOverrideCIDRLimit": {

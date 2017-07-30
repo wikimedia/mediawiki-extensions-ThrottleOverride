@@ -147,6 +147,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 	function onSubmit( array $data ) {
 		$types = implode( ',', $data['Throttles'] );
+		$reason = trim( $data['Reason'] );
 		$parsedRange = IP::parseRange( $data['Target'] );
 		$errors = self::validateFields(
 			$data['Target'],
@@ -155,6 +156,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			$parsedRange
 		);
 
+		// Require confirmation if there already is a row for that target.
 		if ( !$data['Modify'] && $this->throttleId ) {
 			$errors[] = [ 'throttleoverride-rule-alreadyexists', $this->target ];
 		}
@@ -163,16 +165,31 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			return $errors;
 		}
 
+		// Create a log entry
+		$logEntry = new ManualLogEntry( 'throttleoverride', 'created' );
+		$logEntry->setPerformer( $this->getUser() );
+		$logEntry->setTarget( Title::makeTitle( NS_USER, $this->target ) );
+		$logEntry->setComment( $reason );
+		$logEntry->setParameters( [
+			'4::throttles' => $types,
+			'5::expiry' => $data['Expiry'],
+		] );
+		$logId = $logEntry->insert();
+		$logEntry->publish( $logId );
+
+		// Save the new exemption
 		$dbw = wfGetDB( DB_MASTER );
 		$row = [
 			'thr_target' => $this->target,
 			'thr_expiry' => $dbw->encodeExpiry( $data['Expiry'] ),
-			'thr_reason' => trim( $data['Reason'] ),
+			'thr_reason' => $reason,
 			'thr_type' => $types,
 			'thr_range_start' => $parsedRange[0],
 			'thr_range_end' => $parsedRange[1],
 		];
 
+		// If there already is an exemption for that target AND the user already confirmed
+		// to override it, update the db row. Otherwise insert a new row.
 		if ( $data['Modify'] && $this->throttleId ) {
 			$dbw->update( 'throttle_override',
 				$row,
