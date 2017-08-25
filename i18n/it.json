@@ -5,7 +5,7 @@
 			"Toadino2"
 		]
 	},
-	"overridethrottle": "Ignora la limitazione nella creazione di utenze",
+	"overridethrottle": "Ignora limitazioni",
 	"right-throttleoverride": "Esenta alcuni indirizzi IP o serie dal controllo del traffico Internet",
 	"throttleoverride-desc": "Consente di ignorare le limitazioni per indirizzo IP",
 	"throttleoverride-legend": "Informazioni sull'esenzione",

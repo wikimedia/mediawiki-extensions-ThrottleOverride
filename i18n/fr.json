@@ -6,7 +6,7 @@
 			"Wladek92"
 		]
 	},
-	"overridethrottle": "Écraser la restriction de création de compte",
+	"overridethrottle": "Écraser les restrictions",
 	"action-throttleoverride": "ajouter des exclusions aux limites de taux",
 	"right-throttleoverride": "Exclu certaines adresses IP ou intervalles des limites des taux",
 	"throttleoverridelist": "Liste des outrepassements de limites",

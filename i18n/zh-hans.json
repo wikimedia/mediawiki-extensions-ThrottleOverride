@@ -7,7 +7,7 @@
 			"Yfdyh000"
 		]
 	},
-	"overridethrottle": "覆盖帐户创建节流阀",
+	"overridethrottle": "覆盖节流阀",
 	"action-throttleoverride": "添加例外至费用限制",
 	"right-throttleoverride": "从费率限制中排除指定IP地址或地址段",
 	"throttleoverridelist": "节流阀覆盖列表",

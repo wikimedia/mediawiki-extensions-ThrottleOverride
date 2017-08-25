@@ -4,7 +4,7 @@
 			"Metalhead64"
 		]
 	},
-	"overridethrottle": "Die Kontenerstellungsbeschränkung umgehen",
+	"overridethrottle": "Beschränkungen umgehen",
 	"action-throttleoverride": "Ausnahmen zu Bewertungsbeschränkungen hinzuzufügen",
 	"right-throttleoverride": "Bestimmte IP-Adressen oder -Adressbereiche von Bewertungsbeschränkungen ausnehmen",
 	"throttleoverridelist": "Liste von Beschränkungsumgehungen",
