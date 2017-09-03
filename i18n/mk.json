@@ -4,7 +4,7 @@
 			"Bjankuloski06"
 		]
 	},
-	"overridethrottle": "Избегни го ограничувањето за создавање сметки",
+	"overridethrottle": "Избегни го ограничувањето",
 	"action-throttleoverride": "додавање на изземања од ограничувања на стапки",
 	"right-throttleoverride": "Изземање на извесни IP-адреси или опсежни  од ограничувања на стапки",
 	"throttleoverridelist": "Список на наметнати презапишувања",
@@ -20,10 +20,12 @@
 	"throttleoverride-types-move": "Преместување на страници",
 	"throttleoverride-types-mailpassword": "Повраќање на лозинка по е-пошта",
 	"throttleoverride-types-emailuser": "Е-пошта од корисникот",
+	"throttleoverride-list-change": "смени ограничување",
 	"throttleoverride-list-throttletype": "Вид на стеснување:",
 	"throttleoverride-list-legend": "Филтрирање по изземања",
 	"throttleoverride-list-rangestart": "Почеток на IP-опсегот",
 	"throttleoverride-list-rangeend": "Крај на IP-опсегот",
+	"throttleoverride-list-target": "Цел",
 	"throttleoverride-list-expiry": "Истек",
 	"throttleoverride-list-type": "Дозволени дејства:",
 	"throttleoverride-list-reason": "Причина",
@@ -33,5 +35,6 @@
 	"throttleoverride-validation-rangedisabled": "Можноста за создавање на исклучоци од ограничувањето на IP-опсези е исклучена.",
 	"throttleoverride-validation-rangetoolarge": "Не се одзволени исклучоци од ограничувањето по IP-опсег поголем од $1.",
 	"throttleoverride-validation-notypes": "Немате избрано тип на истакнување.",
-	"throttleoverride-validation-expiryinvalid": "Неважечко време на истек."
+	"throttleoverride-validation-expiryinvalid": "Неважечко време на истек.",
+	"throttleoverride-rule-alreadyexists": "Има постоечки исклучок за $1. Можете да ги погледате постоечките поставки во [[Special:ThrottleOverrideList|списокот на исклучоци за ограничувања]], или пак да ги измените поставките на постоечкото правило преподнесувајќи го образецов."
 }

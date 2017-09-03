@@ -20,10 +20,12 @@
 	"throttleoverride-types-move": "Seitenverschiebungen",
 	"throttleoverride-types-mailpassword": "Passwortwiederherstellungs-Mails",
 	"throttleoverride-types-emailuser": "Benutzer-Mails",
+	"throttleoverride-list-change": "Beschränkungen ändern",
 	"throttleoverride-list-throttletype": "Beschränkungstyp:",
 	"throttleoverride-list-legend": "Ausnahmefilterung",
 	"throttleoverride-list-rangestart": "Start des IP-Adressbereichs",
 	"throttleoverride-list-rangeend": "Ende des IP-Adressbereichs",
+	"throttleoverride-list-target": "Ziel",
 	"throttleoverride-list-expiry": "Ablauf",
 	"throttleoverride-list-type": "Erlaubte Aktionen",
 	"throttleoverride-list-reason": "Grund",
@@ -33,5 +35,6 @@
 	"throttleoverride-validation-rangedisabled": "Die Möglichkeit zur Erstellung von Drosselungsausnahmen bei IP-Adressbereichen ist deaktiviert.",
 	"throttleoverride-validation-rangetoolarge": "Drosselungsausnahmen bei IP-Adressbereichen größer als $1 sind nicht erlaubt.",
 	"throttleoverride-validation-notypes": "Kein Beschränkungstyp ausgewählt.",
-	"throttleoverride-validation-expiryinvalid": "Ungültige Ablaufzeit."
+	"throttleoverride-validation-expiryinvalid": "Ungültige Ablaufzeit.",
+	"throttleoverride-rule-alreadyexists": "Es gibt eine vorhandene Ausnahme für $1. Du kannst die vorhandenen Einstellungen auf der [[Special:ThrottleOverrideList|Liste der Beschränkungsausnahmen]] ansehen oder die Einstellungen der vorhandenen Regel durch erneutes Absenden dieses Formulars ändern."
 }

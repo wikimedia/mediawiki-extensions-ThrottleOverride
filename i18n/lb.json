@@ -12,5 +12,6 @@
 	"throttleoverride-types-edit": "Säitenännerungen",
 	"throttleoverride-types-move": "Geréckelt Säiten",
 	"throttleoverride-types-emailuser": "E-Mailen u Benotzer",
+	"throttleoverride-list-target": "Zil",
 	"throttleoverride-validation-ipinvalid": "Net valabel IP-Adress oder IP-Range."
 }

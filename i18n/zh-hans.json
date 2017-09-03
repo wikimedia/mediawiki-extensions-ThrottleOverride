@@ -23,12 +23,14 @@
 	"throttleoverride-types-move": "移动页面",
 	"throttleoverride-types-mailpassword": "密码恢复邮件",
 	"throttleoverride-types-emailuser": "用户电子邮箱",
+	"throttleoverride-list-change": "更改节流阀",
 	"throttleoverride-list-throttletype": "节流阀类型：",
 	"throttleoverride-list-legend": "豁免筛选",
 	"throttleoverride-list-rangestart": "IP地址范围的开始",
 	"throttleoverride-list-rangeend": "IP地址范围的结束",
+	"throttleoverride-list-target": "目标",
 	"throttleoverride-list-expiry": "截止日期",
-	"throttleoverride-list-type": "允许的动作",
+	"throttleoverride-list-type": "允许的操作",
 	"throttleoverride-list-reason": "原因",
 	"throttleoverride-list-search": "搜索",
 	"throttleoverride-list-noresults": "节流阀覆盖列表是空的。",
@@ -36,5 +38,6 @@
 	"throttleoverride-validation-rangedisabled": "创建IP地址域的阀例外被禁用。",
 	"throttleoverride-validation-rangetoolarge": "超出$1个IP地址段的阀例外不允许。",
 	"throttleoverride-validation-notypes": "没有选择节流阀类型。",
-	"throttleoverride-validation-expiryinvalid": "无效的到期时间。"
+	"throttleoverride-validation-expiryinvalid": "无效的到期时间。",
+	"throttleoverride-rule-alreadyexists": "$1存在现有例外。您可以在[[Special:ThrottleOverrideList|节流阀例外列表]]中查看现有设置，或通过重新提交该表单修改现有规则的设置。"
 }

@@ -25,6 +25,7 @@
 	"throttleoverride-list-legend": "면제 필터링",
 	"throttleoverride-list-rangestart": "IP 주소 대역의 시작",
 	"throttleoverride-list-rangeend": "IP 주소 대역의 끝",
+	"throttleoverride-list-target": "대상",
 	"throttleoverride-list-expiry": "만료",
 	"throttleoverride-list-type": "허용된 명령",
 	"throttleoverride-list-reason": "이유",

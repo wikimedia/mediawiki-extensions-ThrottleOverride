@@ -22,10 +22,12 @@
 	"throttleoverride-types-move": "Déplacements de page",
 	"throttleoverride-types-mailpassword": "Courriels de récupération de mot de passe",
 	"throttleoverride-types-emailuser": "Courriels utilisateur",
+	"throttleoverride-list-change": "modifier un ralentissement",
 	"throttleoverride-list-throttletype": "Type de limite :",
 	"throttleoverride-list-legend": "Filtrage des exemptions",
 	"throttleoverride-list-rangestart": "Début de la plage d'adresses IP",
 	"throttleoverride-list-rangeend": "Fin de la plage d'adresses IP",
+	"throttleoverride-list-target": "Cible",
 	"throttleoverride-list-expiry": "Expiration",
 	"throttleoverride-list-type": "Actions autorisées",
 	"throttleoverride-list-reason": "Motif",
@@ -35,5 +37,6 @@
 	"throttleoverride-validation-rangedisabled": "La possibilité de créer des exemptions d’accélérateur sur des plages d’adresses IP est désactivée.",
 	"throttleoverride-validation-rangetoolarge": "Les exemptions d’accélérateur sur une plage d’adresses IP plus grande que $1 ne sont pas autorisées.",
 	"throttleoverride-validation-notypes": "Aucun type d'accélérateur sélectionné.",
-	"throttleoverride-validation-expiryinvalid": "Date de péremption invalide."
+	"throttleoverride-validation-expiryinvalid": "Date de péremption invalide.",
+	"throttleoverride-rule-alreadyexists": "Il existe une exemption pour $1. vous pouvez afficher les définitions existantes sur la [[Special:ThrottleOverrideList| liste des exemptions de ralentissement]],ou modifier la définition de la règle existante en re-soumettant ce formulaire."
 }
