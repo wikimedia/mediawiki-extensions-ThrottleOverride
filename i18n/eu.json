@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Subi"
+			"Subi",
+			"Mikel Ibaiba"
 		]
 	},
+	"throttleoverride-list-target": "Helburua",
 	"throttleoverride-list-reason": "Arrazoia",
 	"throttleoverride-list-search": "Bilatu"
 }
