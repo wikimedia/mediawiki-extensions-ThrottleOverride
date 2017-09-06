@@ -5,7 +5,7 @@
 			"Hamilton Abreu"
 		]
 	},
-	"overridethrottle": "Ultrapassar a regulação de frequência da criação de contas",
+	"overridethrottle": "Ultrapassar as regulações de frequência",
 	"action-throttleoverride": "adicionar exceções aos limites de frequência",
 	"right-throttleoverride": "Isentar certos endereços ou gamas de endereços IP dos limites de frequência",
 	"throttleoverridelist": "Lista de alterações às regulações de frequência",
@@ -21,10 +21,12 @@
 	"throttleoverride-types-move": "Movimentações de páginas",
 	"throttleoverride-types-mailpassword": "Correios eletrónicos de recuperação da palavra-passe",
 	"throttleoverride-types-emailuser": "Correios eletrónicos do utilizador",
+	"throttleoverride-list-change": "alterar regulação de frequência",
 	"throttleoverride-list-throttletype": "Tipo de regulação de frequência:",
 	"throttleoverride-list-legend": "Filtragem de isenções",
 	"throttleoverride-list-rangestart": "Início da gama de endereços IP",
 	"throttleoverride-list-rangeend": "Fim da gama de endereços IP",
+	"throttleoverride-list-target": "Alvo",
 	"throttleoverride-list-expiry": "Expiração",
 	"throttleoverride-list-type": "Ações permitidas:",
 	"throttleoverride-list-reason": "Motivo",
@@ -34,5 +36,6 @@
 	"throttleoverride-validation-rangedisabled": "A possibilidade de criar isenções das regulações de frequência para gamas de endereços IP está desativada.",
 	"throttleoverride-validation-rangetoolarge": "Não são permitidas isenções das regulações de frequência para uma gama de endereços IP maior do que $1",
 	"throttleoverride-validation-notypes": "Não foi selecionado nenhum tipo de regulação de frequência.",
-	"throttleoverride-validation-expiryinvalid": "Data de expiração inválida."
+	"throttleoverride-validation-expiryinvalid": "Data de expiração inválida.",
+	"throttleoverride-rule-alreadyexists": "Já existe uma isenção para $1. Pode ver as definições existentes na [[Special:ThrottleOverrideList|lista de isenções das regulações de frequência]], ou modificar as definições da regra existente reenviando este formulário."
 }

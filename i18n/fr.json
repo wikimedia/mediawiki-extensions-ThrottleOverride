@@ -3,7 +3,8 @@
 		"authors": [
 			"Gomoko",
 			"Louperivois",
-			"Wladek92"
+			"Wladek92",
+			"Verdy p"
 		]
 	},
 	"overridethrottle": "Écraser les restrictions",
@@ -38,5 +39,5 @@
 	"throttleoverride-validation-rangetoolarge": "Les exemptions d’accélérateur sur une plage d’adresses IP plus grande que $1 ne sont pas autorisées.",
 	"throttleoverride-validation-notypes": "Aucun type d'accélérateur sélectionné.",
 	"throttleoverride-validation-expiryinvalid": "Date de péremption invalide.",
-	"throttleoverride-rule-alreadyexists": "Il existe une exemption pour $1. vous pouvez afficher les définitions existantes sur la [[Special:ThrottleOverrideList| liste des exemptions de ralentissement]],ou modifier la définition de la règle existante en re-soumettant ce formulaire."
+	"throttleoverride-rule-alreadyexists": "Il existe une exemption pour $1. vous pouvez afficher les définitions existantes sur la [[Special:ThrottleOverrideList|liste des exemptions de ralentissement]], ou modifier la définition de la règle existante en soumettant à nouveau ce formulaire."
 }
