@@ -3,10 +3,11 @@
 		"authors": [
 			"Andriykopanytsia",
 			"Base",
-			"Ата"
+			"Ата",
+			"Piramidion"
 		]
 	},
-	"overridethrottle": "Обхід обмеження частоти створення облікових записів",
+	"overridethrottle": "Обхід обмежень частоти",
 	"action-throttleoverride": "додавати винятки до обмежень швидкості",
 	"right-throttleoverride": "Вилучення певних IP-адрес чи діапазонів з обмежень швидкості",
 	"throttleoverridelist": "Список обходів обмеження частоти",
@@ -22,10 +23,12 @@
 	"throttleoverride-types-move": "Перейменування сторінок",
 	"throttleoverride-types-mailpassword": "Відновлення паролю електронною поштою",
 	"throttleoverride-types-emailuser": "Листи користувачам електронною поштою",
+	"throttleoverride-list-change": "змінити частоту",
 	"throttleoverride-list-throttletype": "Тип обмеження частоти:",
 	"throttleoverride-list-legend": "Звільнення фільтрації",
 	"throttleoverride-list-rangestart": "Початок діапазону IP",
 	"throttleoverride-list-rangeend": "Кінець діапазону IP",
+	"throttleoverride-list-target": "Ціль",
 	"throttleoverride-list-expiry": "Закінчення",
 	"throttleoverride-list-type": "Дозволені дії",
 	"throttleoverride-list-reason": "Причина",
@@ -35,5 +38,6 @@
 	"throttleoverride-validation-rangedisabled": "Можливість створювати винятки з діапазонів IP-адрес відключена.",
 	"throttleoverride-validation-rangetoolarge": "Винятки з обмеженнями у діапазонах IP-адрес більших, ніж $1, не дозволяються.",
 	"throttleoverride-validation-notypes": "Не вибрано тип обмеження частоти.",
-	"throttleoverride-validation-expiryinvalid": "Недійсний час закінчення."
+	"throttleoverride-validation-expiryinvalid": "Недійсний час закінчення.",
+	"throttleoverride-rule-alreadyexists": "Існує виняток для $1. Ви можете переглянути наявні налаштування у [[Special:ThrottleOverrideList|списку винятків з обмежень частоти]], або ж змінити налаштування наявного правила, повторно надіславши цю форму."
 }
