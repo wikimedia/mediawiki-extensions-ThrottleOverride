@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jopparn"
+			"Jopparn",
+			"Fader"
 		]
 	},
 	"throttleoverride-types-all": "Alla typer",
@@ -10,6 +11,7 @@
 	"throttleoverride-types-move": "Flyttningar av sidan",
 	"throttleoverride-types-mailpassword": "E-post för återhämtning av e-post",
 	"throttleoverride-types-emailuser": "Användarens e-post",
+	"throttleoverride-list-target": "Mål",
 	"throttleoverride-list-type": "Tillåtna åtgärder",
 	"throttleoverride-list-reason": "Orsak",
 	"throttleoverride-list-search": "Sök"
