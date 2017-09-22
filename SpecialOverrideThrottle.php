@@ -283,7 +283,9 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	}
 
 	function onSuccess() {
-		$this->getOutput()->addWikiMsg( 'throttleoverride-success' );
+		$out = $this->getOutput();
+		$out->setPageTitle( $this->msg( 'throttleoverride-success-sub' ) );
+		$out->addWikiMsg( 'throttleoverride-success', wfEscapeWikiText( $this->target ) );
 	}
 
 	protected function getGroupName() {
