@@ -32,9 +32,12 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 
 	function getFormFields() {
 		global $wgRateLimits;
+		global $wgThrottleOverrideTypes;
+		$throttleTypes = array_keys( array_filter( $wgThrottleOverrideTypes ) );
+		$throttleTypes = array_merge( [ 'all' ], $throttleTypes );
 
 		$throttles = [];
-		foreach ( [ 'all', 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ] as $type ) {
+		foreach ( $throttleTypes as $type ) {
 			if ( $type == 'all' || $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
 				// For grepping. The following messages are used here:
 				// throttleoverride-types-all

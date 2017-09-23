@@ -97,10 +97,10 @@ class ThrottleOverridePager extends TablePager {
 				$formatted = htmlspecialchars( $language->formatExpiry( $value,
 					/* User preference timezone */true ) );
 
-				// Show link to Special:ThrottleOverride/$Username if we're allowed to manipulate throttles.
+				// Show link to Special:OverrideThrottle/$Username if we're allowed to manipulate throttles.
 				if ( $this->getUser()->isAllowed( 'throttleoverride' ) ) {
 					$link = $linkRenderer->makeKnownLink(
-						SpecialPage::getTitleFor( 'ThrottleOverride', IP::prettifyIP( $row->thr_target ) ),
+						SpecialPage::getTitleFor( 'OverrideThrottle', IP::prettifyIP( $row->thr_target ) ),
 						$this->msg( 'throttleoverride-list-change' )->text()
 					);
 
