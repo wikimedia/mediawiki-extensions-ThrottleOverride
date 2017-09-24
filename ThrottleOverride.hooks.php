@@ -46,7 +46,7 @@ class ThrottleOverrideHooks {
 			return true;
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		if ( $user->isAnon() && IP::isValid( $user->getName() ) ) {
 			$ip = $user->getName();

@@ -189,10 +189,10 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	 * if it doesn't exist.
 	 *
 	 * @param string $ip
-	 * @param int $dbtype either DB_SLAVE or DB_MASTER
+	 * @param int $dbtype either DB_REPLICA or DB_MASTER
 	 * @return int
 	 */
-	public static function getThrottleOverrideId( $ip, $dbtype = DB_SLAVE ) {
+	public static function getThrottleOverrideId( $ip, $dbtype = DB_REPLICA ) {
 		$db = wfGetDB( $dbtype );
 		$field = $db->selectField(
 			'throttle_override',
