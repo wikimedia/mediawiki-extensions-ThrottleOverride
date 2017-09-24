@@ -5,7 +5,8 @@
 			"Umherirrender",
 			"Liuxinyu970226",
 			"Glaisher",
-			"Robby"
+			"Robby",
+			"EddieGP"
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
@@ -29,7 +30,7 @@
 	"throttleoverride-list-legend": "Fieldset legend on [[Special:ThrottleOverrideList]]",
 	"throttleoverride-list-rangestart": "Table header in the throttle override list for the starting IP address of a throttle override",
 	"throttleoverride-list-rangeend": "Table header in the throttle override list for the ending IP address of a throttle override",
-	"throttleoverride-list-target": "Table header in the throttle override list for the IP address block in CIDR notation of a throttle override\n{Identical|Target}}",
+	"throttleoverride-list-target": "Table header in the throttle override list for the IP address block in CIDR notation of a throttle override\n{{Identical|Target}}",
 	"throttleoverride-list-expiry": "Table header in the throttle override list for the expiry date and time of a throttle override.\n{{Identical|Expiration}}",
 	"throttleoverride-list-type": "Table header in the throttle override list for the actions allowed by a throttle override",
 	"throttleoverride-list-reason": "Table header in the throttle override list for the reason of a throttle override.\n{{Identical|Reason}}",
