@@ -18,6 +18,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use MediaWiki\Logger\LoggerFactory;
+
 class ThrottleOverrideHooks {
 	/**
 	 * @param string $ip
@@ -71,8 +73,15 @@ class ThrottleOverrideHooks {
 
 		if ( $expiry > wfTimestampNow() ) {
 			// Valid exemption. Disable the throttle.
-			$result = false;
 
+			$logger = LoggerFactory::getInstance( 'throttleOverride' );
+			$logger->info( 'User {user} (ip: {ip}) exempted from throttle {action}', [
+				'user' => $user,
+				'ip' => $ip,
+				'action' => $action,
+			] );
+
+			$result = false;
 			return false;
 		} elseif ( $expiry !== false ) {
 			// Expired exemption. Delete it from the DB.
