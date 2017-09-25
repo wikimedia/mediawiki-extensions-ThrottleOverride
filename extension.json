@@ -44,13 +44,13 @@
 		"OverrideThrottleAlias": "ThrottleOverride.i18n.alias.php"
 	},
 	"AutoloadClasses": {
-		"ThrottleOverrideHooks": "ThrottleOverride.hooks.php",
-		"SpecialOverrideThrottle": "SpecialOverrideThrottle.php",
-		"SpecialThrottleOverrideList": "SpecialThrottleOverrideList.php",
-		"ThrottleOverridePager": "ThrottleOverridePager.php",
-		"ThrottleOverridePurgeJob": "ThrottleOverridePurgeJob.php",
-		"ThrottleOverrideLogFormatter": "ThrottleOverrideLogFormatter.php",
-		"ThrottleOverrideUtils": "ThrottleOverrideUtils.php"
+		"SpecialOverrideThrottle": "includes/SpecialOverrideThrottle.php",
+		"SpecialThrottleOverrideList": "includes/SpecialThrottleOverrideList.php",
+		"ThrottleOverrideHooks": "includes/ThrottleOverrideHooks.php",
+		"ThrottleOverrideLogFormatter": "includes/ThrottleOverrideLogFormatter.php",
+		"ThrottleOverridePager": "includes/ThrottleOverridePager.php",
+		"ThrottleOverridePurgeJob": "includes/ThrottleOverridePurgeJob.php",
+		"ThrottleOverrideUtils": "includes/ThrottleOverrideUtils.php"
 	},
 	"config": {
 		"ThrottleOverrideCentralWiki": {
