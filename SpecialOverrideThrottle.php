@@ -27,6 +27,9 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 	function __construct() {
 		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
+
+		$out = $this->getOutput();
+		$out->addModules( 'ext.throttleoverride.specialOverrideThrottle' );
 	}
 
 	function getMessagePrefix() {
@@ -289,5 +292,27 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 	protected function getDisplayFormat() {
 		return 'ooui';
+	}
+
+	protected function postText() {
+		$out = '';
+		if ( $this->par ) {
+			# Get the relevant extract from the log.
+			$ipTitle = Title::makeTitleSafe( NS_USER, $this->par );
+
+			LogEventsList::showLogExtract(
+				$out,
+				'throttleoverride',
+				$ipTitle,
+				'',
+				[
+					'lim' => 10,
+					'msgKey' => [ 'throttleoverride-showlog' ],
+					'showIfEmpty' => false
+				]
+			);
+		}
+
+		return $out;
 	}
 }

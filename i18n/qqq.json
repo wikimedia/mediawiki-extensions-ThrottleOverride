@@ -20,6 +20,7 @@
 	"throttleoverride-legend": "Label for the legend on [[Special:OverrideThrottle]]",
 	"throttleoverride-text": "Intro text on [[Special:OverrideThrottle]]",
 	"throttleoverride-ipaddress": "Label for the IP address field on [[Special:OverrideThrottle]]",
+	"throttleoverride-showlog": "Shown when displaying an extract of the throttleoverride log.",
 	"throttleoverride-success": "Text displayed after a successful submission on [[Special:OverrideThrottle]]",
 	"throttleoverride-types": "Label for the types of throttles that can be overridden.\n{{Identical|Throttle type}}",
 	"throttleoverride-types-all": "Label for the throttle type representing all types (used in [[Special:ThrottleOverrideList]]).\n{{Identical|All types}}",

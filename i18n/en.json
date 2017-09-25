@@ -17,6 +17,7 @@
 	"throttleoverride-legend": "Exemption information",
 	"throttleoverride-text": "Enter the IP address or range you want to exempt from certain throttles, and how long the exemption should last for.\nAn optional reason can be given for the logs.",
 	"throttleoverride-ipaddress": "IP address or range",
+	"throttleoverride-showlog": "This ip address or range has previously been exempted from throttles. The log is provided below for reference.",
 	"throttleoverride-success": "The exemption was applied.",
 	"throttleoverride-types": "Throttle types:",
 	"throttleoverride-types-all": "All types",

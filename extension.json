@@ -66,6 +66,10 @@
 		"ext.throttleoverride.list": {
 			"position": "top",
 			"styles": "ext.throttleoverride.list.css"
+		},
+		"ext.throttleoverride.specialOverrideThrottle": {
+			"position": "top",
+			"styles": "ext.throttleoverride.specialOverrideThrottle.css"
 		}
 	},
 	"ResourceFileModulePaths": {
