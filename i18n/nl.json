@@ -25,6 +25,7 @@
 	"throttleoverride-list-legend": "Vrijstellingsfilters",
 	"throttleoverride-list-rangestart": "Begin van IP-range",
 	"throttleoverride-list-rangeend": "Einde van IP-range",
+	"throttleoverride-list-target": "Doel",
 	"throttleoverride-list-expiry": "Vervalt",
 	"throttleoverride-list-type": "Toegestane handelingen",
 	"throttleoverride-list-reason": "Reden",
