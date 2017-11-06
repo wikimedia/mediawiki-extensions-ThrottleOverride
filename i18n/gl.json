@@ -25,6 +25,7 @@
 	"throttleoverride-list-legend": "Filtro de exencións",
 	"throttleoverride-list-rangestart": "Inicio do rango de enderezos IP",
 	"throttleoverride-list-rangeend": "Fin do rango de enderezos IP",
+	"throttleoverride-list-target": "Destino",
 	"throttleoverride-list-expiry": "Caducidade",
 	"throttleoverride-list-type": "Accións permitidas",
 	"throttleoverride-list-reason": "Motivo",
