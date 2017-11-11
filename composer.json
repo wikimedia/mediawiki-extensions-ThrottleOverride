@@ -6,7 +6,7 @@
 		"mediawiki/minus-x": "0.2.0"
 	},
 	"scripts": {
-		"lint": "parallel-lint --exclude vendor .",
+		"lint": "parallel-lint . --exclude vendor --exclude node_modules",
 		"phpcs": "phpcs -p -s",
 		"fix": [
 			"phpcbf",
