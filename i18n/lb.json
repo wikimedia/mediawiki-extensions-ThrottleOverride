@@ -13,5 +13,10 @@
 	"throttleoverride-types-move": "Geréckelt Säiten",
 	"throttleoverride-types-emailuser": "E-Mailen u Benotzer",
 	"throttleoverride-list-target": "Zil",
+	"throttleoverride-log-type-actcreate": "Benotzerkont opmaachen",
+	"throttleoverride-log-type-edit": "Säit änneren",
+	"throttleoverride-log-type-move": "Säit réckelen",
+	"throttleoverride-log-type-mailpassword": "E-Mail fir d'Passwuert zréckzesetzen",
+	"throttleoverride-log-type-emailuser": "Benotzer E-Mail",
 	"throttleoverride-validation-ipinvalid": "Net valabel IP-Adress oder IP-Range."
 }

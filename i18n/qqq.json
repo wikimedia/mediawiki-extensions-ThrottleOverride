@@ -11,7 +11,7 @@
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
 	"action-throttleoverride": "{{doc-action|throttleoverride}}",
-	"logentry-throttleoverride-created": "The log message shown on Special:Log. $1 is the performing user, $2 can be used for GENDER, $3 is the target user/IP, $4 is a comma-separated list specifying which rate limits get overwritten, $5 is the time the exemption ends and $6 is the number of items in the list ($4) for use with PLURAL. The items of the list $4 are one or more of {{msg-mw|throttleoverride-log-type-actcreate}}, {{msg-mw|throttleoverride-log-type-edit}}, {{msg-mw|throttleoverride-log-type-move}}, {{msg-mw|throttleoverride-log-type-mailpassword}}, {{msg-mw|throttleoverride-log-type-emailuser}}. ",
+	"logentry-throttleoverride-created": "The log message shown on Special:Log. $1 is the performing user, $2 can be used for GENDER, $3 is the target user/IP, $4 is a comma-separated list specifying which rate limits get overwritten, $5 is the time the exemption ends and $6 is the number of items in the list ($4) for use with PLURAL. The items of the list $4 are one or more of {{msg-mw|throttleoverride-log-type-actcreate}}, {{msg-mw|throttleoverride-log-type-edit}}, {{msg-mw|throttleoverride-log-type-move}}, {{msg-mw|throttleoverride-log-type-mailpassword}}, {{msg-mw|throttleoverride-log-type-emailuser}}.",
 	"log-name-throttleoverride": "The log name that appears in the drop-down on the Special:Log page.",
 	"log-description-throttleoverride": "The description that appears on the Special:Log page when you filter logs on this specific log name.",
 	"right-throttleoverride": "{{doc-right|throttleoverride}}",
