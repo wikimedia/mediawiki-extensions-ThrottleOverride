@@ -44,6 +44,15 @@
 				"IPv4": 16,
 				"IPv6": 19
 			}
+		},
+		"ThrottleOverrideTypes": {
+			"value": {
+				"actcreate": true,
+				"edit": true,
+				"move": true,
+				"mailpassword": false,
+				"emailuser": false
+			}
 		}
 	},
 	"ResourceModules": {

@@ -46,7 +46,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		// move - A page is moved (ping-limiter)
 		// mailpassword - User requests a password recovery (ping-limiter)
 		// emailuser - User emails another user (ping-limiter)
-		$throttleTypes = [ 'actcreate', 'edit', 'move', 'mailpassword', 'emailuser' ];
+		global $wgThrottleOverrideTypes;
+		$throttleTypes = array_keys( array_filter( $wgThrottleOverrideTypes ) );
 
 		// Construct an array of message => type.
 		$throttles = [];
