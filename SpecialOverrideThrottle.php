@@ -125,7 +125,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			$data['Target']['default'] = $this->par;
 
 			// We need the most recent data here, we're about to change the throttle.
-			$dbw = wfGetDB( DB_MASTER );
+			$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
 			$row = $dbw->selectRow(
 				'throttle_override',
 				[ 'thr_expiry', 'thr_reason', 'thr_type' ],
@@ -184,7 +184,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		list( $rangeStart, $rangeEnd ) = $parsedRange;
 
 		// Save the new exemption
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
 		$row = [
 			'thr_target' => $this->target,
 			'thr_expiry' => $dbw->encodeExpiry( $data['Expiry'] ),
@@ -207,7 +207,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 		// Purge the cache
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-		$cache->touchCheckKey( ThrottleOverrideHooks::getBucketKey( $cache, $rangeStart ) );
+		$cache->touchCheckKey( ThrottleOverrideUtils::getBucketKey( $cache, $rangeStart ) );
 
 		return true;
 	}
@@ -221,7 +221,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	 * @return int
 	 */
 	public static function getThrottleOverrideId( $ip, $dbtype = DB_REPLICA ) {
-		$db = wfGetDB( $dbtype );
+		$db = ThrottleOverrideUtils::getCentralDB( $dbtype );
 		$field = $db->selectField(
 			'throttle_override',
 			'thr_id',
