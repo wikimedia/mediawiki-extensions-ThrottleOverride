@@ -18,6 +18,7 @@
  */
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 
 class ThrottleOverrideHooks {
 
@@ -98,7 +99,7 @@ class ThrottleOverrideHooks {
 		if ( $expiry === self::NO_OVERRIDE ) {
 			// We checked the database and found no record
 			return true;
-		} elseif ( $expiry > wfTimestampNow() ) {
+		} elseif ( wfTimestamp( TS_UNIX, $expiry ) > time() ) {
 			// Valid exemption. Disable the throttle.
 			$logger = LoggerFactory::getInstance( 'throttleOverride' );
 			$logger->info( 'User {user} (ip: {ip}) exempted from throttle {action}', [
