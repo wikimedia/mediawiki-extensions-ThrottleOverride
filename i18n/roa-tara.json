@@ -4,8 +4,9 @@
 			"Joetaras"
 		]
 	},
+	"overridethrottle": "No sce penzanne a le limitaziune",
 	"throttleoverride-ipaddress": "Indirizze IP o indervalle",
-	"throttleoverride-success": "L'eccezzione ha state applicate.",
+	"throttleoverride-success": "L'eccezzione $1 ha state applicate. <br/>\n'Ndruche l'[[Special:ThrottleOverrideList|elenghe de le eseziune a le limitaziune]] pe revisionarle.",
 	"throttleoverride-types-edit": "Cangiaminde d'a pàgene",
 	"throttleoverride-types-move": "Spustaminde d'a pàgene",
 	"throttleoverride-types-mailpassword": "Recupere d'a password cu l'email",

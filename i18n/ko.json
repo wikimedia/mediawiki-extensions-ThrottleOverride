@@ -31,6 +31,9 @@
 	"throttleoverride-list-reason": "이유",
 	"throttleoverride-list-search": "검색",
 	"throttleoverride-list-noresults": "스로틀 무시 목록이 비어 있습니다.",
+	"throttleoverride-log-type-edit": "문서 편집",
+	"throttleoverride-log-type-move": "문서 이동",
+	"throttleoverride-log-type-emailuser": "사용자 이메일",
 	"throttleoverride-validation-ipinvalid": "올바르지 않은 IP 주소 또는 IP 주소 대역.",
 	"throttleoverride-validation-rangedisabled": "IP 주소 대역에 대해 스로틀을 면제할 수 있는 기능이 비활성화되어 있습니다.",
 	"throttleoverride-validation-rangetoolarge": "$1보다 더 큰 IP 주소 대역에 대해 스로틀 면제는 허용되지 않습니다."
