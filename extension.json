@@ -37,6 +37,9 @@
 			"i18n"
 		]
 	},
+	"JobClasses": {
+		"ThrottleOverridePurge": "ThrottleOverridePurgeJob"
+	},
 	"ExtensionMessagesFiles": {
 		"OverrideThrottleAlias": "ThrottleOverride.i18n.alias.php"
 	},
@@ -45,6 +48,7 @@
 		"SpecialOverrideThrottle": "SpecialOverrideThrottle.php",
 		"SpecialThrottleOverrideList": "SpecialThrottleOverrideList.php",
 		"ThrottleOverridePager": "ThrottleOverridePager.php",
+		"ThrottleOverridePurgeJob": "ThrottleOverridePurgeJob.php",
 		"ThrottleOverrideLogFormatter": "ThrottleOverrideLogFormatter.php",
 		"ThrottleOverrideUtils": "ThrottleOverrideUtils.php"
 	},

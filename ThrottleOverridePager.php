@@ -59,6 +59,9 @@ class ThrottleOverridePager extends TablePager {
 				'thr_expiry',
 				'thr_reason',
 			],
+			'conds' => [
+				'thr_expiry > ' . $this->mDb->addQuotes( $this->mDb->timestamp() ),
+			],
 		];
 
 		if ( $this->throttleType !== 'all' ) {

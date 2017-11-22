@@ -71,10 +71,17 @@ class ThrottleOverrideHooks {
 				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
+				$quotedIp = $db->addQuotes( $hexIp );
 				$expiry = $dbr->selectField(
 					'throttle_override',
 					'thr_expiry',
-					ThrottleOverrideHooks::makeConds( $dbr, $hexIp, $action ),
+					[
+						"thr_range_start <= $quotedIp",
+						"thr_range_end >= $quotedIp",
+						'thr_expiry > ' . $dbr->addQuotes( $dbr->timestamp() ),
+						'thr_type' . $dbr->buildLike(
+							$dbr->anyString(), $action, $dbr->anyString() ),
+					],
 					'ThrottleOverrideHooks::onPingLimiter',
 					[ 'ORDER BY' => 'thr_expiry DESC' ]
 				);
@@ -118,35 +125,9 @@ class ThrottleOverrideHooks {
 
 			$result = false;
 			return false;
-		} elseif ( $expiry !== false ) {
-			// Expired exemption. Delete it from the DB.
-			$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
-			$dbw->delete(
-				'throttle_override',
-				self::makeConds( $dbw, $hexIp, $action ),
-				__METHOD__
-			);
 		}
 
 		return true;
-	}
-
-	/**
-	 * Make SQL query conditions.
-	 *
-	 * @param \Wikimedia\Rdbms\Database $db Database
-	 * @param string $hexIp IP address in hex string format
-	 * @param string $action Throttle action
-	 * @return array Conditions
-	 */
-	private static function makeConds( $db, $hexIp, $action ) {
-		$quotedIp = $db->addQuotes( $hexIp );
-		return [
-			"thr_range_start <= $quotedIp",
-			"thr_range_end >= $quotedIp",
-			'thr_type' . $db->buildLike(
-				$db->anyString(), $action, $db->anyString() ),
-		];
 	}
 
 	/**

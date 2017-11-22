@@ -65,23 +65,6 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 	}
 
 	function onSubmit( array $data, HTMLForm $form = null ) {
-		if ( !wfReadOnly() && !mt_rand( 0, 10 ) ) {
-			// Purge expired entries on one in every 10 queries
-			$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
-			$method = __METHOD__;
-			$dbw->onTransactionIdle( function () use ( $dbw, $method ) {
-				$dbw->delete(
-					'throttle_override',
-					[
-						$dbw->addIdentifierQuotes( 'thr_expiry' ) .
-						' < ' .
-						$dbw->addQuotes( $dbw->timestamp() )
-					],
-					$method
-				);
-			} );
-		}
-
 		$pager = new ThrottleOverridePager( $this, [
 			'throttleType' => $data['ThrottleType'],
 		] );
