@@ -62,7 +62,7 @@ class ThrottleOverrideHooks {
 		$expiry = $cache->getWithSetCallback(
 			$cache->makeKey( 'throttle_override', $action, $hexIp ),
 			$cache::TTL_HOUR,
-			function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $hexIp, $action ) {
+			function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $ip, $hexIp, $action ) {
 				$dbr = wfGetDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
@@ -93,7 +93,10 @@ class ThrottleOverrideHooks {
 
 				// If we return false the value will not be cached
 				return ( $expiry === false ) ? self::NO_OVERRIDE : $expiry;
-			}
+			},
+			[
+				'checkKeys' => [ self::getBucketKey( $cache, $ip ) ]
+			]
 		);
 
 		if ( $expiry === self::NO_OVERRIDE ) {
@@ -121,6 +124,25 @@ class ThrottleOverrideHooks {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Get the cache bucket key for either:
+	 *   - a) The IP address of a user
+	 *   - b) A throttle override that happens to include the given IP address
+	 *
+	 * @param WANObjectCache $cache
+	 * @param string $ip A valid IP address (with no pointless CIDR)
+	 * @return string
+	 */
+	public static function getBucketKey( WANObjectCache $cache, $ip ) {
+		global $wgThrottleOverrideCIDRLimit;
+		// Split the address space into buckets such that any given user IP address
+		// or throttle override's IP range will fall into exactly one bucket.
+		$proto = IP::isIPv6( $ip ) ? 'IPv6' : 'IPv4';
+		$bucket = IP::sanitizeRange( "$ip/{$wgThrottleOverrideCIDRLimit[$proto]}" );
+		// Purge all cache for all IPs in this bucket
+		return $cache->makeKey( 'throttle-override', $bucket );
 	}
 
 	/**

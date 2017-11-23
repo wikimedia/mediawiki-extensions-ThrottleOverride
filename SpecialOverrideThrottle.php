@@ -17,6 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+use MediaWiki\MediaWikiServices;
 
 class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @var string Sanitized target IP address or range */
@@ -180,6 +181,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		$logId = $logEntry->insert();
 		$logEntry->publish( $logId );
 
+		list( $rangeStart, $rangeEnd ) = $parsedRange;
+
 		// Save the new exemption
 		$dbw = wfGetDB( DB_MASTER );
 		$row = [
@@ -187,8 +190,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			'thr_expiry' => $dbw->encodeExpiry( $data['Expiry'] ),
 			'thr_reason' => $reason,
 			'thr_type' => $types,
-			'thr_range_start' => $parsedRange[0],
-			'thr_range_end' => $parsedRange[1],
+			'thr_range_start' => $rangeStart,
+			'thr_range_end' => $rangeEnd,
 		];
 
 		// If there already is an exemption for that target AND the user already confirmed
@@ -201,6 +204,10 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		} else {
 			$dbw->insert( 'throttle_override', $row, __METHOD__ );
 		}
+
+		// Purge the cache
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$cache->touchCheckKey( ThrottleOverrideHooks::getBucketKey( $cache, $rangeStart ) );
 
 		return true;
 	}
