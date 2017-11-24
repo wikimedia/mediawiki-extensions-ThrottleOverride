@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Shirayuki",
-			"Otokoume"
+			"Otokoume",
+			"Omotecho"
 		]
 	},
 	"overridethrottle": "アカウント作成の制限の回避",
@@ -10,7 +11,7 @@
 	"throttleoverride-legend": "免除の情報",
 	"throttleoverride-text": "制限を免除する IP アドレスまたは範囲、およびその制限の期間を入力してください。\n記録用の理由は省略できます。",
 	"throttleoverride-ipaddress": "IP アドレスまたは範囲",
-	"throttleoverride-success": "免除を適用しました。",
+	"throttleoverride-success": "$1 に免除を適用しました。<br />\n根拠は[[Special:ThrottleOverrideList|throttle overrides 一覧]]に示してあります。",
 	"throttleoverride-types": "制限の種類:",
 	"throttleoverride-types-all": "すべての種類",
 	"throttleoverride-types-actcreate": "アカウント作成",
