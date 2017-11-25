@@ -15,6 +15,10 @@
 	"throttleoverride-list-type": "Acciones permitidas",
 	"throttleoverride-list-reason": "Motivo",
 	"throttleoverride-list-search": "Buscar",
+	"throttleoverride-log-type-actcreate": "creación de cuentas",
+	"throttleoverride-log-type-edit": "edición de páginas",
+	"throttleoverride-log-type-move": "traslado de páginas",
+	"throttleoverride-log-type-emailuser": "correo electrónico de usuario",
 	"throttleoverride-validation-ipinvalid": "La dirección o el intervalo de IP no es válido.",
 	"throttleoverride-validation-rangetoolarge": "No se permiten las exenciones de regulación en intervalos de direcciones IP mayores que $1.",
 	"throttleoverride-validation-expiryinvalid": "Tiempo de caducidad inválido."

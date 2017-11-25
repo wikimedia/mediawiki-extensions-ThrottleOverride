@@ -5,6 +5,9 @@
 		]
 	},
 	"throttleoverride-list-target": "লক্ষ্য",
+	"throttleoverride-log-type-actcreate": "অ্যাকাউন্ট সৃষ্টি",
 	"throttleoverride-log-type-edit": "পাতার সম্পাদনা",
-	"throttleoverride-log-type-move": "পাতা স্থানান্তর"
+	"throttleoverride-log-type-move": "পাতা স্থানান্তর",
+	"throttleoverride-log-type-mailpassword": "পাসওয়ার্ড পুনরুদ্ধারের ইমেল",
+	"throttleoverride-log-type-emailuser": "ব্যবহারকারীর ই-মেইল"
 }
