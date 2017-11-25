@@ -86,21 +86,12 @@ class ThrottleOverrideHooks {
 					[ 'ORDER BY' => 'thr_expiry DESC' ]
 				);
 
-				// Its tempting to set the TTL to match the expiration we
-				// found in the DB, but since the record is editable and we do
-				// not purge every key in the range when it changes we will
-				// just leave the default cache time alone. The exception to
-				// this rule is when we are caching a row which will expire in
-				// less than the default TTL.
-				// NOTE: this means that changes to an existing record may not
-				// effect all IPs in the range equally until the default cache
-				// period has elapsed.
 				if ( $expiry !== false ) {
-					// An override exists; do not cache for more than the
-					// override's current-time-left
-					$nowUnix = time();
-					$overrideCTL = wfTimestamp( TS_UNIX, $expiry ) - $nowUnix;
-					$ttl = min( $ttl, max( $overrideCTL, 1 ) );
+					// An override exists; cache for the override's
+					// current-time-left. Cache will be purged via checkKey
+					// updates on record modification. Avoid "0" (infinite)
+					// and negative numbers for sanity.
+					$ttl = max( wfTimestamp( TS_UNIX, $expiry ) - time(), 1 );
 				}
 
 				// If we return false the value will not be cached
