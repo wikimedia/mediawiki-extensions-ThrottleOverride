@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Jopparn",
-			"Fader"
+			"Fader",
+			"WikiPhoenix"
 		]
 	},
 	"throttleoverride-types-all": "Alla typer",
@@ -14,5 +15,8 @@
 	"throttleoverride-list-target": "Mål",
 	"throttleoverride-list-type": "Tillåtna åtgärder",
 	"throttleoverride-list-reason": "Orsak",
-	"throttleoverride-list-search": "Sök"
+	"throttleoverride-list-search": "Sök",
+	"throttleoverride-log-type-edit": "redigering av sida",
+	"throttleoverride-log-type-move": "flyttning av sida",
+	"throttleoverride-log-type-emailuser": "användarens e-post"
 }
