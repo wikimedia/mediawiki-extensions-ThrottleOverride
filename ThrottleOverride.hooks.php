@@ -45,7 +45,7 @@ class ThrottleOverrideHooks {
 	 * @return bool
 	 */
 	public static function onPingLimiter( User &$user, $action, &$result, $ip = null ) {
-		global $wgRateLimits;
+		global $wgRateLimits, $wgThrottleOverrideCentralWiki;
 
 		if ( $action !== 'actcreate' && !isset( $wgRateLimits[$action] ) ) {
 			return true;
@@ -60,10 +60,15 @@ class ThrottleOverrideHooks {
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$expiry = $cache->getWithSetCallback(
-			$cache->makeKey( 'throttle_override', $action, $hexIp ),
+			$cache->makeGlobalKey(
+				'throttle_override',
+				$wgThrottleOverrideCentralWiki,
+				$action,
+				$hexIp
+			),
 			$cache::TTL_HOUR,
 			function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $ip, $hexIp, $action ) {
-				$dbr = wfGetDB( DB_REPLICA );
+				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
 				$expiry = $dbr->selectField(
@@ -95,7 +100,7 @@ class ThrottleOverrideHooks {
 				return ( $expiry === false ) ? self::NO_OVERRIDE : $expiry;
 			},
 			[
-				'checkKeys' => [ self::getBucketKey( $cache, $ip ) ]
+				'checkKeys' => [ ThrottleOverrideUtils::getBucketKey( $cache, $ip ) ]
 			]
 		);
 
@@ -115,7 +120,7 @@ class ThrottleOverrideHooks {
 			return false;
 		} elseif ( $expiry !== false ) {
 			// Expired exemption. Delete it from the DB.
-			$dbw = wfGetDB( DB_MASTER );
+			$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
 			$dbw->delete(
 				'throttle_override',
 				self::makeConds( $dbw, $hexIp, $action ),
@@ -124,25 +129,6 @@ class ThrottleOverrideHooks {
 		}
 
 		return true;
-	}
-
-	/**
-	 * Get the cache bucket key for either:
-	 *   - a) The IP address of a user
-	 *   - b) A throttle override that happens to include the given IP address
-	 *
-	 * @param WANObjectCache $cache
-	 * @param string $ip A valid IP address (with no pointless CIDR)
-	 * @return string
-	 */
-	public static function getBucketKey( WANObjectCache $cache, $ip ) {
-		global $wgThrottleOverrideCIDRLimit;
-		// Split the address space into buckets such that any given user IP address
-		// or throttle override's IP range will fall into exactly one bucket.
-		$proto = IP::isIPv6( $ip ) ? 'IPv6' : 'IPv4';
-		$bucket = IP::sanitizeRange( "$ip/{$wgThrottleOverrideCIDRLimit[$proto]}" );
-		// Purge all cache for all IPs in this bucket
-		return $cache->makeKey( 'throttle-override', $bucket );
 	}
 
 	/**
@@ -184,5 +170,19 @@ class ThrottleOverrideHooks {
 		);
 
 		return true;
+	}
+
+	public static function onSetupAfterCache() {
+		global $wgThrottleOverrideCentralWiki;
+		if ( $wgThrottleOverrideCentralWiki === false ) {
+			$wgThrottleOverrideCentralWiki = wfWikiId();
+		}
+	}
+
+	public static function onSpecialPageInitList( array &$specialPages ) {
+		if ( ThrottleOverrideUtils::isCentralWiki() ) {
+			$specialPages['OverrideThrottle'] = SpecialOverrideThrottle::class;
+			$specialPages['ThrottleOverrideList'] = SpecialThrottleOverrideList::class;
+		}
 	}
 }

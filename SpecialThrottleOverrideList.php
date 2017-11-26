@@ -67,7 +67,7 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 	function onSubmit( array $data, HTMLForm $form = null ) {
 		if ( !wfReadOnly() && !mt_rand( 0, 10 ) ) {
 			// Purge expired entries on one in every 10 queries
-			$dbw = wfGetDB( DB_MASTER );
+			$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
 			$method = __METHOD__;
 			$dbw->onTransactionIdle( function () use ( $dbw, $method ) {
 				$dbw->delete(

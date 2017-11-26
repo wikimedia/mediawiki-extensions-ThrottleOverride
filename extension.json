@@ -9,10 +9,6 @@
 	"AvailableRights": [
 		"throttleoverride"
 	],
-	"SpecialPages": {
-		"OverrideThrottle": "SpecialOverrideThrottle",
-		"ThrottleOverrideList": "SpecialThrottleOverrideList"
-	},
 	"LogTypes": [
 		"throttleoverride"
 	],
@@ -28,6 +24,12 @@
 		],
 		"LoadExtensionSchemaUpdates": [
 			"ThrottleOverrideHooks::onLoadExtensionSchemaUpdates"
+		],
+		"SetupAfterCache": [
+			"ThrottleOverrideHooks::onSetupAfterCache"
+		],
+		"SpecialPage_initList": [
+			"ThrottleOverrideHooks::onSpecialPageInitList"
 		]
 	},
 	"MessagesDirs": {
@@ -43,9 +45,13 @@
 		"SpecialOverrideThrottle": "SpecialOverrideThrottle.php",
 		"SpecialThrottleOverrideList": "SpecialThrottleOverrideList.php",
 		"ThrottleOverridePager": "ThrottleOverridePager.php",
-		"ThrottleOverrideLogFormatter": "ThrottleOverrideLogFormatter.php"
+		"ThrottleOverrideLogFormatter": "ThrottleOverrideLogFormatter.php",
+		"ThrottleOverrideUtils": "ThrottleOverrideUtils.php"
 	},
 	"config": {
+		"ThrottleOverrideCentralWiki": {
+			"value": false
+		},
 		"ThrottleOverrideCIDRLimit": {
 			"value": {
 				"IPv4": 16,
