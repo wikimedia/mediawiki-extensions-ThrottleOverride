@@ -27,6 +27,11 @@
 	"throttleoverride-list-type": "許可された操作",
 	"throttleoverride-list-reason": "理由",
 	"throttleoverride-list-search": "検索",
+	"throttleoverride-log-type-actcreate": "アカウント作成",
+	"throttleoverride-log-type-edit": "ページの編集",
+	"throttleoverride-log-type-move": "ページの移動",
+	"throttleoverride-log-type-mailpassword": "パスワード再発行メールの送信",
+	"throttleoverride-log-type-emailuser": "メールアドレス",
 	"throttleoverride-validation-ipinvalid": "IP アドレスまたは IP 範囲が無効です。",
 	"throttleoverride-validation-expiryinvalid": "有効期限が無効です。"
 }
