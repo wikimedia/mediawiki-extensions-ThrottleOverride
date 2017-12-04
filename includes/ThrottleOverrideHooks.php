@@ -71,7 +71,7 @@ class ThrottleOverrideHooks {
 				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
-				$quotedIp = $db->addQuotes( $hexIp );
+				$quotedIp = $dbr->addQuotes( $hexIp );
 				$expiry = $dbr->selectField(
 					'throttle_override',
 					'thr_expiry',
