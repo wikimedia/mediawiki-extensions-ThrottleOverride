@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Toliño",
-			"Elisardojm"
+			"Elisardojm",
+			"Athena in Wonderland"
 		]
 	},
-	"overridethrottle": "Ignorar a restrición de creación de contas",
+	"overridethrottle": "Ignorar as restricións",
 	"action-throttleoverride": "engadir excepción ós límites de frecuencia",
 	"right-throttleoverride": "Excluír certas direccións IP ou rangos de direccións dos límites de frecuencia",
 	"throttleoverridelist": "Lista de restricións ignoradas",
