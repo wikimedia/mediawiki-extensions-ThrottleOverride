@@ -5,7 +5,7 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamName" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.ParamNameNoMatch" />
-		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
+		<exclude name="Squiz.Scope.MethodScope.Missing" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationProtected" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 	</rule>
