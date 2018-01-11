@@ -37,9 +37,9 @@ class ThrottleOverrideHooks {
 	/**
 	 * @throws InvalidArgumentException If $action is invalid
 	 *
-	 * @param User $user
+	 * @param User &$user
 	 * @param string $action
-	 * @param $result
+	 * @param bool &$result
 	 * @param null|string $ip
 	 *
 	 * @return bool
