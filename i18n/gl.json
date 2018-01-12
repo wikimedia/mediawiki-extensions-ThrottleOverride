@@ -14,7 +14,7 @@
 	"throttleoverride-legend": "Información sobre a exención",
 	"throttleoverride-text": "Insira o enderezo IP ou o rango que queira eximir de certas restricións, así como a duración da exención.\nPode especificar un motivo opcional para os rexistros.",
 	"throttleoverride-ipaddress": "Enderezo IP ou rango",
-	"throttleoverride-success": "Aplicouse a exención.",
+	"throttleoverride-success": "Aplicouse a exención $1.<br />\nConsulte a [[Special:ThrottleOverrideList|lista de restricións ignoradas]] para revisar as exencións.",
 	"throttleoverride-types": "Tipos de restrición:",
 	"throttleoverride-types-all": "Todos os tipos",
 	"throttleoverride-types-actcreate": "Creación de contas",
