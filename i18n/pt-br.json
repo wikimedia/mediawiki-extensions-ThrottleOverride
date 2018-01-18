@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Luckas",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
+	"overridethrottle": "Ultrapassar limitadores de frequência",
+	"action-throttleoverride": "adicionar isenções dos limites de frequência",
 	"throttleoverride-types-all": "Todos os tipos",
 	"throttleoverride-types-actcreate": "Criação de conta",
 	"throttleoverride-list-expiry": "Expiração",
