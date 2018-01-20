@@ -242,7 +242,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	 * @param string $target IP address or range
 	 * @param string|bool $expiry
 	 * @param string $types
-	 * $param array $parsedRange
+	 * @param array $parsedRange
 	 * @return array
 	 */
 	public static function validateFields( $target, $expiry, $types, $parsedRange ) {
