@@ -8,6 +8,8 @@
 	},
 	"overridethrottle": "Ultrapassar limitadores de frequência",
 	"action-throttleoverride": "adicionar isenções dos limites de frequência",
+	"logentry-throttleoverride-created": "$1 isentou $3 de $4 {{PLURAL:$6|limitador|limitadores}} de frequência até $5.",
+	"log-name-throttleoverride": "Isenções dos limitadores de frequência",
 	"throttleoverride-types-all": "Todos os tipos",
 	"throttleoverride-types-actcreate": "Criação de conta",
 	"throttleoverride-list-expiry": "Expiração",
