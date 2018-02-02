@@ -6,6 +6,9 @@
 	"descriptionmsg": "throttleoverride-desc",
 	"license-name": "GPL-3.0+",
 	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
 	"AvailableRights": [
 		"throttleoverride"
 	],
