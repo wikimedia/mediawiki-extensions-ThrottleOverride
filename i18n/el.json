@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nikosgranturismogt"
+		]
+	},
+	"throttleoverride-legend": "Πληροφορίες εξαίρεσης",
+	"throttleoverride-types-all": "Όλοι οι τύποι",
+	"throttleoverride-types-actcreate": "Δημιουργία λογαριασμού",
+	"throttleoverride-types-edit": "Επεξεργασίες σελίδων",
+	"throttleoverride-types-move": "Μετακινήσεις σελίδων",
+	"throttleoverride-types-emailuser": "Διευθύνσεις ηλεκτρονικού ταχυδρομείου χρήστη",
+	"throttleoverride-list-target": "Στόχος",
+	"throttleoverride-list-expiry": "Λήξη",
+	"throttleoverride-list-type": "Επιτρεπόμενες ενέργειες",
+	"throttleoverride-list-reason": "Αιτιολογία",
+	"throttleoverride-list-search": "Αναζήτηση",
+	"throttleoverride-log-type-actcreate": "Δημιουργία λογαριασμού",
+	"throttleoverride-log-type-edit": "Επεξεργασία σελίδων",
+	"throttleoverride-log-type-move": "Μετακίνηση σελίδων"
+}
