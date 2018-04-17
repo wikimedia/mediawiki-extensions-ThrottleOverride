@@ -7,6 +7,8 @@
 			"AlvaroMolina"
 		]
 	},
+	"right-throttleoverride": "Exentar algunas direcciones IP o intervalos de IP de los límites de frecuencia",
+	"throttleoverride-ipaddress": "Dirección o intervalo de direcciones IP",
 	"throttleoverride-types-all": "Todos los tipos",
 	"throttleoverride-types-actcreate": "Creación de cuentas",
 	"throttleoverride-list-rangestart": "Inicio del intervalo de IP",
