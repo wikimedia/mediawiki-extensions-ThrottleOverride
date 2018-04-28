@@ -5,57 +5,56 @@
  * @file
  * @ingroup Extensions
  */
-// @codingStandardsIgnoreFile
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English (English) */
-$specialPageAliases['en'] = array(
-	'OverrideThrottle' => array( 'OverrideThrottle', 'ThrottleOverride' ),
-	'ThrottleOverrideList' => array( 'ThrottleOverrideList' ),
-);
+$specialPageAliases['en'] = [
+	'OverrideThrottle' => [ 'OverrideThrottle', 'ThrottleOverride' ],
+	'ThrottleOverrideList' => [ 'ThrottleOverrideList' ],
+];
 
 /** Arabic (العربية) */
-$specialPageAliases['ar'] = array(
-	'OverrideThrottle' => array( 'تجاوز_الحد' ),
-);
+$specialPageAliases['ar'] = [
+	'OverrideThrottle' => [ 'تجاوز_الحد' ],
+];
 
 /** Egyptian Arabic (مصرى) */
-$specialPageAliases['arz'] = array(
-	'OverrideThrottle' => array( 'تجاوز_الحد' ),
-);
+$specialPageAliases['arz'] = [
+	'OverrideThrottle' => [ 'تجاوز_الحد' ],
+];
 
 /** German (Deutsch) */
-$specialPageAliases['de'] = array(
-	'OverrideThrottle' => array( 'Beschränkungsumgehung' ),
-);
+$specialPageAliases['de'] = [
+	'OverrideThrottle' => [ 'Beschränkungsumgehung' ],
+];
 
 /** Hebrew (עברית) */
-$specialPageAliases['he'] = array(
-	'OverrideThrottle' => array( 'עקיפת_הגבלה' ),
-);
+$specialPageAliases['he'] = [
+	'OverrideThrottle' => [ 'עקיפת_הגבלה' ],
+];
 
 /** Japanese (日本語) */
-$specialPageAliases['ja'] = array(
-	'OverrideThrottle' => array( '制限の回避' ),
-);
+$specialPageAliases['ja'] = [
+	'OverrideThrottle' => [ '制限の回避' ],
+];
 
 /** Korean (한국어) */
-$specialPageAliases['ko'] = array(
-	'OverrideThrottle' => array( '제한회피', '제한_회피' ),
-);
+$specialPageAliases['ko'] = [
+	'OverrideThrottle' => [ '제한회피', '제한_회피' ],
+];
 
 /** Macedonian (македонски) */
-$specialPageAliases['mk'] = array(
-	'OverrideThrottle' => array( 'НаметниПрезапис' ),
-);
+$specialPageAliases['mk'] = [
+	'OverrideThrottle' => [ 'НаметниПрезапис' ],
+];
 
 /** Dutch (Nederlands) */
-$specialPageAliases['nl'] = array(
-	'OverrideThrottle' => array( 'LimietenAanpassen' ),
-);
+$specialPageAliases['nl'] = [
+	'OverrideThrottle' => [ 'LimietenAanpassen' ],
+];
 
 /** Simplified Chinese (中文（简体）‎) */
-$specialPageAliases['zh-hans'] = array(
-	'OverrideThrottle' => array( '节流阀覆盖' ),
-);
+$specialPageAliases['zh-hans'] = [
+	'OverrideThrottle' => [ '节流阀覆盖' ],
+];
