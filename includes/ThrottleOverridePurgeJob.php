@@ -80,5 +80,7 @@ class ThrottleOverridePurgeJob extends Job {
 				break;
 			}
 		}
+
+		return true;
 	}
 }
