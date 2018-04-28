@@ -20,6 +20,8 @@
  * @copyright © 2017 Wikimedia Foundation and contributors
  */
 
+use Wikimedia\Rdbms\DBConnRef;
+
 class ThrottleOverrideUtils {
 	/**
 	 * @return bool

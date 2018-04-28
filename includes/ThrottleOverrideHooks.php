@@ -19,6 +19,7 @@
 
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use Wikimedia\Rdbms\Database;
 
 class ThrottleOverrideHooks {
 
