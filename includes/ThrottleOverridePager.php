@@ -21,6 +21,10 @@
 use MediaWiki\MediaWikiServices;
 
 class ThrottleOverridePager extends TablePager {
+
+	/** @var string */
+	private $throttleType;
+
 	function __construct( SpecialPage $page, $conds = [] ) {
 		parent::__construct( $page->getContext() );
 		$this->throttleType = isset( $conds['throttleType'] ) ? $conds['throttleType'] : 'all';
