@@ -20,6 +20,7 @@
  * @copyright © 2017 Wikimedia Foundation and contributors
  */
 
+use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\DBConnRef;
 
 class ThrottleOverrideUtils {
@@ -37,7 +38,8 @@ class ThrottleOverrideUtils {
 	 */
 	public static function getCentralDB( $index ) {
 		global $wgThrottleOverrideCentralWiki;
-		return wfGetLB( $wgThrottleOverrideCentralWiki )->getLazyConnectionRef(
+		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
+		return $lbFactory->getMainLB( $wgThrottleOverrideCentralWiki )->getLazyConnectionRef(
 			$index, [], $wgThrottleOverrideCentralWiki );
 	}
 
