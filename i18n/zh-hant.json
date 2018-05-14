@@ -3,7 +3,8 @@
 		"authors": [
 			"Simon Shek",
 			"Liuxinyu970226",
-			"Kly"
+			"Kly",
+			"LNDDYL"
 		]
 	},
 	"overridethrottle": "覆蓋節流",
@@ -27,7 +28,7 @@
 	"throttleoverride-types-move": "頁面移動",
 	"throttleoverride-types-mailpassword": "密碼恢復郵件",
 	"throttleoverride-types-emailuser": "使用者電子郵件",
-	"throttleoverride-list-change": "更改節流",
+	"throttleoverride-list-change": "變更節流",
 	"throttleoverride-list-throttletype": "節流類型：",
 	"throttleoverride-list-legend": "免除篩選",
 	"throttleoverride-list-rangestart": "IP 地址範圍的起始",
