@@ -26,7 +26,6 @@
 class ThrottleOverrideLogFormatter extends LogFormatter {
 
 	/**
-	 * @suppress SecurityCheck-DoubleEscaped See T201565 for more information
 	 * @return array
 	 */
 	protected function getMessageParameters() {
