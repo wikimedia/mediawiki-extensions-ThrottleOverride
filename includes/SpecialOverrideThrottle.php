@@ -26,22 +26,22 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @var int value of thr_id */
 	protected $throttleId;
 
-	function __construct() {
+	public function __construct() {
 		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
 
 		$out = $this->getOutput();
 		$out->addModules( 'ext.throttleoverride.specialOverrideThrottle' );
 	}
 
-	function getMessagePrefix() {
+	public function getMessagePrefix() {
 		return 'throttleoverride';
 	}
 
-	function requiresWrite() {
+	public function requiresWrite() {
 		return true;
 	}
 
-	function getFormFields() {
+	public function getFormFields() {
 		global $wgRateLimits;
 
 		// The types are:
@@ -149,7 +149,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		return $data;
 	}
 
-	function onSubmit( array $data ) {
+	public function onSubmit( array $data ) {
 		$types = implode( ',', $data['Throttles'] );
 		$reason = trim( $data['Reason'] );
 		$parsedRange = IP::parseRange( $data['Target'] );
@@ -294,7 +294,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		return $errors;
 	}
 
-	function onSuccess() {
+	public function onSuccess() {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'throttleoverride-success-sub' ) );
 		$out->addWikiMsg( 'throttleoverride-success', wfEscapeWikiText( $this->target ) );

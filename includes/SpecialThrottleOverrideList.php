@@ -22,15 +22,15 @@
  * Special page for viewing the list of current throttle overrides
  */
 class SpecialThrottleOverrideList extends FormSpecialPage {
-	function __construct() {
+	public function __construct() {
 		parent::__construct( 'ThrottleOverrideList' );
 	}
 
-	function getMessagePrefix() {
+	public function getMessagePrefix() {
 		return 'throttleoverride-list';
 	}
 
-	function getFormFields() {
+	public function getFormFields() {
 		global $wgRateLimits;
 		global $wgThrottleOverrideTypes;
 		$throttleTypes = array_keys( array_filter( $wgThrottleOverrideTypes ) );
@@ -58,13 +58,13 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 		];
 	}
 
-	function alterForm( HTMLForm $form ) {
+	public function alterForm( HTMLForm $form ) {
 		$form->setMethod( 'get' );
 		$form->setWrapperLegendMsg( 'throttleoverride-list-legend' );
 		$form->setSubmitTextMsg( 'throttleoverride-list-search' );
 	}
 
-	function onSubmit( array $data, HTMLForm $form = null ) {
+	public function onSubmit( array $data, HTMLForm $form = null ) {
 		$pager = new ThrottleOverridePager( $this, [
 			'throttleType' => $data['ThrottleType'],
 		] );
@@ -83,7 +83,7 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 		return false;
 	}
 
-	function getGroupName() {
+	public function getGroupName() {
 		return 'users';
 	}
 

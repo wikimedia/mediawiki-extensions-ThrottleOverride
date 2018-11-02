@@ -25,7 +25,7 @@ class ThrottleOverridePager extends TablePager {
 	/** @var string */
 	private $throttleType;
 
-	function __construct( SpecialPage $page, $conds = [] ) {
+	public function __construct( SpecialPage $page, $conds = [] ) {
 		parent::__construct( $page->getContext() );
 		$this->throttleType = isset( $conds['throttleType'] ) ? $conds['throttleType'] : 'all';
 
@@ -33,7 +33,7 @@ class ThrottleOverridePager extends TablePager {
 		$out->addModules( 'ext.throttleoverride.list' );
 	}
 
-	function getFieldNames() {
+	public function getFieldNames() {
 		return [
 			'thr_target' => $this->msg( 'throttleoverride-list-target' )->text(),
 			'thr_expiry' => $this->msg( 'throttleoverride-list-expiry' )->text(),
@@ -42,19 +42,19 @@ class ThrottleOverridePager extends TablePager {
 		];
 	}
 
-	function isFieldSortable( $field ) {
+	public function isFieldSortable( $field ) {
 		return $field === 'thr_expiry' || $field === 'thr_range_start';
 	}
 
-	function getDefaultSort() {
+	public function getDefaultSort() {
 		return 'thr_expiry';
 	}
 
-	function getDefaultDirections() {
+	public function getDefaultDirections() {
 		return true;
 	}
 
-	function getQueryInfo() {
+	public function getQueryInfo() {
 		$a = [
 			'tables' => 'throttle_override',
 			'fields' => [
@@ -80,7 +80,7 @@ class ThrottleOverridePager extends TablePager {
 		return $a;
 	}
 
-	function formatValue( $name, $value ) {
+	public function formatValue( $name, $value ) {
 		$row = $this->mCurrentRow;
 		$language = $this->getLanguage();
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();

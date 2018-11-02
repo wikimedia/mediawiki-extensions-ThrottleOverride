@@ -26,7 +26,7 @@ use MediaWiki\MediaWikiServices;
  * Delete expired ThrottleOverride records.
  */
 class ThrottleOverridePurgeJob extends Job {
-	function __construct() {
+	public function __construct() {
 		parent::__construct(
 			'ThrottleOverridePurge',
 			SpecialPage::getTitleFor( 'OverrideThrottle' )
