@@ -69,7 +69,7 @@ class ThrottleOverridePager extends TablePager {
 		];
 
 		if ( $this->throttleType !== 'all' ) {
-			$a['conds'][] = $this->mDb->addIdentifierQuotes( 'thr_type' ) .
+			$a['conds'][] = 'thr_type' .
 				$this->mDb->buildLike(
 					$this->mDb->anyString(),
 					$this->throttleType,
