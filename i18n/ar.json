@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
 	"overridethrottle": "تجاوز الخانق",
@@ -11,7 +12,7 @@
 	"log-description-throttleoverride": "هذا هو سجل الإعفاءات التي تسمح للمستخدمين بتجاوز حدود المعدل، تم تصميم حدود معدل لمنع السخام عن طريق الحد من إجراءات معينة (على سبيل المثال عدد إنشاءات عدد من الحسابات أو استخدام Special:Emailuser).",
 	"right-throttleoverride": "إعفاء بعض عناوين الآيبي أو نطاقات معينة من حدود المعدل",
 	"throttleoverridelist": "قائمة تجاوزات الخنق",
-	"throttleoverride-desc": "يسمح بتجاوز خنق عنوان آيبي",
+	"throttleoverride-desc": "يسمح بتجاوز خنق عنوان أيبي",
 	"throttleoverride-legend": "معلومات الإعفاء",
 	"throttleoverride-text": "أدخل عنوان أو نطاق الآيبي الذي تريد إعفاءه من بعض الخانقات، ومدة استمرار الإعفاء،\nيمكن إعطاء سبب اختياري للسجلات.",
 	"throttleoverride-ipaddress": "عنوان أو نطاق الآيبي",
@@ -41,9 +42,9 @@
 	"throttleoverride-log-type-move": "نقل الصفحة",
 	"throttleoverride-log-type-mailpassword": "رسائل البريد الإلكتروني لاسترداد كلمة المرور",
 	"throttleoverride-log-type-emailuser": "بريد المستخدم الإلكتروني",
-	"throttleoverride-validation-ipinvalid": "عنوان آيبي أو نطاق عنوان آيبي غير صالح.",
+	"throttleoverride-validation-ipinvalid": "عنوان أيبي أو نطاق عنوان أيبي غير صالح.",
 	"throttleoverride-validation-rangedisabled": "تم تعطيل القدرة على إنشاء استثناءات خنق على نطاقات عناوين الآيبي.",
-	"throttleoverride-validation-rangetoolarge": "غير مسموح بإعفاءات الخنق عبر نطاق عناوين آيبي أكبر من $1.",
+	"throttleoverride-validation-rangetoolarge": "غير مسموح بإعفاءات الخنق عبر نطاق عناوين أيبي أكبر من $1.",
 	"throttleoverride-validation-notypes": "لا يوجد نوع خنق محدد.",
 	"throttleoverride-validation-expiryinvalid": "وقت انتهاء الصلاحية غير صالح.",
 	"throttleoverride-rule-alreadyexists": "هناك إعفاء حالي لـ$1، يمكنك عرض الإعدادات الموجودة في[[Special:ThrottleOverrideList|قائمة إعفاءات الخانق]]، أو تعديل إعدادات القاعدة الحالية عن طريق إعادة إرسال هذا النموذج."
