@@ -27,7 +27,7 @@ class ThrottleOverridePager extends TablePager {
 
 	public function __construct( SpecialPage $page, $conds = [] ) {
 		parent::__construct( $page->getContext() );
-		$this->throttleType = isset( $conds['throttleType'] ) ? $conds['throttleType'] : 'all';
+		$this->throttleType = $conds['throttleType'] ?? 'all';
 
 		$out = $this->getOutput();
 		$out->addModules( 'ext.throttleoverride.list' );
