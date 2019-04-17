@@ -5,14 +5,14 @@
 			"Hamilton Abreu"
 		]
 	},
-	"overridethrottle": "Ultrapassar limitadores de frequência",
+	"overridethrottle": "Contornar limitadores de frequência",
 	"action-throttleoverride": "adicionar isenções dos limites de frequência",
 	"logentry-throttleoverride-created": "$1 isentou $3 de $4 {{PLURAL:$6|limitador|limitadores}} de frequência até $5.",
 	"log-name-throttleoverride": "Isenções dos limitadores de frequência",
 	"log-description-throttleoverride": "Este é um registo das isenções que permitem que os utilizadores ultrapassem os limitadores de frequência. Os limites de frequência foram concebidos para impedir spam, limitando certas operações (p. ex. o número de criações de conta ou a utilização de Special:Emailuser).",
 	"right-throttleoverride": "Isentar certos endereços ou gamas de endereços IP dos limites de frequência",
 	"throttleoverridelist": "Lista de alterações aos limitadores de frequência",
-	"throttleoverride-desc": "Permite ultrapassar os limitadores de frequência para endereços IP",
+	"throttleoverride-desc": "Permite contornar os limitadores de frequência para endereços IP",
 	"throttleoverride-legend": "Informação sobre a isenção",
 	"throttleoverride-text": "Introduza o endereço ou gama de endereços IP que pretende isentar de certos limitadores de frequência e a duração dessa isenção.\nPode especificar um motivo opcional para os registos.",
 	"throttleoverride-ipaddress": "Endereço ou gama IP",
