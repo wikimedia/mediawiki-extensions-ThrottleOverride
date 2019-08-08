@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Okras",
-			"Facenapalm"
+			"Facenapalm",
+			"Movses"
 		]
 	},
 	"overridethrottle": "Переопределить ограничения",
@@ -13,7 +14,7 @@
 	"throttleoverride-legend": "Информация об исключениях",
 	"throttleoverride-text": "Введите IP-адрес или диапазон адресов, для которых вы хотите сделать исключение по некоторым ограничениям, и как долго должен длиться это исключение.\nМожно указать дополнительные причины для журналов.",
 	"throttleoverride-ipaddress": "IP-адрес или диапазон",
-	"throttleoverride-success": "Исключение было применено.",
+	"throttleoverride-success": "Исключение для $1 было применено.<br />\nСм. [[Special:ThrottleOverrideList|список переопределений ограничений]] для проверки.",
 	"throttleoverride-types": "Типы ограничений:",
 	"throttleoverride-types-all": "Все типы",
 	"throttleoverride-types-actcreate": "Создание учётной записи",
