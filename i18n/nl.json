@@ -7,7 +7,7 @@
 			"Mainframe98"
 		]
 	},
-	"overridethrottle": "Beperkingen voor aanmaken account negeren",
+	"overridethrottle": "Beperkingen negeren",
 	"throttleoverridelist": "Lijst met drempelwaardebeperkingen",
 	"throttleoverride-desc": "Maakt het mogelijk de beperkingen voor IP-adressen te negeren",
 	"throttleoverride-legend": "Gegevens over uitzonderingen",
