@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"StanProg",
-			"Vlad5250"
+			"Vlad5250",
+			"Ted Masters"
 		]
 	},
 	"overridethrottle": "Пренебрегване на ограничението",
@@ -47,5 +48,5 @@
 	"throttleoverride-validation-rangetoolarge": "Не са позволени изключения от ограничението по IP-диапазон по-голям от $1.",
 	"throttleoverride-validation-notypes": "Не е избран вид ограничение.",
 	"throttleoverride-validation-expiryinvalid": "Невалидно време на изтичане.",
-	"throttleoverride-rule-alreadyexists": "Има съществуващо изключение за $1. Можете да погледнете съществуващите настройки в [[Special:ThrottleOverrideList|списъка на изключения по ограничения]], или да промените настройките на съществуващото правило с повторно изпращане на формуляра."
+	"throttleoverride-rule-alreadyexists": "Има съществуващо изключение за $1. Можете да погледнете съществуващите настройки в [[Special:ThrottleOverrideList|списъка на изключения по ограничения]] или да промените настройките на съществуващото правило с повторно изпращане на формуляра."
 }
