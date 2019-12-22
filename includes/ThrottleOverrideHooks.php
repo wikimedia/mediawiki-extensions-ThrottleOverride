@@ -92,7 +92,7 @@ class ThrottleOverrideHooks {
 					// current-time-left. Cache will be purged via checkKey
 					// updates on record modification. Avoid "0" (infinite)
 					// and negative numbers for sanity.
-					$ttl = max( wfTimestamp( TS_UNIX, $expiry ) - time(), 1 );
+					$ttl = max( (int)wfTimestamp( TS_UNIX, $expiry ) - time(), 1 );
 				}
 
 				// If we return false the value will not be cached
