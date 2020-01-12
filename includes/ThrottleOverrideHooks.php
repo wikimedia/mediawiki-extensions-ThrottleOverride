@@ -23,7 +23,7 @@ use Wikimedia\Rdbms\Database;
 
 class ThrottleOverrideHooks {
 
-	const NO_OVERRIDE = -1;
+	private const NO_OVERRIDE = -1;
 
 	/**
 	 * @param string $ip
