@@ -21,6 +21,7 @@
  */
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\DBConnRef;
 
 class ThrottleOverrideUtils {
@@ -56,8 +57,8 @@ class ThrottleOverrideUtils {
 		global $wgThrottleOverrideCentralWiki, $wgThrottleOverrideCIDRLimit;
 		// Split the address space into buckets such that any given user IP address
 		// or throttle override's IP address range will fall into exactly one bucket.
-		$proto = IP::isIPv6( $ip ) ? 'IPv6' : 'IPv4';
-		$bucket = IP::sanitizeRange( "$ip/{$wgThrottleOverrideCIDRLimit[$proto]}" );
+		$proto = IPUtils::isIPv6( $ip ) ? 'IPv6' : 'IPv4';
+		$bucket = IPUtils::sanitizeRange( "$ip/{$wgThrottleOverrideCIDRLimit[$proto]}" );
 		// Purge all cache for all IPs in this bucket
 		return $cache->makeGlobalKey(
 			'throttle-override',
