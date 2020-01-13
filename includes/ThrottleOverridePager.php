@@ -19,6 +19,7 @@
  */
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\IPUtils;
 
 class ThrottleOverridePager extends TablePager {
 
@@ -98,7 +99,7 @@ class ThrottleOverridePager extends TablePager {
 				return $language->commaList( $types );
 
 			case 'thr_target':
-				return IP::prettifyIP( $value );
+				return IPUtils::prettifyIP( $value );
 
 			case 'thr_expiry':
 				$formatted = htmlspecialchars( $language->formatExpiry( $value,
@@ -107,7 +108,7 @@ class ThrottleOverridePager extends TablePager {
 				// Show link to Special:OverrideThrottle/$Username if we're allowed to manipulate throttles.
 				if ( $this->getUser()->isAllowed( 'throttleoverride' ) ) {
 					$link = $linkRenderer->makeKnownLink(
-						SpecialPage::getTitleFor( 'OverrideThrottle', IP::prettifyIP( $row->thr_target ) ),
+						SpecialPage::getTitleFor( 'OverrideThrottle', IPUtils::prettifyIP( $row->thr_target ) ),
 						$this->msg( 'throttleoverride-list-change' )->text()
 					);
 

@@ -19,6 +19,7 @@
 
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\Database;
 
 class ThrottleOverrideHooks {
@@ -52,12 +53,12 @@ class ThrottleOverrideHooks {
 			return true;
 		}
 
-		if ( $user->isAnon() && IP::isValid( $user->getName() ) ) {
+		if ( $user->isAnon() && IPUtils::isValid( $user->getName() ) ) {
 			$ip = $user->getName();
 		} elseif ( $ip === null ) {
 			$ip = RequestContext::getMain()->getRequest()->getIP();
 		}
-		$hexIp = IP::toHex( $ip );
+		$hexIp = IPUtils::toHex( $ip );
 
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$expiry = $cache->getWithSetCallback(

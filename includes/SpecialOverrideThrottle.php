@@ -18,6 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 use MediaWiki\MediaWikiServices;
+use Wikimedia\IPUtils;
 
 class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @var string Sanitized target IP address or range */
@@ -110,8 +111,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 		$request = $this->getRequest();
 		// thr_target is sanitized so sanitize wpTarget before checking
-		$this->target = IP::sanitizeRange(
-			IP::sanitizeIP( $request->getText( 'wpTarget' ) )
+		$this->target = IPUtils::sanitizeRange(
+			IPUtils::sanitizeIP( $request->getText( 'wpTarget' ) )
 		);
 		// Check for an existing exemption in the master database
 		$this->throttleId = self::getThrottleOverrideId( $this->target, DB_MASTER );
@@ -152,7 +153,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	public function onSubmit( array $data ) {
 		$types = implode( ',', $data['Throttles'] );
 		$reason = trim( $data['Reason'] );
-		$parsedRange = IP::parseRange( $data['Target'] );
+		$parsedRange = IPUtils::parseRange( $data['Target'] );
 		$errors = self::validateFields(
 			$data['Target'],
 			$data['Expiry'],
@@ -248,8 +249,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	public static function validateFields( $target, $expiry, $types, $parsedRange ) {
 		global $wgThrottleOverrideCIDRLimit;
 		$errors = [];
-		$ip = IP::sanitizeIP( $target );
-		if ( !IP::isIPAddress( $ip ) ) {
+		$ip = IPUtils::sanitizeIP( $target );
+		if ( !IPUtils::isIPAddress( $ip ) ) {
 			// Invalid IP address.
 			$errors[] = [ 'throttleoverride-validation-ipinvalid', $ip ];
 		}
@@ -265,15 +266,15 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		}
 
 		if ( $parsedRange[0] !== $parsedRange[1] ) {
-			$ip = IP::sanitizeRange( $ip );
+			$ip = IPUtils::sanitizeRange( $ip );
 			list( $iprange, $range ) = explode( '/', $ip, 2 );
 			if (
-				( IP::isIPv4( $ip ) && $range > 32 ) ||
-				( IP::isIPv6( $ip ) && $range > 128 )
+				( IPUtils::isIPv4( $ip ) && $range > 32 ) ||
+				( IPUtils::isIPv6( $ip ) && $range > 128 )
 			) {
 				// Range exemptions effectively disabled.
 				$errors[] = [ 'throttleoverride-validation-rangedisabled' ];
-			} elseif ( IP::isIPv4( $iprange ) &&
+			} elseif ( IPUtils::isIPv4( $iprange ) &&
 				$range < $wgThrottleOverrideCIDRLimit['IPv4']
 			) {
 				// Target range larger than limit.
@@ -281,7 +282,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 					'throttleoverride-validation-rangetoolarge',
 					$wgThrottleOverrideCIDRLimit['IPv4']
 				];
-			} elseif ( IP::isIPv6( $iprange ) &&
+			} elseif ( IPUtils::isIPv6( $iprange ) &&
 				$range < $wgThrottleOverrideCIDRLimit['IPv6']
 			) {
 				$errors[] = [
