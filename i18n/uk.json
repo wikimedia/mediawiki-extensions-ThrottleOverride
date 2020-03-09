@@ -26,7 +26,7 @@
 	"throttleoverride-types-actcreate": "Створення облікових записів",
 	"throttleoverride-types-edit": "Редагування сторінок",
 	"throttleoverride-types-move": "Перейменування сторінок",
-	"throttleoverride-types-mailpassword": "Відновлення паролю електронною поштою",
+	"throttleoverride-types-mailpassword": "Відновлення пароля електронною поштою",
 	"throttleoverride-types-emailuser": "Листи користувачам електронною поштою",
 	"throttleoverride-list-change": "змінити частоту",
 	"throttleoverride-list-throttletype": "Тип обмеження частоти:",
