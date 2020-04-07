@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Simon Shek",
-			"Liuxinyu970226",
 			"Kly",
-			"LNDDYL"
+			"LNDDYL",
+			"Liuxinyu970226",
+			"Simon Shek"
 		]
 	},
 	"overridethrottle": "覆蓋節流",

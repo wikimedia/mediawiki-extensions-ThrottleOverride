@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mainframe98",
 			"Siebrand",
-			"Southparkfan",
 			"Sjoerddebruin",
-			"Mainframe98"
+			"Southparkfan"
 		]
 	},
 	"overridethrottle": "Beperkingen negeren",

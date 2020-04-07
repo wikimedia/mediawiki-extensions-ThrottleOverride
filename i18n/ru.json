@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Okras",
 			"Facenapalm",
-			"Movses"
+			"Movses",
+			"Okras"
 		]
 	},
 	"overridethrottle": "Переопределить ограничения",

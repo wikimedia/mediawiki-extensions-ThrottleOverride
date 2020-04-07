@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luckas",
+			"Eduardo Addad de Oliveira",
 			"Felipe L. Ewald",
-			"Eduardo Addad de Oliveira"
+			"Luckas"
 		]
 	},
 	"overridethrottle": "Ultrapassar limitadores de frequência",

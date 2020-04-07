@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki",
-			"Umherirrender",
-			"Liuxinyu970226",
+			"EddieGP",
 			"Glaisher",
+			"Liuxinyu970226",
 			"Robby",
-			"EddieGP"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
