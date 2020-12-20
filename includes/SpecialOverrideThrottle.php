@@ -62,7 +62,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				// throttleoverride-types-actcreate, throttleoverride-types-edit,
 				// throttleoverride-types-moves, throttleoverride-types-mailpassword,
 				// throttleoverride-types-emailuser
-				$throttles[$this->msg( "throttleoverride-types-$type" )->text()] = $type;
+				$throttles[$this->msg( "throttleoverride-types-$type" )->escaped()] = $type;
 			}
 		}
 
