@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Foomin10",
 			"Omotecho",
 			"Otokoume",
 			"Shirayuki"
 		]
 	},
-	"overridethrottle": "アカウント作成の制限の回避",
+	"overridethrottle": "制限の回避",
 	"throttleoverride-desc": "IP アドレスの制限を回避できるようにする",
 	"throttleoverride-legend": "免除の情報",
 	"throttleoverride-text": "制限を免除する IP アドレスまたは範囲、およびその制限の期間を入力してください。\n記録用の理由は省略できます。",
