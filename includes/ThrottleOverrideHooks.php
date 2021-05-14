@@ -69,7 +69,7 @@ class ThrottleOverrideHooks {
 				$hexIp
 			),
 			$cache::TTL_HOUR,
-			function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $ip, $hexIp, $action ) {
+			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $ip, $hexIp, $action ) {
 				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
