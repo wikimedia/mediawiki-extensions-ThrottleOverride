@@ -34,7 +34,7 @@ class ThrottleOverrideUtils {
 	}
 
 	/**
-	 * @param int $index DB_MASTER/DB_REPLICA
+	 * @param int $index DB_PRIMARY/DB_REPLICA
 	 * @return DBConnRef
 	 */
 	public static function getCentralDB( $index ) {

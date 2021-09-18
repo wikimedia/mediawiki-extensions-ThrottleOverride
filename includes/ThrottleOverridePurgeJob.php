@@ -35,7 +35,7 @@ class ThrottleOverridePurgeJob extends Job {
 	}
 
 	public function run() {
-		$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
+		$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
 		$expCond = [ 'thr_expiry < ' . $dbw->addQuotes( $dbw->timestamp() ) ];
 		$services = MediaWikiServices::getInstance();
 		$lbf = $services->getDBLoadBalancerFactory();

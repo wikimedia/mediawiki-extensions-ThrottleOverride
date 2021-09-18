@@ -115,7 +115,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			IPUtils::sanitizeIP( $request->getText( 'wpTarget' ) )
 		);
 		// Check for an existing exemption in the master database
-		$this->throttleId = self::getThrottleOverrideId( $this->target, DB_MASTER );
+		$this->throttleId = self::getThrottleOverrideId( $this->target, DB_PRIMARY );
 		if ( $request->wasPosted() && $this->throttleId ) {
 			$data['Modify']['default'] = 1;
 		}
@@ -126,7 +126,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			$data['Target']['default'] = $this->par;
 
 			// We need the most recent data here, we're about to change the throttle.
-			$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
+			$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
 			$row = $dbw->selectRow(
 				'throttle_override',
 				[ 'thr_expiry', 'thr_reason', 'thr_type' ],
@@ -185,7 +185,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		list( $rangeStart, $rangeEnd ) = $parsedRange;
 
 		// Save the new exemption
-		$dbw = ThrottleOverrideUtils::getCentralDB( DB_MASTER );
+		$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
 		$row = [
 			'thr_target' => $this->target,
 			'thr_expiry' => $dbw->encodeExpiry( $data['Expiry'] ),
@@ -223,7 +223,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	 * if it doesn't exist.
 	 *
 	 * @param string $ip
-	 * @param int $dbtype either DB_REPLICA or DB_MASTER
+	 * @param int $dbtype either DB_REPLICA or DB_PRIMARY
 	 * @return int
 	 */
 	public static function getThrottleOverrideId( $ip, $dbtype = DB_REPLICA ) {
