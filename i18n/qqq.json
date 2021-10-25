@@ -6,7 +6,8 @@
 			"Liuxinyu970226",
 			"Robby",
 			"Shirayuki",
-			"Umherirrender"
+			"Umherirrender",
+			"Yupik"
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
@@ -39,7 +40,7 @@
 	"throttleoverride-list-expiry": "Table header in the throttle override list for the expiry date and time of a throttle override.\n{{Identical|Expiration}}",
 	"throttleoverride-list-type": "Table header in the throttle override list for the actions allowed by a throttle override",
 	"throttleoverride-list-reason": "Table header in the throttle override list for the reason of a throttle override.\n{{Identical|Reason}}",
-	"throttleoverride-list-search": "Label for the sumbit button on [[Special:ThrottleOverrideList]].\n{{Identical|Search}}",
+	"throttleoverride-list-search": "Label for the submit button on [[Special:ThrottleOverrideList]].\n{{Identical|Search}}",
 	"throttleoverride-list-noresults": "Message displayed on [[Special:ThrottleOverrideList]] when the pager returns no results",
 	"throttleoverride-log-type-actcreate": "Message displayed as part of a comma-seperated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-actcreate}}.",
 	"throttleoverride-log-type-edit": "Message displayed as part of a comma-seperated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-edit}}.",
