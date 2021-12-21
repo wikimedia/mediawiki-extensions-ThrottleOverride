@@ -30,7 +30,7 @@ class ThrottleOverrideUtils {
 	 */
 	public static function isCentralWiki() {
 		global $wgThrottleOverrideCentralWiki;
-		return wfWikiId() === $wgThrottleOverrideCentralWiki;
+		return WikiMap::getCurrentWikiId() === $wgThrottleOverrideCentralWiki;
 	}
 
 	/**

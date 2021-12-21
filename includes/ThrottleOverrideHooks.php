@@ -149,7 +149,7 @@ class ThrottleOverrideHooks {
 	public static function onSetupAfterCache() {
 		global $wgThrottleOverrideCentralWiki;
 		if ( $wgThrottleOverrideCentralWiki === false ) {
-			$wgThrottleOverrideCentralWiki = wfWikiId();
+			$wgThrottleOverrideCentralWiki = WikiMap::getCurrentWikiId();
 		}
 	}
 
