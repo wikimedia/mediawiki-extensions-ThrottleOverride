@@ -4,7 +4,8 @@
 			"Liuxinyu970226",
 			"Shirayuki",
 			"Xiaomingyan",
-			"Yfdyh000"
+			"Yfdyh000",
+			"Tranve"
 		]
 	},
 	"overridethrottle": "覆盖节流阀",
@@ -23,7 +24,7 @@
 	"throttleoverride-success-sub": "节流阀覆盖成功",
 	"throttleoverride-types": "节流阀类型：",
 	"throttleoverride-types-all": "所有类型",
-	"throttleoverride-types-actcreate": "账户创建",
+	"throttleoverride-types-actcreate": "账号创建",
 	"throttleoverride-types-edit": "编辑页面",
 	"throttleoverride-types-move": "移动页面",
 	"throttleoverride-types-mailpassword": "密码恢复邮件",
@@ -39,7 +40,7 @@
 	"throttleoverride-list-reason": "原因",
 	"throttleoverride-list-search": "搜索",
 	"throttleoverride-list-noresults": "节流阀覆盖列表是空的。",
-	"throttleoverride-log-type-actcreate": "账户创建",
+	"throttleoverride-log-type-actcreate": "账号创建",
 	"throttleoverride-log-type-edit": "页面编辑",
 	"throttleoverride-log-type-move": "页面移动",
 	"throttleoverride-log-type-mailpassword": "密码恢复邮件",
