@@ -207,11 +207,12 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		}
 
 		// Purge the cache
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$services = MediaWikiServices::getInstance();
+		$cache = $services->getMainWANObjectCache();
 		$cache->touchCheckKey( ThrottleOverrideUtils::getBucketKey( $cache, $rangeStart ) );
 
 		// Queue a job that will delete expired records
-		JobQueueGroup::singleton()->lazyPush(
+		$services->getJobQueueGroup()->lazyPush(
 			new ThrottleOverridePurgeJob()
 		);
 
