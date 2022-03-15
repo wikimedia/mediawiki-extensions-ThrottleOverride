@@ -40,7 +40,7 @@ class ThrottleOverrideUtils {
 	public static function getCentralDB( $index ) {
 		global $wgThrottleOverrideCentralWiki;
 		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-		return $lbFactory->getMainLB( $wgThrottleOverrideCentralWiki )->getLazyConnectionRef(
+		return $lbFactory->getMainLB( $wgThrottleOverrideCentralWiki )->getConnectionRef(
 			$index, [], $wgThrottleOverrideCentralWiki );
 	}
 
