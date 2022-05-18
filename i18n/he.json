@@ -1,12 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Amire80"
 		]
 	},
 	"action-throttleoverride": "להוסיף חסינים מההגבלה על קצב הפעולות",
 	"right-throttleoverride": "חסינות מהגבלת הקצב של כתובות IP וטווחים מסוימים",
+	"throttleoverride-types-edit": "עריכות דפים",
 	"throttleoverride-list-rangestart": "כתובת ה־IP הראשונה בטווח",
 	"throttleoverride-list-rangeend": "כתובת ה־IP האחרונה בטווח",
+	"throttleoverride-list-reason": "סיבה",
+	"throttleoverride-log-type-edit": "עריכת דף",
 	"throttleoverride-validation-ipinvalid": "כתובת IP או טווח כתובות IP לא תקין."
 }
