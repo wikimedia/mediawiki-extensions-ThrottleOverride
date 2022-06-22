@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bluehill",
 			"Priviet",
 			"Revi",
 			"Ykhwong",
 			"아라"
 		]
 	},
-	"overridethrottle": "계정 만들기 제한 회피",
+	"overridethrottle": "속도 제한 회피",
 	"throttleoverridelist": "스로틀 무시 목록",
 	"throttleoverride-desc": "IP 주소 제어를 무시할 수 있게 합니다",
 	"throttleoverride-legend": "면제 정보",
