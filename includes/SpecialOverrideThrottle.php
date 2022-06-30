@@ -111,9 +111,10 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 		$request = $this->getRequest();
 		// thr_target is sanitized so sanitize wpTarget before checking
-		$this->target = IPUtils::sanitizeRange(
-			IPUtils::sanitizeIP( $request->getText( 'wpTarget' ) )
-		);
+		$target = $request->getText( 'wpTarget' );
+		$this->target = $target !== null
+			? IPUtils::sanitizeRange( IPUtils::sanitizeIP( $target ) )
+			: '';
 		// Check for an existing exemption in the master database
 		$this->throttleId = self::getThrottleOverrideId( $this->target, DB_PRIMARY );
 		if ( $request->wasPosted() && $this->throttleId ) {
