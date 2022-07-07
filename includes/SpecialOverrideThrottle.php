@@ -311,7 +311,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		return 'ooui';
 	}
 
-	protected function postText() {
+	protected function postHtml() {
 		$out = '';
 		if ( $this->par ) {
 			# Get the relevant extract from the log.
