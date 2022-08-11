@@ -75,7 +75,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			],
 			'Expiry' => [
 				'type' => SpecialBlock::getSuggestedDurations() ? 'selectorother' : 'text',
-				'label-message' => 'ipbexpiry',
+				'label-message' => 'throttleoverride-expiry',
 				'required' => true,
 				'options' => SpecialBlock::getSuggestedDurations(),
 				'other' => $this->msg( 'ipbother' )->text(),
