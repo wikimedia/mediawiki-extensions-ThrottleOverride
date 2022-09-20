@@ -15,6 +15,7 @@
 	"throttleoverride-legend": "Ausnahmeinformationen",
 	"throttleoverride-text": "Gib die IP-Adresse oder den Adressbereich an, die du von bestimmten Beschränkungen ausnehmen willst und wie lange die Ausnahme gelten soll.\nFür die Logbücher kann eine optionale Begründung angegeben werden.",
 	"throttleoverride-ipaddress": "IP-Adresse oder Adressenbereich",
+	"throttleoverride-expiry": "Dauer der Befreiung",
 	"throttleoverride-showlog": "Diese IP-Adresse oder dieser IP-Adressbereich wurde kürzlich von Beschränkungen ausgenommen. Zur Information wird unten das Beschränkungsausnahmen-Logbuch angezeigt.",
 	"throttleoverride-success": "Die Ausnahme für $1 wurde angewandt.<br />\nSiehe die [[Special:ThrottleOverrideList|Liste der Beschränkungsumgehungen]], um Ausnahmen zu überprüfen.",
 	"throttleoverride-success-sub": "Die Beschränkungsumgehung war erfolgreich.",
