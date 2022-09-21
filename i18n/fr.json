@@ -18,6 +18,7 @@
 	"throttleoverride-legend": "Information sur l’exemption",
 	"throttleoverride-text": "Entrez l’adresse IP ou la plage que vous voulez exempter de certaines restrictions, et la durée de vie de l’exemption.\nUn motif facultatif peut être fourni pour les journaux.",
 	"throttleoverride-ipaddress": "Adresse IP ou plage",
+	"throttleoverride-expiry": "Durée d’exemption",
 	"throttleoverride-showlog": "Cette adresse IP ou plage d’adresses IP a été précédemment exemptée de limitations. La trace est fournie ci-dessous pour référence.",
 	"throttleoverride-success": "L’exemption pour $1 a été appliquée.<br />\nVoyez la  [[Special:ThrottleOverrideList|liste des limitations ignorées]] pour voir les exemptions.",
 	"throttleoverride-success-sub": "Dérogation à la limitation réussie",

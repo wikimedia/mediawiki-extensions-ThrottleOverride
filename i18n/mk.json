@@ -15,6 +15,7 @@
 	"throttleoverride-legend": "Информации за изземањето",
 	"throttleoverride-text": "Внесете IP-адреса или опсег од адреси што сакате да ги изземете од ограничувања и колку долго да трае изземањето.\nЗа евиденција во дневниците, можете да дадете и образложение.",
 	"throttleoverride-ipaddress": "IP-адреса или опсег",
+	"throttleoverride-expiry": "Траење на изземеноста",
 	"throttleoverride-showlog": "Оваа IP-адреса или опсег е претходно изземена од ограничувањата. Подолу е прикажан дневникот.",
 	"throttleoverride-success": "Изземањето на $1 е применето.<br />\nИзземените можете да ги прегледате на [[Special:ThrottleOverrideList|соодветниот список]].",
 	"throttleoverride-success-sub": "Успешно изземено",

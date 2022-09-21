@@ -18,6 +18,7 @@
 	"throttleoverride-legend": "免除訊息",
 	"throttleoverride-text": "輸入您想要從目前節流裡排除的 IP 地址，以及持續免除的時間。\n可為日誌提供選用的原因。",
 	"throttleoverride-ipaddress": "IP 地址或範圍",
+	"throttleoverride-expiry": "免除期間",
 	"throttleoverride-showlog": "IP 地址和範圍先前已從節流裡免除。提供於下方的日誌可作為參考。",
 	"throttleoverride-success": "已套用 $1 的免除。<br />\n請查看[[Special:ThrottleOverrideList|節流覆蓋清單]]來檢視免除。",
 	"throttleoverride-success-sub": "節流覆蓋成功",
