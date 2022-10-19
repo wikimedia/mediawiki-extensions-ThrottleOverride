@@ -16,6 +16,7 @@
 	"throttleoverride-legend": "Informação sobre a isenção",
 	"throttleoverride-text": "Introduza o endereço ou gama de endereços IP que pretende isentar de certos limitadores de frequência e a duração dessa isenção.\nPode especificar um motivo opcional para os registos.",
 	"throttleoverride-ipaddress": "Endereço ou gama IP",
+	"throttleoverride-expiry": "Duração da isenção",
 	"throttleoverride-showlog": "Este endereço ou gama de endereços IP foi anteriormente isentado de limitadores de frequência. Para referência, é fornecido abaixo o registo.",
 	"throttleoverride-success": "A isenção de $1 foi aplicada.<br />\nConsulte a [[Special:ThrottleOverrideList|lista de alterações dos limitadores de frequência]] para rever isenções.",
 	"throttleoverride-success-sub": "Alteração de limitador de frequência",
