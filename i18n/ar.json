@@ -16,6 +16,7 @@
 	"throttleoverride-legend": "معلومات الإعفاء",
 	"throttleoverride-text": "أدخل عنوان أو نطاق الآيبي الذي تريد إعفاءه من بعض الخانقات، ومدة استمرار الإعفاء،\nيمكن إعطاء سبب اختياري للسجلات.",
 	"throttleoverride-ipaddress": "عنوان أو نطاق الآيبي",
+	"throttleoverride-expiry": "مدة الإعفاء",
 	"throttleoverride-showlog": "سبق أن تم إعفاء عنوان أو نطاق الآيبي هذا من الخانق، يتم توفير السجل أدناه كمرجع.",
 	"throttleoverride-success": "تم تطبيق الإعفاء لـ$1،<br />\nراجع [[Special:ThrottleOverrideList|قائمة تجاوزات الخنق]] لمراجعة الإعفاءات.",
 	"throttleoverride-success-sub": "نجح قائمة تجاوز الخنق",
