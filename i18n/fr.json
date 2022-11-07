@@ -9,7 +9,7 @@
 	},
 	"overridethrottle": "Écraser les restrictions",
 	"action-throttleoverride": "ajouter des exclusions aux limites de taux",
-	"logentry-throttleoverride-created": "$1 a exempté $3 de $4 {{PLURAL:$6|limitation|limitations}} jusqu’à $5.",
+	"logentry-throttleoverride-created": "$1 a exempté $3 d{{PLURAL:$6|e la|es}} limitation{{PLURAL:$6||s}} suivante{{PLURAL:$6||s}} jusqu’à $5 : $4.",
 	"log-name-throttleoverride": "Exemptions de limitations",
 	"log-description-throttleoverride": "Voici un journal des exemptions qui permettront aux uilisateurs de passer outre les seuils de limitation. Ces derniers sont prévus pour bloquer les pourriels en limitant certaines actions (par exemple le nombre de création de comptes, ou l'utilisation de Special:Emailuser).",
 	"right-throttleoverride": "Exclu certaines adresses IP ou intervalles des limites des taux",
