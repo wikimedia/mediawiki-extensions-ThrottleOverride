@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bada Kaji"
+			"Bada Kaji",
+			"पर्वत सुबेदी",
+			"बडा काजी"
 		]
 	},
+	"throttleoverride-types-edit": "पृष्ठ सम्पादनहरू",
 	"throttleoverride-list-search": "खोज्नुहोस्"
 }
