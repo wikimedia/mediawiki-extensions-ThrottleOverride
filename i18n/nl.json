@@ -9,7 +9,7 @@
 		]
 	},
 	"overridethrottle": "Beperkingen negeren",
-	"throttleoverridelist": "Lijst met drempelwaardebeperkingen",
+	"throttleoverridelist": "Lijst met drempelwaarde-uitzonderingen",
 	"throttleoverride-desc": "Maakt het mogelijk de beperkingen voor IP-adressen te negeren",
 	"throttleoverride-legend": "Gegevens over uitzonderingen",
 	"throttleoverride-text": "Voer een IP-adres of -range in waar u uitzonderingen voor wilt instellen, en hoe lang de uitzondering moet duren.\nU kunt optioneel een reden opgeven voor in het logboek.",
