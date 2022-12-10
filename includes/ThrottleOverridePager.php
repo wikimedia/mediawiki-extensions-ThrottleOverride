@@ -122,7 +122,7 @@ class ThrottleOverridePager extends TablePager {
 				return $formatted;
 
 			case 'thr_reason':
-				return Linker::formatComment( $value );
+				return MediaWikiServices::getInstance()->getCommentFormatter()->format( $value );
 
 			default:
 				throw new MWException( "Unknown field $name." );
