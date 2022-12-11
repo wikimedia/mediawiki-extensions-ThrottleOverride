@@ -31,7 +31,7 @@ class ThrottleOverridePager extends TablePager {
 		$this->throttleType = $conds['throttleType'] ?? 'all';
 
 		$out = $this->getOutput();
-		$out->addModules( 'ext.throttleoverride.list' );
+		$out->addModuleStyles( 'ext.throttleoverride.styles' );
 	}
 
 	public function getFieldNames() {

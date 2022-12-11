@@ -1,0 +1,10 @@
+/* For SpecialThrottleOverrideList/ThrottleOverridePager */
+.mw-throttleoverridelist-actions {
+	white-space: nowrap;
+	font-size: 90%;
+}
+
+/* For SpecialOverrideThrottle */
+.mw-warning-with-logexcerpt {
+	margin-top: 10px;
+}

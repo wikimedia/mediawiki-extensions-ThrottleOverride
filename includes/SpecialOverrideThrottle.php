@@ -40,7 +40,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	}
 
 	public function execute( $par ) {
-		$this->getOutput()->addModules( 'ext.throttleoverride.specialOverrideThrottle' );
+		$this->getOutput()->addModuleStyles( 'ext.throttleoverride.styles' );
 		parent::execute( $par );
 	}
 
