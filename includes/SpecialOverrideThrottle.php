@@ -29,9 +29,6 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 	public function __construct() {
 		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
-
-		$out = $this->getOutput();
-		$out->addModules( 'ext.throttleoverride.specialOverrideThrottle' );
 	}
 
 	public function getMessagePrefix() {
@@ -40,6 +37,11 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 	public function requiresWrite() {
 		return true;
+	}
+
+	public function execute( $par ) {
+		$this->getOutput()->addModules( 'ext.throttleoverride.specialOverrideThrottle' );
+		parent::execute( $par );
 	}
 
 	public function getFormFields() {
