@@ -71,9 +71,9 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 
 		// Add the result as post text so it appears after the form
 		if ( !$pager->getNumRows() ) {
-			$form->addPostText( $this->msg( 'throttleoverride-list-noresults' )->escaped() );
+			$form->addPostHtml( $this->msg( 'throttleoverride-list-noresults' )->escaped() );
 		} else {
-			$form->addPostText(
+			$form->addPostHtml(
 				$pager->getNavigationBar() .
 				$pager->getBody() .
 				$pager->getNavigationBar()
