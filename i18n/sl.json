@@ -4,6 +4,7 @@
 			"Eleassar"
 		]
 	},
+	"throttleoverridelist": "Seznam preglasitev omejitev",
 	"throttleoverride-expiry": "Trajanje izjeme",
 	"throttleoverride-types-edit": "Spremembe strani",
 	"throttleoverride-list-reason": "Razlog",
