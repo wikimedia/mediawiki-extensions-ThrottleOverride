@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
-	"throttleoverride-list-reason": "Suijâ"
+	"throttleoverride-list-reason": "Suijâ",
+	"throttleoverride-list-search": "Uusâ"
 }
