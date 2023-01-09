@@ -8,9 +8,11 @@
 	"action-throttleoverride": "להוסיף חסינים מההגבלה על קצב הפעולות",
 	"right-throttleoverride": "חסינות מהגבלת הקצב של כתובות IP וטווחים מסוימים",
 	"throttleoverride-types-edit": "עריכות דפים",
+	"throttleoverride-types-mailpassword": "מכתבי שחזור סיסמה",
 	"throttleoverride-list-rangestart": "כתובת ה־IP הראשונה בטווח",
 	"throttleoverride-list-rangeend": "כתובת ה־IP האחרונה בטווח",
 	"throttleoverride-list-reason": "סיבה",
 	"throttleoverride-log-type-edit": "עריכת דף",
+	"throttleoverride-log-type-mailpassword": "מכתב שחזור סיסמה",
 	"throttleoverride-validation-ipinvalid": "כתובת IP או טווח כתובות IP לא תקין."
 }
