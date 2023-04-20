@@ -15,6 +15,7 @@
 	"throttleoverride-legend": "Unntaksinformasjon",
 	"throttleoverride-text": "Skriv inn IP-adressen eller -intervallet du ønsker å unnta fra visse fartsbegrensninger, og hvor lenge unntaket skal vare. En valgfri årsak kan gis for loggene.",
 	"throttleoverride-ipaddress": "IP-adresse eller -intervall",
+	"throttleoverride-expiry": "Varighet for unntaket",
 	"throttleoverride-showlog": "Denne IP-adressen eller dette IP-intervallet har tidligere blitt unntatt fra fartsbegrensninger. Loggen gjengis nedenfor.",
 	"throttleoverride-success": "Unntaket for $1 ble tatt i bruk.<br />\nSe [[Special:ThrottleOverrideList|listen over overstyringer av fartsbegrensninger]] for å gå gjennom unntakene.",
 	"throttleoverride-success-sub": "Overstyring av fartsbegrensning lyktes",
