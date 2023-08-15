@@ -8,7 +8,7 @@
 	},
 	"overridethrottle": "Override throttles",
 	"action-throttleoverride": "add exemptions to rate limits",
-	"logentry-throttleoverride-created": "$1 exempted $3 from $4 {{PLURAL:$6|throttle|throttles}} until $5.",
+	"logentry-throttleoverride-created": "$1 {{GENDER:$1|exempted}} $3 from $4 {{PLURAL:$6|throttle|throttles}} until $5.",
 	"log-name-throttleoverride": "Throttle exemptions",
 	"log-description-throttleoverride": "This is a log of exemptions that will allow users to bypass rate limits. Rate limits are designed to prevent spam by limiting certain actions (e.g. the number of account creations or the usage of Special:Emailuser).",
 	"right-throttleoverride": "Exempt certain IP addresses or ranges from rate limits",
