@@ -6,7 +6,7 @@
 	},
 	"overridethrottle": "Preglasitev omejitev",
 	"action-throttleoverride": "dodajanje izjem omejitev hitrosti",
-	"logentry-throttleoverride-created": "$1 je izvzel_a $3 iz $4 {{PLURAL:$6|omejitve|omejitev}} do $5.",
+	"logentry-throttleoverride-created": "$1 je {{GENDER:$1|izvzel|izvzela|izvzel_a}} $3 iz $4 {{PLURAL:$6|omejitve|omejitev}} do $5.",
 	"log-name-throttleoverride": "Dnevnik izjem omejitev",
 	"log-description-throttleoverride": "To je dnevnik izjem, ki bodo uporabnikom omogočile, da zaobidejo omejitve hitrosti. Omejitve hitrosti so namenjene preprečevanju neželene e-pošte z omejevanjem določenih dejanj (npr. število ustvaritev računa ali uporabe Special:Emailuser).",
 	"right-throttleoverride": "Izvzetje nekaterih IP-naslovov ali razponov iz omejitev hitrosti",

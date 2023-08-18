@@ -7,7 +7,7 @@
 	},
 	"overridethrottle": "עקיפת הגבלות",
 	"action-throttleoverride": "להוסיף חסינים מההגבלה על קצב הפעולות",
-	"logentry-throttleoverride-created": "$1 נתן|נתנה {{GENDER:$3|למשתמש|למשתמשת}} $3 חסינות {{PLURAL:$6|מהגבלה|מ־$4 הגבלות}} עד $5.",
+	"logentry-throttleoverride-created": "$1 {{GENDER:$1|נתן|נתנה}} {{GENDER:$3|למשתמש|למשתמשת}} $3 חסינות {{PLURAL:$6|מהגבלה|מ־$4 הגבלות}} עד $5.",
 	"log-name-throttleoverride": "חסינויות מהגבלות",
 	"log-description-throttleoverride": "זהו יומן של פטורים שיאפשרו למשתמשים לעקוף את מגבלות הקצב. מגבלות הקצב נועדו למנוע זיבול על־ידי הגבלת פעולות מסוימות (למשל מספר יצירת החשבון או השימוש ב־Special:Emailuser).",
 	"right-throttleoverride": "מתן חסינות מהגבלת הקצב של כתובות IP וטווחים מסוימים",
