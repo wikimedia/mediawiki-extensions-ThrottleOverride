@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Armin1392",
+			"Havadar-hvac",
 			"Mjbmr",
 			"Ommmmid",
 			"Reza1615"
 		]
 	},
 	"overridethrottle": "لغو گاز ایجاد حساب کاربری",
+	"logentry-throttleoverride-created": "$1 {{جنسیت:$1| معاف شد}}\n $3 از $4 {{جمع:$6| \nدریچه گاز|دریچه گاز}} تا $5 .",
 	"throttleoverridelist": "فهرست لغوهای دریچه گاز",
 	"throttleoverride-desc": "اجازه لغو آدرس آی‌پی دریچه‌های گاز",
 	"throttleoverride-legend": "اطلاعات معافیت",
