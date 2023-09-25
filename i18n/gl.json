@@ -8,7 +8,7 @@
 	},
 	"overridethrottle": "Ignorar as restricións",
 	"action-throttleoverride": "engadir excepción ós límites de frecuencia",
-	"right-throttleoverride": "Excluír certas direccións IP ou rangos de direccións dos límites de frecuencia",
+	"right-throttleoverride": "Excluír certos enderezos IP ou rangos de enderezos dos límites de frecuencia",
 	"throttleoverridelist": "Lista de restricións ignoradas",
 	"throttleoverride-desc": "Permite ignorar as restricións dos enderezos IP",
 	"throttleoverride-legend": "Información sobre a exención",
