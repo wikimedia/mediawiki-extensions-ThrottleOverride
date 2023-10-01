@@ -19,21 +19,19 @@
 		"throttleoverride/*": "ThrottleOverrideLogFormatter"
 	},
 	"Hooks": {
-		"PingLimiter": [
-			"ThrottleOverrideHooks::onPingLimiter"
-		],
-		"ExemptFromAccountCreationThrottle": [
-			"ThrottleOverrideHooks::onExemptFromAccountCreationThrottle"
-		],
-		"LoadExtensionSchemaUpdates": [
-			"ThrottleOverrideHooks::onLoadExtensionSchemaUpdates"
-		],
-		"SetupAfterCache": [
-			"ThrottleOverrideHooks::onSetupAfterCache"
-		],
-		"SpecialPage_initList": [
-			"ThrottleOverrideHooks::onSpecialPageInitList"
-		]
+		"PingLimiter": "main",
+		"ExemptFromAccountCreationThrottle": "main",
+		"LoadExtensionSchemaUpdates": "schema",
+		"SetupAfterCache": "main",
+		"SpecialPage_initList": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "ThrottleOverrideHooks"
+		},
+		"schema": {
+			"class": "ThrottleOverrideSchemaHooks"
+		}
 	},
 	"MessagesDirs": {
 		"OverrideThrottle": [
@@ -53,6 +51,7 @@
 		"ThrottleOverrideLogFormatter": "includes/ThrottleOverrideLogFormatter.php",
 		"ThrottleOverridePager": "includes/ThrottleOverridePager.php",
 		"ThrottleOverridePurgeJob": "includes/ThrottleOverridePurgeJob.php",
+		"ThrottleOverrideSchemaHooks": "includes/ThrottleOverrideSchemaHooks.php",
 		"ThrottleOverrideUtils": "includes/ThrottleOverrideUtils.php"
 	},
 	"config": {

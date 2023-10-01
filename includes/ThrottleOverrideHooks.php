@@ -17,12 +17,23 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
+
+use MediaWiki\Auth\Hook\ExemptFromAccountCreationThrottleHook;
+use MediaWiki\Hook\SetupAfterCacheHook;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
+use MediaWiki\User\Hook\PingLimiterHook;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\Database;
 
-class ThrottleOverrideHooks {
+class ThrottleOverrideHooks implements
+	PingLimiterHook,
+	ExemptFromAccountCreationThrottleHook,
+	SetupAfterCacheHook,
+	SpecialPage_initListHook
+{
 
 	private const NO_OVERRIDE = -1;
 
@@ -30,23 +41,35 @@ class ThrottleOverrideHooks {
 	 * @param string $ip
 	 * @return bool
 	 */
-	public static function onExemptFromAccountCreationThrottle( $ip ) {
+	public function onExemptFromAccountCreationThrottle( $ip ) {
 		$result = false;
 		$user = RequestContext::getMain()->getUser();
-		return self::onPingLimiter( $user, 'actcreate', $result, $ip );
+		return $this->doPingLimiter( $user, 'actcreate', $result, $ip );
 	}
 
 	/**
 	 * @throws InvalidArgumentException If $action is invalid
 	 *
-	 * @param User &$user
+	 * @param User $user
+	 * @param string $action
+	 * @param bool &$result
+	 * @param int $incrBy
+	 *
+	 * @return bool
+	 */
+	public function onPingLimiter( $user, $action, &$result, $incrBy ) {
+		return $this->doPingLimiter( $user, $action, $result );
+	}
+
+	/**
+	 * @param User $user
 	 * @param string $action
 	 * @param bool &$result
 	 * @param null|string $ip
 	 *
 	 * @return bool
 	 */
-	public static function onPingLimiter( User &$user, $action, &$result, $ip = null ) {
+	public function doPingLimiter( $user, $action, &$result, $ip = null ) {
 		global $wgRateLimits, $wgThrottleOverrideCentralWiki;
 
 		if ( $action !== 'actcreate' && !isset( $wgRateLimits[$action] ) ) {
@@ -123,37 +146,14 @@ class ThrottleOverrideHooks {
 		return true;
 	}
 
-	/**
-	 * @param DatabaseUpdater $updater
-	 * @return bool
-	 */
-	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
-		$updater->addExtensionTable(
-			'throttle_override',
-			__DIR__ . '/../patches/table.sql'
-		);
-		$updater->addExtensionIndex(
-			'throttle_override',
-			'thr_expiry',
-			__DIR__ . '/../patches/expiry_index.sql'
-		);
-		$updater->addExtensionField(
-			'throttle_override',
-			'thr_target',
-			__DIR__ . '/../patches/patch-thr_target.sql'
-		);
-
-		return true;
-	}
-
-	public static function onSetupAfterCache() {
+	public function onSetupAfterCache() {
 		global $wgThrottleOverrideCentralWiki;
 		if ( $wgThrottleOverrideCentralWiki === false ) {
 			$wgThrottleOverrideCentralWiki = WikiMap::getCurrentWikiId();
 		}
 	}
 
-	public static function onSpecialPageInitList( array &$specialPages ) {
+	public function onSpecialPage_initList( &$specialPages ) {
 		if ( ThrottleOverrideUtils::isCentralWiki() ) {
 			$specialPages['OverrideThrottle'] = SpecialOverrideThrottle::class;
 			$specialPages['ThrottleOverrideList'] = SpecialThrottleOverrideList::class;
