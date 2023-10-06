@@ -6,12 +6,13 @@
 			"Shirayuki",
 			"Tranve",
 			"Xiaomingyan",
+			"Xyb",
 			"Yfdyh000"
 		]
 	},
 	"overridethrottle": "覆盖节流阀",
 	"action-throttleoverride": "添加例外至速率限制",
-	"logentry-throttleoverride-created": "$1免除了$3的$4{{PLURAL:$6|节流阀限制}}直到$5。",
+	"logentry-throttleoverride-created": "$1{{GENDER:$1|免除了}}$3的$4{{PLURAL:$6|节流阀限制}}直到$5。",
 	"log-name-throttleoverride": "节流阀豁免",
 	"log-description-throttleoverride": "这是将允许用户跳过速率限制的例外日志。设计上，速率限制通过限制特定操作（例如账户创建数量，或使用Special:Emailuser）来阻止破坏。",
 	"right-throttleoverride": "从速率限制中排除指定IP地址或地址段",
