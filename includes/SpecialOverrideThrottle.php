@@ -264,7 +264,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			$errors[] = [ 'throttleoverride-validation-expiryinvalid' ];
 		}
 
-		if ( empty( $types ) ) {
+		if ( $types === '' ) {
 			// No throttle type given.
 			$errors[] = [ 'throttleoverride-validation-typesempty' ];
 		}
