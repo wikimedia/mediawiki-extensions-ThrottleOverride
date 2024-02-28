@@ -6,7 +6,7 @@
 	},
 	"overridethrottle": "Overstyr fartsbegrensninger",
 	"action-throttleoverride": "legge til unntak til fartsbegrensninger",
-	"logentry-throttleoverride-created": "$1 unntok $3 fra {{PLURAL:$6|fartsbegrensning|fartsbegresninger}} for $4 fram til $5.",
+	"logentry-throttleoverride-created": "$1 {{GENDER:$1|unntok}} $3 fra {{PLURAL:$6|fartsbegrensning|fartsbegresninger}} for $4 fram til $5.",
 	"log-name-throttleoverride": "Unntak fra fartsbegrensninger",
 	"log-description-throttleoverride": "Dette er en logg over unntak som lar brukere omgå fartsbegrensningene. Fartsbegrensningene er ment å motvirke spam ved å begrense visse handlinger (f.eks. antall kontoopprettelser eller bruk av Special:Emailuser).",
 	"right-throttleoverride": "Unntok visse IP-adresser eller -intervaller fra fartsbegrensninger",
