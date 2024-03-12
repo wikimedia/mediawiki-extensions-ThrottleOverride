@@ -185,7 +185,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		$logId = $logEntry->insert();
 		$logEntry->publish( $logId );
 
-		list( $rangeStart, $rangeEnd ) = $parsedRange;
+		[ $rangeStart, $rangeEnd ] = $parsedRange;
 
 		// Save the new exemption
 		$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
@@ -271,7 +271,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 		if ( $parsedRange[0] !== $parsedRange[1] ) {
 			$ip = IPUtils::sanitizeRange( $ip );
-			list( $iprange, $range ) = explode( '/', $ip, 2 );
+			[ $iprange, $range ] = explode( '/', $ip, 2 );
 			if (
 				( IPUtils::isIPv4( $ip ) && $range > 32 ) ||
 				( IPUtils::isIPv6( $ip ) && $range > 128 )
