@@ -7,7 +7,8 @@
 			"Robby",
 			"Shirayuki",
 			"Umherirrender",
-			"Yupik"
+			"Yupik",
+			"Amire80"
 		]
 	},
 	"overridethrottle": "{{doc-special|OverrideThrottle}}",
@@ -43,11 +44,11 @@
 	"throttleoverride-list-reason": "Table header in the throttle override list for the reason of a throttle override.\n{{Identical|Reason}}",
 	"throttleoverride-list-search": "Label for the submit button on [[Special:ThrottleOverrideList]].\n{{Identical|Search}}",
 	"throttleoverride-list-noresults": "Message displayed on [[Special:ThrottleOverrideList]] when the pager returns no results",
-	"throttleoverride-log-type-actcreate": "Message displayed as part of a comma-seperated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-actcreate}}.",
-	"throttleoverride-log-type-edit": "Message displayed as part of a comma-seperated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-edit}}.",
-	"throttleoverride-log-type-move": "Message displayed as part of a comma-seperated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-move}}.",
-	"throttleoverride-log-type-mailpassword": "Message displayed as part of a comma-seperated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-mailpassword}}.",
-	"throttleoverride-log-type-emailuser": "Message displayed as part of a comma-seperated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-emailuser}}.",
+	"throttleoverride-log-type-actcreate": "Message displayed as part of a comma-separated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-actcreate}}.",
+	"throttleoverride-log-type-edit": "Message displayed as part of a comma-separated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-edit}}.",
+	"throttleoverride-log-type-move": "Message displayed as part of a comma-separated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-move}}.",
+	"throttleoverride-log-type-mailpassword": "Message displayed as part of a comma-separated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-mailpassword}}.",
+	"throttleoverride-log-type-emailuser": "Message displayed as part of a comma-separated list in {{msg-mw|logentry-throttleoverride-created}}. Similar to {{msg-mw|throttleoverride-types-emailuser}}.",
 	"throttleoverride-validation-ipinvalid": "Validation error displayed on [[Special:ThrottleOverride]] when an invalid IP address or IP address range is given.",
 	"throttleoverride-validation-rangedisabled": "Validation error displayed on [[Special:ThrottleOverride]] when a user tries to give an IP address range to override for, but all range exemptions are disabled.",
 	"throttleoverride-validation-rangetoolarge": "Validation error displayed on [[Special:ThrottleOverride]] when the IP address range provided exceeds the configured allowable size.\n\nParameters:\n* $1 - The CIDR limit as configured",
