@@ -4,7 +4,9 @@
 			"Armin1392",
 			"Mjbmr",
 			"Ommmmid",
-			"Reza1615"
+			"Reza1615",
+			"Ebraminio",
+			"Havadar-hvac"
 		]
 	},
 	"overridethrottle": "لغو گاز ایجاد حساب کاربری",
@@ -32,6 +34,6 @@
 	"throttleoverride-list-noresults": "فهرست لغو دریچه گاز خالی است.",
 	"throttleoverride-log-type-emailuser": "ایمیل کاربر",
 	"throttleoverride-validation-ipinvalid": "آی‌پی نامعتبر یا دامنه آی‌پی.",
-	"throttleoverride-validation-rangedisabled": "توانایی برای ایجاد معافیت‌های گاز در محدوده‌های آدرس آی‌پی غیرفعال شده‌است.",
+	"throttleoverride-validation-rangedisabled": "توانایی برای ایجاد معافیت‌های گاز در محدوده‌های آدرس آی‌پی غیرفعال شده است.",
 	"throttleoverride-validation-rangetoolarge": "معافیت‌های دریچه گاز بیش از محدوده آی‌پی بزرگتر از $1 مجاز نیستند."
 }
