@@ -60,11 +60,11 @@ class ThrottleOverridePurgeJob extends Job {
 				}
 
 				// Delete rows by primary key that we looked up
-				$dbw->delete(
-					'throttle_override',
-					[ 'thr_id' => $ids ],
-					__METHOD__
-				);
+				$dbw->newDeleteQueryBuilder()
+					->deleteFrom( 'throttle_override' )
+					->where( [ 'thr_id' => $ids ] )
+					->caller( __METHOD__ )
+					->execute();
 
 				// Pause to allow replica servers to catch up
 				$lbf->commitAndWaitForReplication( __METHOD__, $ticket );

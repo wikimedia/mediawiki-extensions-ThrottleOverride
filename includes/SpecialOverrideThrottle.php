@@ -201,12 +201,18 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		// If there already is an exemption for that target AND the user already confirmed
 		// to override it, update the db row. Otherwise insert a new row.
 		if ( $data['Modify'] && $this->throttleId ) {
-			$dbw->update( 'throttle_override',
-				$row,
-				[ 'thr_id' => $this->throttleId ],
-				__METHOD__ );
+			$dbw->newUpdateQueryBuilder()
+				->update( 'throttle_override' )
+				->set( $row )
+				->where( [ 'thr_id' => $this->throttleId ] )
+				->caller( __METHOD__ )
+				->execute();
 		} else {
-			$dbw->insert( 'throttle_override', $row, __METHOD__ );
+			$dbw->newInsertQueryBuilder()
+				->insertInto( 'throttle_override' )
+				->row( $row )
+				->caller( __METHOD__ )
+				->execute();
 		}
 
 		// Purge the cache
