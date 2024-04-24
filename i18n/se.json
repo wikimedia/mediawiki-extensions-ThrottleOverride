@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
-	"throttleoverride-list-search": "Oza"
+	"throttleoverride-list-search": "Oza",
+	"throttleoverride-validation-ipinvalid": "Boastu IP-čujuhus dahje IP-čujuhusráidu."
 }
