@@ -130,12 +130,12 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 
 			// We need the most recent data here, we're about to change the throttle.
 			$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
-			$row = $dbw->selectRow(
-				'throttle_override',
-				[ 'thr_expiry', 'thr_reason', 'thr_type' ],
-				[ 'thr_target' => $this->par ],
-				__METHOD__
-			);
+			$row = $dbw->newSelectQueryBuilder()
+				->select( [ 'thr_expiry', 'thr_reason', 'thr_type' ] )
+				->from( 'throttle_override' )
+				->where( [ 'thr_target' => $this->par ] )
+				->caller( __METHOD__ )
+				->fetchRow();
 
 			if ( $row ) {
 				$data['Expiry']['default'] = $row->thr_expiry;
@@ -238,12 +238,12 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	 */
 	public static function getThrottleOverrideId( $ip, $dbtype = DB_REPLICA ) {
 		$db = ThrottleOverrideUtils::getCentralDB( $dbtype );
-		$field = $db->selectField(
-			'throttle_override',
-			'thr_id',
-			[ 'thr_target' => $ip ],
-			__METHOD__
-		);
+		$field = $db->newSelectQueryBuilder()
+			->select( 'thr_id' )
+			->from( 'throttle_override' )
+			->where( [ 'thr_target' => $ip ] )
+			->caller( __METHOD__ )
+			->fetchField();
 		return $field === false ? 0 : $field;
 	}
 

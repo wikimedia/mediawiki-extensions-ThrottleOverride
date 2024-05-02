@@ -27,6 +27,9 @@ use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
 use MediaWiki\User\Hook\PingLimiterHook;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\Database;
+use Wikimedia\Rdbms\IExpression;
+use Wikimedia\Rdbms\LikeValue;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 class ThrottleOverrideHooks implements
 	PingLimiterHook,
@@ -83,6 +86,7 @@ class ThrottleOverrideHooks implements
 		}
 		$hexIp = IPUtils::toHex( $ip );
 
+		$fname = __METHOD__;
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$expiry = $cache->getWithSetCallback(
 			$cache->makeGlobalKey(
@@ -92,24 +96,24 @@ class ThrottleOverrideHooks implements
 				$hexIp
 			),
 			$cache::TTL_HOUR,
-			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $ip, $hexIp, $action ) {
+			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $ip, $hexIp, $action, $fname ) {
 				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
 				$quotedIp = $dbr->addQuotes( $hexIp );
-				$expiry = $dbr->selectField(
-					'throttle_override',
-					'thr_expiry',
-					[
-						"thr_range_start <= $quotedIp",
-						"thr_range_end >= $quotedIp",
-						'thr_expiry > ' . $dbr->addQuotes( $dbr->timestamp() ),
-						'thr_type' . $dbr->buildLike(
-							$dbr->anyString(), $action, $dbr->anyString() ),
-					],
-					'ThrottleOverrideHooks::onPingLimiter',
-					[ 'ORDER BY' => 'thr_expiry DESC' ]
-				);
+				$expiry = $dbr->newSelectQueryBuilder()
+					->select( 'thr_expiry' )
+					->from( 'throttle_override' )
+					->where( [
+						$dbr->expr( 'thr_range_start', '<=', $hexIp ),
+						$dbr->expr( 'thr_range_end', '>=', $hexIp ),
+						$dbr->expr( 'thr_expiry', '>', $dbr->timestamp() ),
+						$dbr->expr( 'thr_type', IExpression::LIKE,
+							new LikeValue( $dbr->anyString(), $action, $dbr->anyString() ) ),
+					] )
+					->orderBy( 'thr_expiry', SelectQueryBuilder::SORT_DESC )
+					->caller( $fname )
+					->fetchField();
 
 				if ( $expiry !== false ) {
 					// An override exists; cache for the override's

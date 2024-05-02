@@ -36,7 +36,7 @@ class ThrottleOverridePurgeJob extends Job {
 
 	public function run() {
 		$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
-		$expCond = [ 'thr_expiry < ' . $dbw->addQuotes( $dbw->timestamp() ) ];
+		$expCond = $dbw->expr( 'thr_expiry', '<', $dbw->timestamp() );
 		$services = MediaWikiServices::getInstance();
 		$lbf = $services->getDBLoadBalancerFactory();
 		$ticket = $lbf->getEmptyTransactionTicket( __METHOD__ );
@@ -46,13 +46,14 @@ class ThrottleOverridePurgeJob extends Job {
 			// Find a set of expired records to be deleted
 			$ids = [];
 			$ips = [];
-			$res = $dbw->select(
-				'throttle_override',
-				[ 'thr_id', 'thr_range_start' ],
-				$expCond,
-				__METHOD__,
-				[ 'FOR UPDATE', 'LIMIT' => 100 ]
-			);
+			$res = $dbw->newSelectQueryBuilder()
+				->select( [ 'thr_id', 'thr_range_start' ] )
+				->from( 'throttle_override' )
+				->where( $expCond )
+				->forUpdate()
+				->limit( 100 )
+				->caller( __METHOD__ )
+				->fetchResultSet();
 			if ( $res->numRows() >= 1 ) {
 				foreach ( $res as $row ) {
 					$ids[] = $row->thr_id;
