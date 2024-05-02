@@ -22,7 +22,7 @@
 
 use MediaWiki\MediaWikiServices;
 use Wikimedia\IPUtils;
-use Wikimedia\Rdbms\DBConnRef;
+use Wikimedia\Rdbms\IDatabase;
 
 class ThrottleOverrideUtils {
 	/**
@@ -35,12 +35,12 @@ class ThrottleOverrideUtils {
 
 	/**
 	 * @param int $index DB_PRIMARY/DB_REPLICA
-	 * @return DBConnRef
+	 * @return IDatabase
 	 */
 	public static function getCentralDB( $index ) {
 		global $wgThrottleOverrideCentralWiki;
 		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-		return $lbFactory->getMainLB( $wgThrottleOverrideCentralWiki )->getConnectionRef(
+		return $lbFactory->getMainLB( $wgThrottleOverrideCentralWiki )->getConnection(
 			$index, [], $wgThrottleOverrideCentralWiki );
 	}
 
