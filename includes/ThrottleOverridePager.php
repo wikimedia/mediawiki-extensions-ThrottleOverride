@@ -20,6 +20,8 @@
 
 use MediaWiki\MediaWikiServices;
 use Wikimedia\IPUtils;
+use Wikimedia\Rdbms\IExpression;
+use Wikimedia\Rdbms\LikeValue;
 
 class ThrottleOverridePager extends TablePager {
 
@@ -65,17 +67,16 @@ class ThrottleOverridePager extends TablePager {
 				'thr_reason',
 			],
 			'conds' => [
-				'thr_expiry > ' . $this->mDb->addQuotes( $this->mDb->timestamp() ),
+				$this->mDb->expr( 'thr_expiry', '>', $this->mDb->timestamp() ),
 			],
 		];
 
 		if ( $this->throttleType !== 'all' ) {
-			$a['conds'][] = 'thr_type' .
-				$this->mDb->buildLike(
-					$this->mDb->anyString(),
-					$this->throttleType,
-					$this->mDb->anyString()
-				);
+			$a['conds'][] = $this->mDb->expr( 'thr_type', IExpression::LIKE, new LikeValue(
+				$this->mDb->anyString(),
+				$this->throttleType,
+				$this->mDb->anyString()
+			) );
 		}
 
 		return $a;
