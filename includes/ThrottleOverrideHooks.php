@@ -96,11 +96,10 @@ class ThrottleOverrideHooks implements
 				$hexIp
 			),
 			$cache::TTL_HOUR,
-			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $ip, $hexIp, $action, $fname ) {
+			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $hexIp, $action, $fname ) {
 				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
-				$quotedIp = $dbr->addQuotes( $hexIp );
 				$expiry = $dbr->newSelectQueryBuilder()
 					->select( 'thr_expiry' )
 					->from( 'throttle_override' )
