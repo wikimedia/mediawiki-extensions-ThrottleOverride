@@ -19,6 +19,8 @@
  * @license GPL-3.0-or-later
  */
 
+use MediaWiki\User\User;
+
 /**
  * This class formats throttleoverride log entries.
  *

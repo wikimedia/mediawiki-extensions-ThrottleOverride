@@ -18,6 +18,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use MediaWiki\SpecialPage\FormSpecialPage;
+
 /**
  * Special page for viewing the list of current throttle overrides
  */

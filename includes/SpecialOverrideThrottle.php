@@ -18,6 +18,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\FormSpecialPage;
+use MediaWiki\Specials\SpecialBlock;
+use MediaWiki\Title\Title;
 use Wikimedia\IPUtils;
 
 class SpecialOverrideThrottle extends FormSpecialPage {
