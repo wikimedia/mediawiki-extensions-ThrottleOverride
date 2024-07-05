@@ -20,6 +20,7 @@
 // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 
 use MediaWiki\Auth\Hook\ExemptFromAccountCreationThrottleHook;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Hook\SetupAfterCacheHook;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;

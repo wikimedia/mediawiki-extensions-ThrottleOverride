@@ -19,6 +19,8 @@
  * @license GPL-3.0-or-later
  */
 
+use MediaWiki\Context\RequestContext;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
 
 /**
