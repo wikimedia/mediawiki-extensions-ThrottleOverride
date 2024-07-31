@@ -9,7 +9,7 @@
 	},
 	"overridethrottle": "覆蓋節流",
 	"action-throttleoverride": "添加速率限制的免除",
-	"logentry-throttleoverride-created": "$1 免除了來自 $4 當中 $3 直到 $5 前的{{PLURAL:$6|節流|節流}}。",
+	"logentry-throttleoverride-created": "$1  {{GENDER:$1|免除了}}來自 $4 當中 $3 直到 $5 前的{{PLURAL:$6|節流}}。",
 	"log-name-throttleoverride": "節流免除",
 	"log-description-throttleoverride": "此為允許使用者跳過速率限的免除日誌制。速率限制被設計來透過限制特定的操作避免濫用行為（例如：帳號建立的數目或是 Special:Emailuser 的使用）。",
 	"right-throttleoverride": "免除目前自速率限制的 IP 地址或範圍",
