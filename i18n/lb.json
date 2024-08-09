@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
-	"throttleoverride-legend": "Informatioun iwwer d'Ausnam",
+	"throttleoverride-legend": "Informatiounen iwwer d'Ausnam",
 	"throttleoverride-ipaddress": "IP-Adress oder Range",
 	"throttleoverride-success": "D'Ausnahm gouf applizéiert.",
 	"throttleoverride-types-actcreate": "Benotzerkont opmaachen",
