@@ -18,10 +18,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use MediaWiki\Block\BlockUser;
 use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\FormSpecialPage;
-use MediaWiki\Specials\SpecialBlock;
 use MediaWiki\Title\Title;
 use Wikimedia\IPUtils;
 
@@ -72,6 +72,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			}
 		}
 
+		$blockDurations = MediaWikiServices::getInstance()->getContentLanguage()->getBlockDurations();
 		$data = [
 			'Target' => [
 				'type' => 'text',
@@ -80,12 +81,12 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				'autofocus' => true
 			],
 			'Expiry' => [
-				'type' => SpecialBlock::getSuggestedDurations() ? 'selectorother' : 'text',
+				'type' => $blockDurations ? 'selectorother' : 'text',
 				'label-message' => 'throttleoverride-expiry',
 				'required' => true,
-				'options' => SpecialBlock::getSuggestedDurations(),
+				'options' => $blockDurations,
 				'other' => $this->msg( 'ipbother' )->text(),
-				'filter-callback' => 'SpecialBlock::parseExpiryInput',
+				'filter-callback' => BlockUser::class . '::parseExpiryInput',
 				'validation-callback' => function ( $input ) {
 					if ( !$input ) {
 						return $this->msg( 'throttleoverride-validation-expiryinvalid' )->parse();
