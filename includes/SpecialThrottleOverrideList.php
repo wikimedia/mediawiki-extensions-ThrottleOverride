@@ -19,6 +19,7 @@
  */
 
 use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\MainConfigNames;
 use MediaWiki\SpecialPage\FormSpecialPage;
 
 /**
@@ -34,14 +35,14 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 	}
 
 	public function getFormFields() {
-		global $wgRateLimits;
-		global $wgThrottleOverrideTypes;
-		$throttleTypes = array_keys( array_filter( $wgThrottleOverrideTypes ) );
+		$config = $this->getConfig();
+		$throttleTypes = array_keys( array_filter( $config->get( 'ThrottleOverrideTypes' ) ) );
 		$throttleTypes = array_merge( [ 'all' ], $throttleTypes );
 
 		$throttles = [];
+		$rateLimits = $config->get( MainConfigNames::RateLimits );
 		foreach ( $throttleTypes as $type ) {
-			if ( $type == 'all' || $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
+			if ( $type == 'all' || $type == 'actcreate' || isset( $rateLimits[$type] ) ) {
 				// For grepping. The following messages are used here:
 				// throttleoverride-types-all
 				// throttleoverride-types-actcreate, throttleoverride-types-edit,

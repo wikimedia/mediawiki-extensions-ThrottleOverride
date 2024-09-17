@@ -17,6 +17,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Specials\SpecialBlock;
@@ -48,21 +50,20 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	}
 
 	public function getFormFields() {
-		global $wgRateLimits;
-
+		$config = $this->getConfig();
 		// The types are:
 		// actcreate - An account is created (not ping-limiter)
 		// edit - A page is edited (ping-limiter)
 		// move - A page is moved (ping-limiter)
 		// mailpassword - User requests a password recovery (ping-limiter)
 		// emailuser - User emails another user (ping-limiter)
-		global $wgThrottleOverrideTypes;
-		$throttleTypes = array_keys( array_filter( $wgThrottleOverrideTypes ) );
+		$throttleTypes = array_keys( array_filter( $config->get( 'ThrottleOverrideTypes' ) ) );
 
 		// Construct an array of message => type.
 		$throttles = [];
+		$rateLimits = $config->get( MainConfigNames::RateLimits );
 		foreach ( $throttleTypes as $type ) {
-			if ( $type == 'actcreate' || isset( $wgRateLimits[$type] ) ) {
+			if ( $type == 'actcreate' || isset( $rateLimits[$type] ) ) {
 				// For grepping. The following messages are used here:
 				// throttleoverride-types-actcreate, throttleoverride-types-edit,
 				// throttleoverride-types-moves, throttleoverride-types-mailpassword,
