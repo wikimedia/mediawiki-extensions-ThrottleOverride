@@ -20,28 +20,33 @@
  * @copyright © 2017 Wikimedia Foundation and contributors
  */
 
-use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\SpecialPage;
+use Wikimedia\Rdbms\LBFactory;
 
 /**
  * Delete expired ThrottleOverride records.
  */
 class ThrottleOverridePurgeJob extends Job {
-	public function __construct() {
+	private LBFactory $lbFactory;
+	private WANObjectCache $cache;
+
+	public function __construct(
+		LBFactory $lbFactory,
+		WANObjectCache $cache
+	) {
 		parent::__construct(
 			'ThrottleOverridePurge',
 			SpecialPage::getTitleFor( 'OverrideThrottle' )
 		);
 		$this->removeDuplicates = true;
+		$this->lbFactory = $lbFactory;
+		$this->cache = $cache;
 	}
 
 	public function run() {
 		$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
 		$expCond = $dbw->expr( 'thr_expiry', '<', $dbw->timestamp() );
-		$services = MediaWikiServices::getInstance();
-		$lbf = $services->getDBLoadBalancerFactory();
-		$ticket = $lbf->getEmptyTransactionTicket( __METHOD__ );
-		$cache = $services->getMainWANObjectCache();
+		$ticket = $this->lbFactory->getEmptyTransactionTicket( __METHOD__ );
 
 		while ( true ) {
 			// Find a set of expired records to be deleted
@@ -69,12 +74,12 @@ class ThrottleOverridePurgeJob extends Job {
 					->execute();
 
 				// Pause to allow replica servers to catch up
-				$lbf->commitAndWaitForReplication( __METHOD__, $ticket );
+				$this->lbFactory->commitAndWaitForReplication( __METHOD__, $ticket );
 
 				// Touch the check key associated with each overrides' bucket
 				foreach ( $ips as $ip ) {
-					$cache->touchCheckKey(
-						ThrottleOverrideUtils::getBucketKey( $cache, $ip )
+					$this->cache->touchCheckKey(
+						ThrottleOverrideUtils::getBucketKey( $this->cache, $ip )
 					);
 				}
 			} else {
