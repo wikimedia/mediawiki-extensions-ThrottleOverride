@@ -30,6 +30,7 @@
 			"class": "ThrottleOverrideHooks",
 			"services": [
 				"MainConfig",
+				"DBLoadBalancerFactory",
 				"MainWANObjectCache"
 			]
 		},
@@ -46,6 +47,7 @@
 		"ThrottleOverridePurge": {
 			"class": "ThrottleOverridePurgeJob",
 			"services": [
+				"MainConfig",
 				"DBLoadBalancerFactory",
 				"MainWANObjectCache"
 			]

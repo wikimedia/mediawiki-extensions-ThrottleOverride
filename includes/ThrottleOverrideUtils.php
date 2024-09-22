@@ -20,18 +20,29 @@
  * @copyright © 2017 Wikimedia Foundation and contributors
  */
 
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Config\Config;
 use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IDatabase;
+use Wikimedia\Rdbms\LBFactory;
 
 class ThrottleOverrideUtils {
+	private Config $config;
+	private LBFactory $lbFactory;
+
+	public function __construct(
+		Config $config,
+		LBFactory $lbFactory
+	) {
+		$this->config = $config;
+		$this->lbFactory = $lbFactory;
+	}
+
 	/**
 	 * @return bool
 	 */
-	public static function isCentralWiki() {
-		$centralWiki = MediaWikiServices::getInstance()->getMainConfig()
-			->get( 'ThrottleOverrideCentralWiki' );
+	public function isCentralWiki() {
+		$centralWiki = $this->config->get( 'ThrottleOverrideCentralWiki' );
 		return WikiMap::getCurrentWikiId() === $centralWiki;
 	}
 
@@ -39,11 +50,9 @@ class ThrottleOverrideUtils {
 	 * @param int $index DB_PRIMARY/DB_REPLICA
 	 * @return IDatabase
 	 */
-	public static function getCentralDB( $index ) {
-		$services = MediaWikiServices::getInstance();
-		$centralWiki = $services->getMainConfig()->get( 'ThrottleOverrideCentralWiki' );
-		$lbFactory = $services->getDBLoadBalancerFactory();
-		return $lbFactory->getMainLB( $centralWiki )->getConnection(
+	public function getCentralDB( $index ) {
+		$centralWiki = $this->config->get( 'ThrottleOverrideCentralWiki' );
+		return $this->lbFactory->getMainLB( $centralWiki )->getConnection(
 			$index, [], $centralWiki );
 	}
 
@@ -56,10 +65,9 @@ class ThrottleOverrideUtils {
 	 * @param string $ip A valid IP address (with no pointless CIDR)
 	 * @return string
 	 */
-	public static function getBucketKey( WANObjectCache $cache, $ip ) {
-		$config = MediaWikiServices::getInstance()->getMainConfig();
-		$centralWiki = $config->get( 'ThrottleOverrideCentralWiki' );
-		$limit = $config->get( 'ThrottleOverrideCIDRLimit' );
+	public function getBucketKey( WANObjectCache $cache, $ip ) {
+		$centralWiki = $this->config->get( 'ThrottleOverrideCentralWiki' );
+		$limit = $this->config->get( 'ThrottleOverrideCIDRLimit' );
 		// Split the address space into buckets such that any given user IP address
 		// or throttle override's IP address range will fall into exactly one bucket.
 		$proto = IPUtils::isIPv6( $ip ) ? 'IPv6' : 'IPv4';

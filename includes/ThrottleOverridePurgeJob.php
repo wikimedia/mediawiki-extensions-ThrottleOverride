@@ -20,6 +20,7 @@
  * @copyright © 2017 Wikimedia Foundation and contributors
  */
 
+use MediaWiki\Config\Config;
 use MediaWiki\SpecialPage\SpecialPage;
 use Wikimedia\Rdbms\LBFactory;
 
@@ -29,8 +30,10 @@ use Wikimedia\Rdbms\LBFactory;
 class ThrottleOverridePurgeJob extends Job {
 	private LBFactory $lbFactory;
 	private WANObjectCache $cache;
+	private ThrottleOverrideUtils $utils;
 
 	public function __construct(
+		Config $config,
 		LBFactory $lbFactory,
 		WANObjectCache $cache
 	) {
@@ -41,10 +44,14 @@ class ThrottleOverridePurgeJob extends Job {
 		$this->removeDuplicates = true;
 		$this->lbFactory = $lbFactory;
 		$this->cache = $cache;
+		$this->utils = new ThrottleOverrideUtils(
+			$config,
+			$lbFactory
+		);
 	}
 
 	public function run() {
-		$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
+		$dbw = $this->utils->getCentralDB( DB_PRIMARY );
 		$expCond = $dbw->expr( 'thr_expiry', '<', $dbw->timestamp() );
 		$ticket = $this->lbFactory->getEmptyTransactionTicket( __METHOD__ );
 
@@ -79,7 +86,7 @@ class ThrottleOverridePurgeJob extends Job {
 				// Touch the check key associated with each overrides' bucket
 				foreach ( $ips as $ip ) {
 					$this->cache->touchCheckKey(
-						ThrottleOverrideUtils::getBucketKey( $this->cache, $ip )
+						$this->utils->getBucketKey( $this->cache, $ip )
 					);
 				}
 			} else {

@@ -38,6 +38,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	private JobQueueGroup $jobQueueGroup;
 	private LBFactory $lbFactory;
 	private WANObjectCache $cache;
+	private ThrottleOverrideUtils $utils;
 
 	public function __construct(
 		Config $config,
@@ -52,6 +53,10 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		$this->jobQueueGroup = $jobQueueGroup;
 		$this->lbFactory = $lbFactory;
 		$this->cache = $cache;
+		$this->utils = new ThrottleOverrideUtils(
+			$config,
+			$lbFactory
+		);
 	}
 
 	public function getMessagePrefix() {
@@ -141,7 +146,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			? IPUtils::sanitizeRange( IPUtils::sanitizeIP( $target ) )
 			: '';
 		// Check for an existing exemption in the master database
-		$this->throttleId = self::getThrottleOverrideId( $this->target, DB_PRIMARY );
+		$this->throttleId = $this->getThrottleOverrideId( $this->target, DB_PRIMARY );
 		if ( $request->wasPosted() && $this->throttleId ) {
 			$data['Modify']['default'] = 1;
 		}
@@ -152,7 +157,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			$data['Target']['default'] = $this->par;
 
 			// We need the most recent data here, we're about to change the throttle.
-			$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
+			$dbw = $this->utils->getCentralDB( DB_PRIMARY );
 			$row = $dbw->newSelectQueryBuilder()
 				->select( [ 'thr_expiry', 'thr_reason', 'thr_type' ] )
 				->from( 'throttle_override' )
@@ -211,7 +216,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		[ $rangeStart, $rangeEnd ] = $parsedRange;
 
 		// Save the new exemption
-		$dbw = ThrottleOverrideUtils::getCentralDB( DB_PRIMARY );
+		$dbw = $this->utils->getCentralDB( DB_PRIMARY );
 		$row = [
 			'thr_target' => $this->target,
 			'thr_expiry' => $dbw->encodeExpiry( $data['Expiry'] ),
@@ -239,11 +244,12 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		}
 
 		// Purge the cache
-		$this->cache->touchCheckKey( ThrottleOverrideUtils::getBucketKey( $this->cache, $rangeStart ) );
+		$this->cache->touchCheckKey( $this->utils->getBucketKey( $this->cache, $rangeStart ) );
 
 		// Queue a job that will delete expired records
 		$this->jobQueueGroup->lazyPush(
 			new ThrottleOverridePurgeJob(
+				$this->config,
 				$this->lbFactory,
 				$this->cache
 			)
@@ -260,8 +266,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	 * @param int $dbtype either DB_REPLICA or DB_PRIMARY
 	 * @return int
 	 */
-	public static function getThrottleOverrideId( $ip, $dbtype = DB_REPLICA ) {
-		$db = ThrottleOverrideUtils::getCentralDB( $dbtype );
+	private function getThrottleOverrideId( $ip, $dbtype = DB_REPLICA ) {
+		$db = $this->utils->getCentralDB( $dbtype );
 		$field = $db->newSelectQueryBuilder()
 			->select( 'thr_id' )
 			->from( 'throttle_override' )
