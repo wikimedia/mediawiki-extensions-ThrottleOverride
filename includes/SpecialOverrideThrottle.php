@@ -19,6 +19,7 @@
  */
 
 use MediaWiki\Block\BlockUser;
+use MediaWiki\Config\Config;
 use MediaWiki\MainConfigNames;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Title\Title;
@@ -32,18 +33,21 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @var int value of thr_id */
 	protected $throttleId;
 
+	private Config $config;
 	private Language $language;
 	private JobQueueGroup $jobQueueGroup;
 	private LBFactory $lbFactory;
 	private WANObjectCache $cache;
 
 	public function __construct(
+		Config $config,
 		Language $language,
 		JobQueueGroup $jobQueueGroup,
 		LBFactory $lbFactory,
 		WANObjectCache $cache
 	) {
 		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
+		$this->config = $config;
 		$this->language = $language;
 		$this->jobQueueGroup = $jobQueueGroup;
 		$this->lbFactory = $lbFactory;
@@ -176,7 +180,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		$types = implode( ',', $data['Throttles'] );
 		$reason = trim( $data['Reason'] );
 		$parsedRange = IPUtils::parseRange( $data['Target'] );
-		$errors = self::validateFields(
+		$errors = $this->validateFields(
 			$data['Target'],
 			$data['Expiry'],
 			$types,
@@ -276,8 +280,8 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	 * @param array $parsedRange
 	 * @return array
 	 */
-	public static function validateFields( $target, $expiry, $types, $parsedRange ) {
-		global $wgThrottleOverrideCIDRLimit;
+	private function validateFields( $target, $expiry, $types, $parsedRange ) {
+		$limit = $this->config->get( 'ThrottleOverrideCIDRLimit' );
 		$errors = [];
 		$ip = IPUtils::sanitizeIP( $target );
 		if ( !IPUtils::isIPAddress( $ip ) ) {
@@ -305,19 +309,19 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 				// Range exemptions effectively disabled.
 				$errors[] = [ 'throttleoverride-validation-rangedisabled' ];
 			} elseif ( IPUtils::isIPv4( $iprange ) &&
-				$range < $wgThrottleOverrideCIDRLimit['IPv4']
+				$range < $limit['IPv4']
 			) {
 				// Target range larger than limit.
 				$errors[] = [
 					'throttleoverride-validation-rangetoolarge',
-					$wgThrottleOverrideCIDRLimit['IPv4']
+					$limit['IPv4']
 				];
 			} elseif ( IPUtils::isIPv6( $iprange ) &&
-				$range < $wgThrottleOverrideCIDRLimit['IPv6']
+				$range < $limit['IPv6']
 			) {
 				$errors[] = [
 					'throttleoverride-validation-rangetoolarge',
-					$wgThrottleOverrideCIDRLimit['IPv6']
+					$limit['IPv6']
 				];
 			}
 		}

@@ -29,6 +29,7 @@
 		"main": {
 			"class": "ThrottleOverrideHooks",
 			"services": [
+				"MainConfig",
 				"MainWANObjectCache"
 			]
 		},
