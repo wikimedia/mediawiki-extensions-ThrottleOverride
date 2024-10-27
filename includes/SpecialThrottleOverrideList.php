@@ -68,7 +68,7 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 		$form->setSubmitTextMsg( 'throttleoverride-list-search' );
 	}
 
-	public function onSubmit( array $data, HTMLForm $form = null ) {
+	public function onSubmit( array $data, ?HTMLForm $form = null ) {
 		$pager = new ThrottleOverridePager( $this, [
 			'throttleType' => $data['ThrottleType'],
 		] );
