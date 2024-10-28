@@ -20,9 +20,11 @@
 // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 
 use MediaWiki\Auth\Hook\ExemptFromAccountCreationThrottleHook;
+use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Hook\SetupAfterCacheHook;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MainConfigNames;
 use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
 use MediaWiki\User\Hook\PingLimiterHook;
 use MediaWiki\User\User;
@@ -42,11 +44,14 @@ class ThrottleOverrideHooks implements
 
 	private const NO_OVERRIDE = -1;
 
+	private Config $config;
 	private WANObjectCache $cache;
 
 	public function __construct(
+		Config $config,
 		WANObjectCache $cache
 	) {
+		$this->config = $config;
 		$this->cache = $cache;
 	}
 
@@ -83,9 +88,8 @@ class ThrottleOverrideHooks implements
 	 * @return bool
 	 */
 	public function doPingLimiter( $user, $action, &$result, $ip = null ) {
-		global $wgRateLimits, $wgThrottleOverrideCentralWiki;
-
-		if ( $action !== 'actcreate' && !isset( $wgRateLimits[$action] ) ) {
+		$rateLimits = $this->config->get( MainConfigNames::RateLimits );
+		if ( $action !== 'actcreate' && !isset( $rateLimits[$action] ) ) {
 			return true;
 		}
 
@@ -100,7 +104,7 @@ class ThrottleOverrideHooks implements
 		$expiry = $this->cache->getWithSetCallback(
 			$this->cache->makeGlobalKey(
 				'throttle_override',
-				$wgThrottleOverrideCentralWiki,
+				$this->config->get( 'ThrottleOverrideCentralWiki' ),
 				$action,
 				$hexIp
 			),
@@ -170,6 +174,7 @@ class ThrottleOverrideHooks implements
 			$specialPages['OverrideThrottle'] = [
 				'class' => SpecialOverrideThrottle::class,
 				'services' => [
+					'MainConfig',
 					'ContentLanguage',
 					'JobQueueGroup',
 					'DBLoadBalancerFactory',

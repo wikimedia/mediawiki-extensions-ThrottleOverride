@@ -30,8 +30,9 @@ class ThrottleOverrideUtils {
 	 * @return bool
 	 */
 	public static function isCentralWiki() {
-		global $wgThrottleOverrideCentralWiki;
-		return WikiMap::getCurrentWikiId() === $wgThrottleOverrideCentralWiki;
+		$centralWiki = MediaWikiServices::getInstance()->getMainConfig()
+			->get( 'ThrottleOverrideCentralWiki' );
+		return WikiMap::getCurrentWikiId() === $centralWiki;
 	}
 
 	/**
@@ -39,10 +40,11 @@ class ThrottleOverrideUtils {
 	 * @return IDatabase
 	 */
 	public static function getCentralDB( $index ) {
-		global $wgThrottleOverrideCentralWiki;
-		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-		return $lbFactory->getMainLB( $wgThrottleOverrideCentralWiki )->getConnection(
-			$index, [], $wgThrottleOverrideCentralWiki );
+		$services = MediaWikiServices::getInstance();
+		$centralWiki = $services->getMainConfig()->get( 'ThrottleOverrideCentralWiki' );
+		$lbFactory = $services->getDBLoadBalancerFactory();
+		return $lbFactory->getMainLB( $centralWiki )->getConnection(
+			$index, [], $centralWiki );
 	}
 
 	/**
@@ -55,15 +57,17 @@ class ThrottleOverrideUtils {
 	 * @return string
 	 */
 	public static function getBucketKey( WANObjectCache $cache, $ip ) {
-		global $wgThrottleOverrideCentralWiki, $wgThrottleOverrideCIDRLimit;
+		$config = MediaWikiServices::getInstance()->getMainConfig();
+		$centralWiki = $config->get( 'ThrottleOverrideCentralWiki' );
+		$limit = $config->get( 'ThrottleOverrideCIDRLimit' );
 		// Split the address space into buckets such that any given user IP address
 		// or throttle override's IP address range will fall into exactly one bucket.
 		$proto = IPUtils::isIPv6( $ip ) ? 'IPv6' : 'IPv4';
-		$bucket = IPUtils::sanitizeRange( "$ip/{$wgThrottleOverrideCIDRLimit[$proto]}" );
+		$bucket = IPUtils::sanitizeRange( "$ip/{$limit[$proto]}" );
 		// Purge all cache for all IPs in this bucket
 		return $cache->makeGlobalKey(
 			'throttle-override',
-			$wgThrottleOverrideCentralWiki,
+			$centralWiki,
 			$bucket
 		);
 	}
