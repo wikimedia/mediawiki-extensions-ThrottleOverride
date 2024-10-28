@@ -20,10 +20,10 @@
 
 use MediaWiki\Block\BlockUser;
 use MediaWiki\MainConfigNames;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Title\Title;
 use Wikimedia\IPUtils;
+use Wikimedia\Rdbms\LBFactory;
 
 class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @var string Sanitized target IP address or range */
@@ -32,8 +32,22 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @var int value of thr_id */
 	protected $throttleId;
 
-	public function __construct() {
+	private Language $language;
+	private JobQueueGroup $jobQueueGroup;
+	private LBFactory $lbFactory;
+	private WANObjectCache $cache;
+
+	public function __construct(
+		Language $language,
+		JobQueueGroup $jobQueueGroup,
+		LBFactory $lbFactory,
+		WANObjectCache $cache
+	) {
 		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
+		$this->language = $language;
+		$this->jobQueueGroup = $jobQueueGroup;
+		$this->lbFactory = $lbFactory;
+		$this->cache = $cache;
 	}
 
 	public function getMessagePrefix() {
@@ -72,7 +86,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			}
 		}
 
-		$blockDurations = MediaWikiServices::getInstance()->getContentLanguage()->getBlockDurations();
+		$blockDurations = $this->language->getBlockDurations();
 		$data = [
 			'Target' => [
 				'type' => 'text',
@@ -221,13 +235,14 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		}
 
 		// Purge the cache
-		$services = MediaWikiServices::getInstance();
-		$cache = $services->getMainWANObjectCache();
-		$cache->touchCheckKey( ThrottleOverrideUtils::getBucketKey( $cache, $rangeStart ) );
+		$this->cache->touchCheckKey( ThrottleOverrideUtils::getBucketKey( $this->cache, $rangeStart ) );
 
 		// Queue a job that will delete expired records
-		$services->getJobQueueGroup()->lazyPush(
-			new ThrottleOverridePurgeJob()
+		$this->jobQueueGroup->lazyPush(
+			new ThrottleOverridePurgeJob(
+				$this->lbFactory,
+				$this->cache
+			)
 		);
 
 		return true;

@@ -18,7 +18,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use MediaWiki\CommentFormatter\CommentFormatter;
 use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\MainConfigNames;
 use MediaWiki\SpecialPage\FormSpecialPage;
 
@@ -26,8 +28,16 @@ use MediaWiki\SpecialPage\FormSpecialPage;
  * Special page for viewing the list of current throttle overrides
  */
 class SpecialThrottleOverrideList extends FormSpecialPage {
-	public function __construct() {
+	private CommentFormatter $commentFormatter;
+	private LinkRenderer $linkRenderer;
+
+	public function __construct(
+		CommentFormatter $commentFormatter,
+		LinkRenderer $linkRenderer
+	) {
 		parent::__construct( 'ThrottleOverrideList' );
+		$this->commentFormatter = $commentFormatter;
+		$this->linkRenderer = $linkRenderer;
 	}
 
 	public function getMessagePrefix() {
@@ -69,7 +79,7 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 	}
 
 	public function onSubmit( array $data, HTMLForm $form = null ) {
-		$pager = new ThrottleOverridePager( $this, [
+		$pager = new ThrottleOverridePager( $this->commentFormatter, $this->linkRenderer, $this, [
 			'throttleType' => $data['ThrottleType'],
 		] );
 

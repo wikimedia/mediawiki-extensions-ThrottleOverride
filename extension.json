@@ -27,7 +27,10 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "ThrottleOverrideHooks"
+			"class": "ThrottleOverrideHooks",
+			"services": [
+				"MainWANObjectCache"
+			]
 		},
 		"schema": {
 			"class": "ThrottleOverrideSchemaHooks"
@@ -39,7 +42,13 @@
 		]
 	},
 	"JobClasses": {
-		"ThrottleOverridePurge": "ThrottleOverridePurgeJob"
+		"ThrottleOverridePurge": {
+			"class": "ThrottleOverridePurgeJob",
+			"services": [
+				"DBLoadBalancerFactory",
+				"MainWANObjectCache"
+			]
+		}
 	},
 	"ExtensionMessagesFiles": {
 		"OverrideThrottleAlias": "ThrottleOverride.i18n.alias.php"

@@ -18,8 +18,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use MediaWiki\CommentFormatter\CommentFormatter;
 use MediaWiki\Html\Html;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Pager\TablePager;
 use MediaWiki\SpecialPage\SpecialPage;
 use Wikimedia\IPUtils;
@@ -31,9 +32,19 @@ class ThrottleOverridePager extends TablePager {
 	/** @var string */
 	private $throttleType;
 
-	public function __construct( SpecialPage $page, $conds = [] ) {
+	private CommentFormatter $commentFormatter;
+	private LinkRenderer $linkRenderer;
+
+	public function __construct(
+		CommentFormatter $commentFormatter,
+		LinkRenderer $linkRenderer,
+		SpecialPage $page,
+		$conds = []
+	) {
 		parent::__construct( $page->getContext() );
 		$this->throttleType = $conds['throttleType'] ?? 'all';
+		$this->commentFormatter = $commentFormatter;
+		$this->linkRenderer = $linkRenderer;
 
 		$out = $this->getOutput();
 		$out->addModuleStyles( 'ext.throttleoverride.styles' );
@@ -88,7 +99,6 @@ class ThrottleOverridePager extends TablePager {
 	public function formatValue( $name, $value ) {
 		$row = $this->mCurrentRow;
 		$language = $this->getLanguage();
-		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 
 		switch ( $name ) {
 			case 'thr_type':
@@ -111,7 +121,7 @@ class ThrottleOverridePager extends TablePager {
 
 				// Show link to Special:OverrideThrottle/$Username if we're allowed to manipulate throttles.
 				if ( $this->getUser()->isAllowed( 'throttleoverride' ) ) {
-					$link = $linkRenderer->makeKnownLink(
+					$link = $this->linkRenderer->makeKnownLink(
 						SpecialPage::getTitleFor( 'OverrideThrottle', IPUtils::prettifyIP( $row->thr_target ) ),
 						$this->msg( 'throttleoverride-list-change' )->text()
 					);
@@ -126,7 +136,7 @@ class ThrottleOverridePager extends TablePager {
 				return $formatted;
 
 			case 'thr_reason':
-				return MediaWikiServices::getInstance()->getCommentFormatter()->format( $value );
+				return $this->commentFormatter->format( $value );
 
 			default:
 				throw new MWException( "Unknown field $name." );

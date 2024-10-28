@@ -23,7 +23,6 @@ use MediaWiki\Auth\Hook\ExemptFromAccountCreationThrottleHook;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Hook\SetupAfterCacheHook;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
 use MediaWiki\User\Hook\PingLimiterHook;
 use MediaWiki\User\User;
@@ -42,6 +41,14 @@ class ThrottleOverrideHooks implements
 {
 
 	private const NO_OVERRIDE = -1;
+
+	private WANObjectCache $cache;
+
+	public function __construct(
+		WANObjectCache $cache
+	) {
+		$this->cache = $cache;
+	}
 
 	/**
 	 * @param string $ip
@@ -90,15 +97,14 @@ class ThrottleOverrideHooks implements
 		$hexIp = IPUtils::toHex( $ip );
 
 		$fname = __METHOD__;
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-		$expiry = $cache->getWithSetCallback(
-			$cache->makeGlobalKey(
+		$expiry = $this->cache->getWithSetCallback(
+			$this->cache->makeGlobalKey(
 				'throttle_override',
 				$wgThrottleOverrideCentralWiki,
 				$action,
 				$hexIp
 			),
-			$cache::TTL_HOUR,
+			$this->cache::TTL_HOUR,
 			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $hexIp, $action, $fname ) {
 				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
@@ -129,7 +135,7 @@ class ThrottleOverrideHooks implements
 				return ( $expiry === false ) ? self::NO_OVERRIDE : $expiry;
 			},
 			[
-				'checkKeys' => [ ThrottleOverrideUtils::getBucketKey( $cache, $ip ) ]
+				'checkKeys' => [ ThrottleOverrideUtils::getBucketKey( $this->cache, $ip ) ]
 			]
 		);
 
@@ -161,8 +167,22 @@ class ThrottleOverrideHooks implements
 
 	public function onSpecialPage_initList( &$specialPages ) {
 		if ( ThrottleOverrideUtils::isCentralWiki() ) {
-			$specialPages['OverrideThrottle'] = SpecialOverrideThrottle::class;
-			$specialPages['ThrottleOverrideList'] = SpecialThrottleOverrideList::class;
+			$specialPages['OverrideThrottle'] = [
+				'class' => SpecialOverrideThrottle::class,
+				'services' => [
+					'ContentLanguage',
+					'JobQueueGroup',
+					'DBLoadBalancerFactory',
+					'MainWANObjectCache',
+				],
+			];
+			$specialPages['ThrottleOverrideList'] = [
+				'class' => SpecialThrottleOverrideList::class,
+				'services' => [
+					'CommentFormatter',
+					'LinkRenderer',
+				],
+			];
 		}
 	}
 }
