@@ -32,6 +32,7 @@ use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\Database;
 use Wikimedia\Rdbms\IExpression;
+use Wikimedia\Rdbms\LBFactory;
 use Wikimedia\Rdbms\LikeValue;
 use Wikimedia\Rdbms\SelectQueryBuilder;
 
@@ -46,13 +47,19 @@ class ThrottleOverrideHooks implements
 
 	private Config $config;
 	private WANObjectCache $cache;
+	private ThrottleOverrideUtils $utils;
 
 	public function __construct(
 		Config $config,
+		LBFactory $lbFactory,
 		WANObjectCache $cache
 	) {
 		$this->config = $config;
 		$this->cache = $cache;
+		$this->utils = new ThrottleOverrideUtils(
+			$config,
+			$lbFactory
+		);
 	}
 
 	/**
@@ -101,6 +108,7 @@ class ThrottleOverrideHooks implements
 		$hexIp = IPUtils::toHex( $ip );
 
 		$fname = __METHOD__;
+		$utils = $this->utils;
 		$expiry = $this->cache->getWithSetCallback(
 			$this->cache->makeGlobalKey(
 				'throttle_override',
@@ -109,8 +117,8 @@ class ThrottleOverrideHooks implements
 				$hexIp
 			),
 			$this->cache::TTL_HOUR,
-			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $hexIp, $action, $fname ) {
-				$dbr = ThrottleOverrideUtils::getCentralDB( DB_REPLICA );
+			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $utils, $hexIp, $action, $fname ) {
+				$dbr = $utils->getCentralDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
 				$expiry = $dbr->newSelectQueryBuilder()
@@ -139,7 +147,7 @@ class ThrottleOverrideHooks implements
 				return ( $expiry === false ) ? self::NO_OVERRIDE : $expiry;
 			},
 			[
-				'checkKeys' => [ ThrottleOverrideUtils::getBucketKey( $this->cache, $ip ) ]
+				'checkKeys' => [ $utils->getBucketKey( $this->cache, $ip ) ]
 			]
 		);
 
@@ -170,7 +178,7 @@ class ThrottleOverrideHooks implements
 	}
 
 	public function onSpecialPage_initList( &$specialPages ) {
-		if ( ThrottleOverrideUtils::isCentralWiki() ) {
+		if ( $this->utils->isCentralWiki() ) {
 			$specialPages['OverrideThrottle'] = [
 				'class' => SpecialOverrideThrottle::class,
 				'services' => [
