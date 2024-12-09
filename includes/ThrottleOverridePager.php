@@ -39,7 +39,7 @@ class ThrottleOverridePager extends TablePager {
 		CommentFormatter $commentFormatter,
 		LinkRenderer $linkRenderer,
 		SpecialPage $page,
-		$conds = []
+		array $conds = []
 	) {
 		parent::__construct( $page->getContext() );
 		$this->throttleType = $conds['throttleType'] ?? 'all';
