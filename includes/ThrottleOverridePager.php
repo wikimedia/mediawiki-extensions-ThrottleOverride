@@ -50,6 +50,7 @@ class ThrottleOverridePager extends TablePager {
 		$out->addModuleStyles( 'ext.throttleoverride.styles' );
 	}
 
+	/** @inheritDoc */
 	public function getFieldNames() {
 		return [
 			'thr_target' => $this->msg( 'throttleoverride-list-target' )->text(),
@@ -59,18 +60,22 @@ class ThrottleOverridePager extends TablePager {
 		];
 	}
 
+	/** @inheritDoc */
 	public function isFieldSortable( $field ) {
 		return $field === 'thr_expiry' || $field === 'thr_range_start';
 	}
 
+	/** @inheritDoc */
 	public function getDefaultSort() {
 		return 'thr_expiry';
 	}
 
+	/** @inheritDoc */
 	public function getDefaultDirections() {
 		return true;
 	}
 
+	/** @inheritDoc */
 	public function getQueryInfo() {
 		$a = [
 			'tables' => 'throttle_override',
@@ -96,6 +101,7 @@ class ThrottleOverridePager extends TablePager {
 		return $a;
 	}
 
+	/** @inheritDoc */
 	public function formatValue( $name, $value ) {
 		$row = $this->mCurrentRow;
 		$language = $this->getLanguage();

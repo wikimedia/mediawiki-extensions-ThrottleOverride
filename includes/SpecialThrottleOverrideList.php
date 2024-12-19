@@ -40,10 +40,12 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 		$this->linkRenderer = $linkRenderer;
 	}
 
+	/** @inheritDoc */
 	public function getMessagePrefix() {
 		return 'throttleoverride-list';
 	}
 
+	/** @inheritDoc */
 	public function getFormFields() {
 		$config = $this->getConfig();
 		$throttleTypes = array_keys( array_filter( $config->get( 'ThrottleOverrideTypes' ) ) );
@@ -72,12 +74,14 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 		];
 	}
 
+	/** @inheritDoc */
 	public function alterForm( HTMLForm $form ) {
 		$form->setMethod( 'get' );
 		$form->setWrapperLegendMsg( 'throttleoverride-list-legend' );
 		$form->setSubmitTextMsg( 'throttleoverride-list-search' );
 	}
 
+	/** @inheritDoc */
 	public function onSubmit( array $data, ?HTMLForm $form = null ) {
 		$pager = new ThrottleOverridePager( $this->commentFormatter, $this->linkRenderer, $this, [
 			'throttleType' => $data['ThrottleType'],
@@ -97,10 +101,12 @@ class SpecialThrottleOverrideList extends FormSpecialPage {
 		return false;
 	}
 
+	/** @inheritDoc */
 	public function getGroupName() {
 		return 'users';
 	}
 
+	/** @inheritDoc */
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}

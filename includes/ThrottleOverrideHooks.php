@@ -177,6 +177,7 @@ class ThrottleOverrideHooks implements
 		}
 	}
 
+	/** @inheritDoc */
 	public function onSpecialPage_initList( &$specialPages ) {
 		if ( $this->utils->isCentralWiki() ) {
 			$specialPages['OverrideThrottle'] = [

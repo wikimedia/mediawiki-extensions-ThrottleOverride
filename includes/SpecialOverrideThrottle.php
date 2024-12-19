@@ -59,19 +59,23 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		);
 	}
 
+	/** @inheritDoc */
 	public function getMessagePrefix() {
 		return 'throttleoverride';
 	}
 
+	/** @inheritDoc */
 	public function requiresWrite() {
 		return true;
 	}
 
+	/** @inheritDoc */
 	public function execute( $par ) {
 		$this->getOutput()->addModuleStyles( 'ext.throttleoverride.styles' );
 		parent::execute( $par );
 	}
 
+	/** @inheritDoc */
 	public function getFormFields() {
 		$config = $this->getConfig();
 		// The types are:
@@ -181,6 +185,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		return $data;
 	}
 
+	/** @inheritDoc */
 	public function onSubmit( array $data ) {
 		$types = implode( ',', $data['Throttles'] );
 		$reason = trim( $data['Reason'] );
@@ -335,20 +340,24 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		return $errors;
 	}
 
+	/** @inheritDoc */
 	public function onSuccess() {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'throttleoverride-success-sub' ) );
 		$out->addWikiMsg( 'throttleoverride-success', wfEscapeWikiText( $this->target ) );
 	}
 
+	/** @inheritDoc */
 	protected function getGroupName() {
 		return 'users';
 	}
 
+	/** @inheritDoc */
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}
 
+	/** @inheritDoc */
 	protected function postHtml() {
 		$out = '';
 		if ( $this->par ) {
