@@ -21,7 +21,6 @@
  */
 
 use MediaWiki\Config\Config;
-use MediaWiki\SpecialPage\SpecialPage;
 use Wikimedia\Rdbms\LBFactory;
 
 /**
@@ -31,14 +30,12 @@ class ThrottleOverridePurgeJob extends Job {
 	private ThrottleOverrideUtils $utils;
 
 	public function __construct(
+		array $params,
 		Config $config,
 		private readonly LBFactory $lbFactory,
 		private readonly WANObjectCache $cache,
 	) {
-		parent::__construct(
-			'ThrottleOverridePurge',
-			SpecialPage::getTitleFor( 'OverrideThrottle' )
-		);
+		parent::__construct( 'ThrottleOverridePurge', $params );
 		$this->removeDuplicates = true;
 		$this->utils = new ThrottleOverrideUtils(
 			$config,

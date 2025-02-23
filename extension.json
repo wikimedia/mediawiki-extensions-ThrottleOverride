@@ -46,6 +46,7 @@
 	"JobClasses": {
 		"ThrottleOverridePurge": {
 			"class": "ThrottleOverridePurgeJob",
+			"needsPage": false,
 			"services": [
 				"MainConfig",
 				"DBLoadBalancerFactory",

@@ -249,6 +249,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		// Queue a job that will delete expired records
 		$this->jobQueueGroup->lazyPush(
 			new ThrottleOverridePurgeJob(
+				[],
 				$this->config,
 				$this->lbFactory,
 				$this->cache
