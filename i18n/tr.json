@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"Joseph"
 		]
 	},
 	"overridethrottle": "Kelebekleri geçersiz kıl",
@@ -33,7 +34,7 @@
 	"throttleoverride-list-target": "Hedef",
 	"throttleoverride-list-expiry": "Bitiş",
 	"throttleoverride-list-type": "İzin verilen eylemler",
-	"throttleoverride-list-reason": "Sebep",
+	"throttleoverride-list-reason": "Gerekçe",
 	"throttleoverride-list-search": "Ara",
 	"throttleoverride-list-noresults": "Gaz kelebeği geçersiz kılma listesi boş.",
 	"throttleoverride-log-type-actcreate": "hesap oluşturma",
