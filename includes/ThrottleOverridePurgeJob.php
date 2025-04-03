@@ -50,6 +50,7 @@ class ThrottleOverridePurgeJob extends Job {
 		);
 	}
 
+	/** @inheritDoc */
 	public function run() {
 		$dbw = $this->utils->getCentralDB( DB_PRIMARY );
 		$expCond = $dbw->expr( 'thr_expiry', '<', $dbw->timestamp() );
