@@ -19,5 +19,5 @@
 	"throttleoverride-log-type-move": "Säit réckelen",
 	"throttleoverride-log-type-mailpassword": "E-Mail fir d'Passwuert zréckzesetzen",
 	"throttleoverride-log-type-emailuser": "Benotzer-E-Mail",
-	"throttleoverride-validation-ipinvalid": "Net valabel IP-Adress oder IP-Range."
+	"throttleoverride-validation-ipinvalid": "Ongülteg IP-Adress oder IP-Adressberäich."
 }
