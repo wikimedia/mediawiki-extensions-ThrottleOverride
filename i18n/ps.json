@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
-	"throttleoverride-list-reason": "سبب",
+	"throttleoverride-list-reason": "لامل",
 	"throttleoverride-list-search": "پلټل"
 }
