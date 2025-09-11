@@ -25,7 +25,6 @@ use MediaWiki\User\User;
 
 /**
  * This class formats throttleoverride log entries.
- *
  */
 class ThrottleOverrideLogFormatter extends LogFormatter {
 
