@@ -17,8 +17,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
-
 use MediaWiki\Auth\Hook\ExemptFromAccountCreationThrottleHook;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
