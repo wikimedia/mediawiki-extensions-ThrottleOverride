@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
-			"Joseph"
+			"Joseph",
+			"ToprakM"
 		]
 	},
 	"overridethrottle": "Kelebekleri geçersiz kıl",
@@ -24,7 +25,7 @@
 	"throttleoverride-types-actcreate": "Hesap oluşturma",
 	"throttleoverride-types-edit": "Sayfa düzenlemeleri",
 	"throttleoverride-types-move": "Sayfa taşıma",
-	"throttleoverride-types-mailpassword": "Şifre kurtarma e-postaları",
+	"throttleoverride-types-mailpassword": "Parola kurtarma e-postası",
 	"throttleoverride-types-emailuser": "Kullanıcı e-postaları",
 	"throttleoverride-list-change": "gaz kelebeği değiştir",
 	"throttleoverride-list-throttletype": "Gaz kelebeği tipi:",
@@ -40,7 +41,7 @@
 	"throttleoverride-log-type-actcreate": "hesap oluşturma",
 	"throttleoverride-log-type-edit": "sayfa düzenleme",
 	"throttleoverride-log-type-move": "sayfa taşıma",
-	"throttleoverride-log-type-mailpassword": "şifre kurtarma e-postaları",
+	"throttleoverride-log-type-mailpassword": "parola kurtarma e-postası",
 	"throttleoverride-log-type-emailuser": "kullanıcı e-postası",
 	"throttleoverride-validation-ipinvalid": "Geçersiz IP adresi veya IP adresi aralığı.",
 	"throttleoverride-validation-rangedisabled": "IP adresleri aralığında gaz muafiyeti oluşturma özelliği devre dışı bırakılmıştır.",
