@@ -343,7 +343,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @inheritDoc */
 	public function onSuccess() {
 		$out = $this->getOutput();
-		$out->setPageTitle( $this->msg( 'throttleoverride-success-sub' ) );
+		$out->setPageTitle( $this->msg( 'throttleoverride-success-sub' )->escaped() );
 		$out->addWikiMsg( 'throttleoverride-success', wfEscapeWikiText( $this->target ) );
 	}
 
