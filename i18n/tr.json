@@ -3,12 +3,13 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Joseph",
+			"SaldırganSincap",
 			"ToprakM"
 		]
 	},
 	"overridethrottle": "Kelebekleri geçersiz kıl",
 	"action-throttleoverride": "ücret sınırlarına muafiyet ekle",
-	"logentry-throttleoverride-created": "$1, $4 olarak $3 {{PLURAL:$6|boğaz|boğaz}} $5 muaf tutuldu.",
+	"logentry-throttleoverride-created": "$1, $4 olarak $3 {{PLURAL:$6|boğaz}} $5 muaf {{GENDER:$1|tutuldu}}.",
 	"log-name-throttleoverride": "Gaz muafiyeti",
 	"log-description-throttleoverride": "Bu, kullanıcıların oran sınırlarını aşmasına izin verecek bir muafiyet günlüğüdür. Ücret sınırları, belirli işlemleri (ör. Hesap oluşturma sayısı veya Özel: E-posta kullanıcısı kullanımı) sınırlandırarak spam'ı önlemek için tasarlanmıştır.",
 	"right-throttleoverride": "Belirli IP adreslerini veya aralıklarını ücret sınırlarından muaf",
