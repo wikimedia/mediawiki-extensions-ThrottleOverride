@@ -5,6 +5,24 @@
 			"شاه زمان پټان"
 		]
 	},
+	"throttleoverride-ipaddress": "وېب پته يا لړۍ",
+	"throttleoverride-types-all": "ټول ډولونه",
+	"throttleoverride-types-actcreate": "گڼون جوړول",
+	"throttleoverride-types-edit": "د مخ سمونونه",
+	"throttleoverride-types-move": "مخ لېږدونې",
+	"throttleoverride-types-mailpassword": "پټنوم بياترلاسنې برېښليکونه",
+	"throttleoverride-types-emailuser": "کارن برېښليکونه",
+	"throttleoverride-list-rangeend": "د وېب‌پتې لړۍ پای",
+	"throttleoverride-list-target": "موخه",
+	"throttleoverride-list-expiry": "پای‌نېټه",
+	"throttleoverride-list-type": "اجازه ورکړل شوې کړنې",
 	"throttleoverride-list-reason": "لامل",
-	"throttleoverride-list-search": "پلټل"
+	"throttleoverride-list-search": "پلټل",
+	"throttleoverride-log-type-actcreate": "گڼون جوړول",
+	"throttleoverride-log-type-edit": "مخ سمون",
+	"throttleoverride-log-type-move": "مخ لېږدول",
+	"throttleoverride-log-type-mailpassword": "پټنوم بياترلاسنې برېښليک",
+	"throttleoverride-log-type-emailuser": "کارن برېښليک",
+	"throttleoverride-validation-ipinvalid": "ناسمه وېب‌پته يا وېب‌پتې لړۍ.",
+	"throttleoverride-validation-expiryinvalid": "ناسمه پای‌نېټه."
 }
