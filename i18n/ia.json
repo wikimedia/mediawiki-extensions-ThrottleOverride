@@ -16,7 +16,7 @@
 	"throttleoverride-text": "Insere le adresse o intervallo IP que tu vole exemptar de certe limites de frequentia, e le durata del exemption.\nUn motivo optional pote esser fornite pro le registros.",
 	"throttleoverride-ipaddress": "Adresse o intervallo IP",
 	"throttleoverride-expiry": "Durata del exemption",
-	"throttleoverride-showlog": "Iste adresse o intervallo IP ha ja essite exemptate del limites de frequentia. Le registro appare hic infra pro referentia.",
+	"throttleoverride-showlog": "Iste adresse o intervallo IP ha ja essite exemptate del limites de frequentia. Infra se trova le registro.",
 	"throttleoverride-success": "Le exemption pro $1 ha essite applicate.<br />Vide le [[Special:ThrottleOverrideList|lista de exemptiones al limites de frequentia]] pro revider le exemptiones.",
 	"throttleoverride-success-sub": "Exemption instituite al limites de frequentia",
 	"throttleoverride-types": "Typos de limite de frequentia:",
