@@ -4,7 +4,11 @@
 			"Cabal"
 		]
 	},
+	"throttleoverride-types-edit": "ਵਰਕੇ ਦੀਆਂ ਸੋਧਾਂ",
+	"throttleoverride-types-move": "ਵਰਕੇ ਦੀਆਂ ਤਬਦੀਲੀਆਂ",
 	"throttleoverride-types-mailpassword": "ਪਛਾਣ-ਸ਼ਬਦ ਦੀ ਮੁੜ-ਪ੍ਰਾਪਤੀ ਲਈ ਈਮੇਲਾਂ",
 	"throttleoverride-list-search": "ਲੱਭੋ",
+	"throttleoverride-log-type-edit": "ਵਰਕੇ ਦੀਆਂ ਸੋਧਾਂ",
+	"throttleoverride-log-type-move": "ਵਰਕਾ ਤਬਦੀਲੀ",
 	"throttleoverride-log-type-mailpassword": "ਪਛਾਣ-ਸ਼ਬਦ ਦੀ ਮੁੜ-ਪ੍ਰਾਪਤੀ ਲਈ ਈਮੇਲ"
 }
