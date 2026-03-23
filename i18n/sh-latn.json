@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"Winston Sung"
 		]
 	},
@@ -25,7 +26,7 @@
 	"throttleoverride-types-move": "Premještanje stranica",
 	"throttleoverride-types-mailpassword": "Povraćanje lozinke putem e-pošte",
 	"throttleoverride-types-emailuser": "E-pošta od korisnika",
-	"throttleoverride-list-change": "smijeni ograničenje",
+	"throttleoverride-list-change": "promijeni ograničenje",
 	"throttleoverride-list-throttletype": "Vrsta ograničenja:",
 	"throttleoverride-list-legend": "Filtriranje prema izuzimanjima",
 	"throttleoverride-list-rangestart": "Početak IP opsega",
