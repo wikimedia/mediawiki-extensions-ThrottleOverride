@@ -11,13 +11,13 @@
 	"log-name-throttleoverride": "Izuzeća od ograničenja",
 	"log-description-throttleoverride": "Ovo je dnevnik izuzimanja koji omogućuju korisnicima zaobilaženje ograničenja. Takva ograničneja su predviđena kako bi se spriječilo spamiranje, ograničavajući ograničavajući radnje (npr. broj napravljenih računa ili uporabu e-pošte korisnicima).",
 	"right-throttleoverride": "Izuzimanje izvjesnih IP-adresa ili raspona od ograničenja stopa",
-	"throttleoverridelist": "Spisak nametnutih prepisivanja",
+	"throttleoverridelist": "Lista nametnutih prepisivanja",
 	"throttleoverride-desc": "Omogućuje izbjegavanje ograničenja IP-adrese",
 	"throttleoverride-legend": "Informacije o izuzeću",
 	"throttleoverride-text": "Unesite IP adresu ili opseg adresa što želite izuzeti iz ograničenja i koliko dugo će izuzeće trajati.\nZa zapise u evidencijama, možete dati i objašnjenje.",
 	"throttleoverride-ipaddress": "IP adresa ili opseg",
 	"throttleoverride-showlog": "Ova IP adresa ili raspon je prethodno izuzeta iz ograničenja. Ispod je prikazana evidencija.",
-	"throttleoverride-success": "Izuzeće na $1 primijenjeno je.<br />\nIzuzete možete pregledati na [[Special:ThrottleOverrideList|odgovarajućim spisku]].",
+	"throttleoverride-success": "Izuzeće na $1 je primijenjeno.<br />\nIzuzete možete pregledati na [[Special:ThrottleOverrideList|odgovarajućoj listi]].",
 	"throttleoverride-success-sub": "Uspješno izuzeto",
 	"throttleoverride-types": "Tipovi ograničenja:",
 	"throttleoverride-types-all": "Sve vrste",
@@ -36,7 +36,7 @@
 	"throttleoverride-list-type": "Dozvoljene radnje:",
 	"throttleoverride-list-reason": "Razlog",
 	"throttleoverride-list-search": "Traži",
-	"throttleoverride-list-noresults": "Spisak za nametnuta prepisivanja je prazan.",
+	"throttleoverride-list-noresults": "Lista za nametnuta prepisivanja je prazna.",
 	"throttleoverride-log-type-actcreate": "pravljenje računa",
 	"throttleoverride-log-type-edit": "uređivanje stranica",
 	"throttleoverride-log-type-move": "premještanje stranica",
@@ -47,5 +47,5 @@
 	"throttleoverride-validation-rangetoolarge": "Nisu odzvoljene iznimke od ograničenja IP raspona koji prelazi $1.",
 	"throttleoverride-validation-notypes": "Nemate izabran tip isticanja.",
 	"throttleoverride-validation-expiryinvalid": "Neispravno vrijeme istjeka.",
-	"throttleoverride-rule-alreadyexists": "Ima postojeća iznimka za $1. Možete pogledati postojeće postavke u [[Special:ThrottleOverrideList|spisku iznimka za ograničenja]], ili izmijeniti postavke postojećeg pravila preunoseći ovaj obrazac."
+	"throttleoverride-rule-alreadyexists": "Ima postojeća iznimka za $1. Možete pogledati postojeće postavke u [[Special:ThrottleOverrideList|listi iznimka za ograničenja]], ili izmijeniti postavke postojećeg pravila preunoseći ovaj obrazac."
 }
