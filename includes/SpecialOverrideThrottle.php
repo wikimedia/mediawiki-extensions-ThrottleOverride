@@ -47,7 +47,7 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 		LBFactory $lbFactory,
 		WANObjectCache $cache
 	) {
-		parent::__construct( 'OverrideThrottle', 'throttleoverride' );
+		parent::__construct( 'OverrideThrottle' );
 		$this->config = $config;
 		$this->language = $language;
 		$this->jobQueueGroup = $jobQueueGroup;
@@ -57,6 +57,11 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 			$config,
 			$lbFactory
 		);
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'throttleoverride';
 	}
 
 	/** @inheritDoc */
