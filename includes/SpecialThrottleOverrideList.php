@@ -28,16 +28,11 @@ use MediaWiki\SpecialPage\FormSpecialPage;
  * Special page for viewing the list of current throttle overrides
  */
 class SpecialThrottleOverrideList extends FormSpecialPage {
-	private CommentFormatter $commentFormatter;
-	private LinkRenderer $linkRenderer;
-
 	public function __construct(
-		CommentFormatter $commentFormatter,
-		LinkRenderer $linkRenderer
+		private readonly CommentFormatter $commentFormatter,
+		private readonly LinkRenderer $linkRenderer,
 	) {
 		parent::__construct( 'ThrottleOverrideList' );
-		$this->commentFormatter = $commentFormatter;
-		$this->linkRenderer = $linkRenderer;
 	}
 
 	/** @inheritDoc */

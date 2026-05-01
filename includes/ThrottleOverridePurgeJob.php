@@ -28,22 +28,18 @@ use Wikimedia\Rdbms\LBFactory;
  * Delete expired ThrottleOverride records.
  */
 class ThrottleOverridePurgeJob extends Job {
-	private LBFactory $lbFactory;
-	private WANObjectCache $cache;
 	private ThrottleOverrideUtils $utils;
 
 	public function __construct(
 		Config $config,
-		LBFactory $lbFactory,
-		WANObjectCache $cache
+		private readonly LBFactory $lbFactory,
+		private readonly WANObjectCache $cache,
 	) {
 		parent::__construct(
 			'ThrottleOverridePurge',
 			SpecialPage::getTitleFor( 'OverrideThrottle' )
 		);
 		$this->removeDuplicates = true;
-		$this->lbFactory = $lbFactory;
-		$this->cache = $cache;
 		$this->utils = new ThrottleOverrideUtils(
 			$config,
 			$lbFactory

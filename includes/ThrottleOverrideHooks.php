@@ -43,17 +43,13 @@ class ThrottleOverrideHooks implements
 
 	private const NO_OVERRIDE = -1;
 
-	private Config $config;
-	private WANObjectCache $cache;
 	private ThrottleOverrideUtils $utils;
 
 	public function __construct(
-		Config $config,
+		private readonly Config $config,
 		LBFactory $lbFactory,
-		WANObjectCache $cache
+		private readonly WANObjectCache $cache,
 	) {
-		$this->config = $config;
-		$this->cache = $cache;
 		$this->utils = new ThrottleOverrideUtils(
 			$config,
 			$lbFactory

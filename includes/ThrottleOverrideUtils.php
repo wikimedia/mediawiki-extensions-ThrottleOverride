@@ -27,15 +27,10 @@ use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LBFactory;
 
 class ThrottleOverrideUtils {
-	private Config $config;
-	private LBFactory $lbFactory;
-
 	public function __construct(
-		Config $config,
-		LBFactory $lbFactory
+		private readonly Config $config,
+		private readonly LBFactory $lbFactory,
 	) {
-		$this->config = $config;
-		$this->lbFactory = $lbFactory;
 	}
 
 	/**

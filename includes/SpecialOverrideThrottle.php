@@ -33,26 +33,16 @@ class SpecialOverrideThrottle extends FormSpecialPage {
 	/** @var int value of thr_id */
 	protected $throttleId;
 
-	private Config $config;
-	private Language $language;
-	private JobQueueGroup $jobQueueGroup;
-	private LBFactory $lbFactory;
-	private WANObjectCache $cache;
-	private ThrottleOverrideUtils $utils;
+	private readonly ThrottleOverrideUtils $utils;
 
 	public function __construct(
-		Config $config,
-		Language $language,
-		JobQueueGroup $jobQueueGroup,
-		LBFactory $lbFactory,
-		WANObjectCache $cache
+		private readonly Config $config,
+		private readonly Language $language,
+		private readonly JobQueueGroup $jobQueueGroup,
+		private readonly LBFactory $lbFactory,
+		private readonly WANObjectCache $cache,
 	) {
 		parent::__construct( 'OverrideThrottle' );
-		$this->config = $config;
-		$this->language = $language;
-		$this->jobQueueGroup = $jobQueueGroup;
-		$this->lbFactory = $lbFactory;
-		$this->cache = $cache;
 		$this->utils = new ThrottleOverrideUtils(
 			$config,
 			$lbFactory

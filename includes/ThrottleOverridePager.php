@@ -32,19 +32,14 @@ class ThrottleOverridePager extends TablePager {
 	/** @var string */
 	private $throttleType;
 
-	private CommentFormatter $commentFormatter;
-	private LinkRenderer $linkRenderer;
-
 	public function __construct(
-		CommentFormatter $commentFormatter,
-		LinkRenderer $linkRenderer,
+		private readonly CommentFormatter $commentFormatter,
+		private readonly LinkRenderer $linkRenderer,
 		SpecialPage $page,
-		array $conds = []
+		array $conds = [],
 	) {
 		parent::__construct( $page->getContext() );
 		$this->throttleType = $conds['throttleType'] ?? 'all';
-		$this->commentFormatter = $commentFormatter;
-		$this->linkRenderer = $linkRenderer;
 
 		$out = $this->getOutput();
 		$out->addModuleStyles( 'ext.throttleoverride.styles' );
