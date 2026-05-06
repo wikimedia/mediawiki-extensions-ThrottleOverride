@@ -5,7 +5,8 @@
 			"Priviet",
 			"Revi",
 			"Ykhwong",
-			"아라"
+			"아라",
+			"Tensama0415"
 		]
 	},
 	"overridethrottle": "속도 제한 회피",
@@ -14,7 +15,7 @@
 	"throttleoverride-legend": "면제 정보",
 	"throttleoverride-text": "특정한 스로틀 제한을 면제할 IP 주소나 대역, 그리고 면제가 지속되는 기간을 입력하세요.\n선택적인 이유는 기록에 남길 수 있습니다.",
 	"throttleoverride-ipaddress": "IP 주소나 범위",
-	"throttleoverride-success": "면제를 적용했습니다.",
+	"throttleoverride-success": "$1에 대한 면제를 적용했습니다.<br /> \n예외 사항을 확인하려면 [[Special:ThrottleOverrideList|스로틀 오버라이드 목록]]을 참조하세요.",
 	"throttleoverride-types": "스로틀 유형:",
 	"throttleoverride-types-all": "모든 종류",
 	"throttleoverride-types-actcreate": "계정 만들기",
