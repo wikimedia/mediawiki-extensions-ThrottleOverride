@@ -28,6 +28,7 @@
 	"throttleoverride-types-move": "문서 이동",
 	"throttleoverride-types-mailpassword": "비밀번호 복구 이메일",
 	"throttleoverride-types-emailuser": "사용자 이메일",
+	"throttleoverride-list-change": "스로틀 변경",
 	"throttleoverride-list-throttletype": "스로틀 종류:",
 	"throttleoverride-list-legend": "면제 필터링",
 	"throttleoverride-list-rangestart": "IP 주소 대역의 시작",
