@@ -46,7 +46,7 @@
 	"throttleoverride-log-type-move": "het hernoemen van pagina’s",
 	"throttleoverride-log-type-mailpassword": "het per e-mail verzenden van het wachtwoord",
 	"throttleoverride-log-type-emailuser": "het verzenden van gebruikerse-mail",
-	"throttleoverride-validation-ipinvalid": "Ongeldig IP-adres of IP-adresbereik.",
+	"throttleoverride-validation-ipinvalid": "Onjuist IP-adres of IP-adresbereik.",
 	"throttleoverride-validation-rangedisabled": "De mogelijkheid om beperkingsvrijstellingen in te stellen voor IP-adresbereiken is uitgeschakeld.",
 	"throttleoverride-validation-rangetoolarge": "Beperkingsvrijstellingen voor een IP-adresbereik dat groter is dan $1 zijn niet toegestaan.",
 	"throttleoverride-validation-notypes": "Er is geen soort beperking geselecteerd.",
