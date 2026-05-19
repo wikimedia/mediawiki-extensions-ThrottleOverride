@@ -11,6 +11,7 @@
 	},
 	"overridethrottle": "속도 제한 회피",
 	"action-throttleoverride": "속도 제한에 면제를 추가",
+	"logentry-throttleoverride-created": "$1님이 $3을(를) $4 {{PLURAL:$6|스로틀}}로부터  $5까지 {{GENDER:$1|면제했습니다}}.",
 	"log-name-throttleoverride": "스로틀 면제",
 	"log-description-throttleoverride": "이 목록은 사용자가 사용량 제한을 우회할 수 있도록 허용하는 예외를 보여줍니다. 사용량 제한은 특정 행위(예: 계정 생성 횟수 또는 Special:Emailuser 사용 횟수)를 제한하여 스팸을 방지하기 위해 설계되었습니다.",
 	"right-throttleoverride": "특정 IP 주소나 범위를 속도 제한에서 면제",
@@ -50,5 +51,6 @@
 	"throttleoverride-validation-rangedisabled": "IP 주소 대역에 대해 스로틀을 면제할 수 있는 기능이 비활성화되어 있습니다.",
 	"throttleoverride-validation-rangetoolarge": "$1보다 더 큰 IP 주소 대역에 대해 스로틀 면제는 허용되지 않습니다.",
 	"throttleoverride-validation-notypes": "선택된 스로틀 유형이 없습니다.",
-	"throttleoverride-validation-expiryinvalid": "만료 시간이 잘못되었습니다."
+	"throttleoverride-validation-expiryinvalid": "만료 시간이 잘못되었습니다.",
+	"throttleoverride-rule-alreadyexists": "$1에 대한 면제 항목이 이미 존재합니다. 기존 설정은 [[Special:ThrottleOverrideList|스로틀 면제 목록]]에서 확인하거나, 이 양식을 다시 제출하여 기존 규칙의 설정을 수정할 수 있습니다."
 }
