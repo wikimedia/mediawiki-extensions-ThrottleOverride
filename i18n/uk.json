@@ -4,20 +4,22 @@
 			"Andriykopanytsia",
 			"Base",
 			"Piramidion",
-			"Ата"
+			"Ата",
+			"Movses"
 		]
 	},
 	"overridethrottle": "Обхід обмежень частоти",
-	"action-throttleoverride": "додавання винятків із обмежень швидкості",
+	"action-throttleoverride": "додавання виключень із обмежень швидкості",
 	"logentry-throttleoverride-created": "$1 {{GENDER:$1|виключив|виключила}} $3 з $4 {{PLURAL:$6|обмеження частоти|обмежень частоти}} до $5.",
 	"log-name-throttleoverride": "Виключення з обмежень частоти",
 	"log-description-throttleoverride": "Це — журнал виключень, які дозволять користувачам обходити обмеження швидкості дій. Обмеження швидкості призначені для запобігання спаму шляхом обмеження виконання конкретних дій (напр., кількості створюваних облікових записів чи частоти використання сторінки Special:Emailuser).",
 	"right-throttleoverride": "Виключення певних IP-адрес чи діапазонів з обмежень швидкості",
 	"throttleoverridelist": "Список обходів обмеження частоти",
 	"throttleoverride-desc": "Дозволити обходити обмеження частоти створення облікових записів",
-	"throttleoverride-legend": "Інформація про звільнення",
-	"throttleoverride-text": "Введіть IP-адресу або діапазон, який Ви хочете звільнити від обмеження частоти, і як довго звільнення повинне тривати.\nНе обов'язково можна вказати причину для вказання у журналах.",
+	"throttleoverride-legend": "Інформація про виключення",
+	"throttleoverride-text": "Введіть IP-адресу або діапазон, який Ви хочете виключити від обмеження частоти, і як довго виключення повинне тривати.\nОпціонально можна вказати причину для вказання у журналах.",
 	"throttleoverride-ipaddress": "IP-адреса або діапазон",
+	"throttleoverride-expiry": "Тривалість виключення",
 	"throttleoverride-showlog": "Цю IP-адресу чи діапазон раніше виключали з обмежень частоти. Нижче наведено журнал для ознайомлення.",
 	"throttleoverride-success": "Виключення для $1 застосовано.<br />\nДив. [[Special:ThrottleOverrideList|список обходів обмежень частоти]], щоб перевірити виключення.",
 	"throttleoverride-success-sub": "Обхід обмеження частоти здійснено успішно",
@@ -45,9 +47,9 @@
 	"throttleoverride-log-type-mailpassword": "електронні листи для відновлення пароля",
 	"throttleoverride-log-type-emailuser": "електронні листи користувачам",
 	"throttleoverride-validation-ipinvalid": "Неприпустима IP-адреса або діапазон IP.",
-	"throttleoverride-validation-rangedisabled": "Можливість створювати винятки з обмеження частоти для діапазонів IP-адрес вимкнено.",
-	"throttleoverride-validation-rangetoolarge": "Винятки з обмежень частоти для діапазонів IP-адрес, більших, ніж $1, не дозволені.",
+	"throttleoverride-validation-rangedisabled": "Можливість створювати виключення з обмеження частоти для діапазонів IP-адрес вимкнено.",
+	"throttleoverride-validation-rangetoolarge": "Виключення з обмежень частоти для діапазонів IP-адрес, більших, ніж $1, не дозволені.",
 	"throttleoverride-validation-notypes": "Не вибрано тип обмеження частоти.",
 	"throttleoverride-validation-expiryinvalid": "Недійсний час закінчення.",
-	"throttleoverride-rule-alreadyexists": "Існує виняток для $1. Ви можете переглянути наявні налаштування у [[Special:ThrottleOverrideList|списку винятків з обмежень частоти]], або ж змінити налаштування наявного правила, повторно надіславши цю форму."
+	"throttleoverride-rule-alreadyexists": "Існує виключення для $1. Ви можете переглянути наявні налаштування у [[Special:ThrottleOverrideList|списку виключень з обмежень частоти]], або ж змінити налаштування наявного правила, повторно надіславши цю форму."
 }
