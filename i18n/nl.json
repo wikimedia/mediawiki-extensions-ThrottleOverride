@@ -12,8 +12,8 @@
 	"action-throttleoverride": "vrijstellingen van beperkingen toe te voegen",
 	"logentry-throttleoverride-created": "$1 {{GENDER:$1|heeft}} $3 tot $5 vrijgesteld van de beperking{{PLURAL:$6||en}} voor $4.",
 	"log-name-throttleoverride": "Vrijstelling van beperkingen",
-	"log-description-throttleoverride": "Dit is een logboek met vrijstellingen waardoor gebruikers snelheidsbeperkingen kunnen omzeilen. Deze beperkingen voorkomen spam door bepaalde handelingen te beperken (bijvoorbeeld het aantal aangemaakte accounts of het gebruik van Special:Emailuser).",
-	"right-throttleoverride": "Bepaalde IP-adressen of -bereiken vrijstellen van snelheidsbeperkingen",
+	"log-description-throttleoverride": "Dit is een logboek met vrijstellingen waardoor gebruikers tempobeperkingen kunnen omzeilen. Deze beperkingen voorkomen spam door bepaalde handelingen te beperken (bijvoorbeeld het aantal aangemaakte accounts of het gebruik van Special:Emailuser).",
+	"right-throttleoverride": "Bepaalde IP-adressen of -bereiken vrijstellen van tempobeperkingen",
 	"throttleoverridelist": "Lijst met vrijstellingen van beperkingen",
 	"throttleoverride-desc": "Maakt het mogelijk de beperkingen voor IP-adressen te negeren",
 	"throttleoverride-legend": "Informatie over vrijstellingen",
@@ -50,6 +50,6 @@
 	"throttleoverride-validation-rangedisabled": "De mogelijkheid om beperkingsvrijstellingen in te stellen voor IP-adresbereiken is uitgeschakeld.",
 	"throttleoverride-validation-rangetoolarge": "Beperkingsvrijstellingen voor een IP-adresbereik dat groter is dan $1 zijn niet toegestaan.",
 	"throttleoverride-validation-notypes": "Er is geen soort beperking geselecteerd.",
-	"throttleoverride-validation-expiryinvalid": "Ongeldige vervaltijd.",
+	"throttleoverride-validation-expiryinvalid": "Incorrecte vervaltijd.",
 	"throttleoverride-rule-alreadyexists": "Er is al een vrijstelling voor $1. U kunt de bestaande instellingen bekijken in de [[Special:ThrottleOverrideList|lijst met beperkingsvrijstellingen]], of de instellingen van de bestaande regel wijzigen door dit formulier opnieuw in te dienen."
 }
