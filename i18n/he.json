@@ -19,7 +19,7 @@
 	"throttleoverride-expiry": "משך הזמן החסינות",
 	"throttleoverride-showlog": "כתובת ה־IP הזאת או הטווח הזה קיבלו בעבר חסינות מהגבלות. היומן מסופק להלן לעיון.",
 	"throttleoverride-success": "החסינות ל־$1 הוחלה.<br /> \nאפשר לעיין ב[[Special:ThrottleOverrideList|רשימת עקיפות הגבלות]] כדי לסקור את החסינויות.",
-	"throttleoverride-success-sub": "עקיפת החסינות הצליחה",
+	"throttleoverride-success-sub": "עקיפת ההגבלה הצליחה",
 	"throttleoverride-types": "סוגי הגבלה:",
 	"throttleoverride-types-all": "כל הסוגים",
 	"throttleoverride-types-actcreate": "יצירת חשבונות",
