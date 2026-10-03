@@ -20,10 +20,15 @@
 
 use MediaWiki\Block\BlockUser;
 use MediaWiki\Config\Config;
+use MediaWiki\JobQueue\JobQueueGroup;
+use MediaWiki\Language\Language;
+use MediaWiki\Logging\LogEventsList;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\MainConfigNames;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Title\Title;
 use Wikimedia\IPUtils;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\LBFactory;
 
 class SpecialOverrideThrottle extends FormSpecialPage {

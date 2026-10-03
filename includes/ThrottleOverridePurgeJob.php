@@ -21,6 +21,8 @@
  */
 
 use MediaWiki\Config\Config;
+use MediaWiki\JobQueue\Job;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\LBFactory;
 
 /**

@@ -23,6 +23,7 @@
 use MediaWiki\Config\Config;
 use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\IPUtils;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LBFactory;
 

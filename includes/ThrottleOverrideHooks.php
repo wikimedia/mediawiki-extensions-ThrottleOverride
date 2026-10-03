@@ -28,6 +28,7 @@ use MediaWiki\User\Hook\PingLimiterHook;
 use MediaWiki\User\User;
 use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\IPUtils;
+use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Rdbms\IExpression;
 use Wikimedia\Rdbms\LBFactory;
 use Wikimedia\Rdbms\LikeValue;

@@ -19,6 +19,7 @@
  */
 
 use MediaWiki\CommentFormatter\CommentFormatter;
+use MediaWiki\Exception\MWException;
 use MediaWiki\Html\Html;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Pager\TablePager;
