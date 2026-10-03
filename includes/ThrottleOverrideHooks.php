@@ -28,7 +28,6 @@ use MediaWiki\User\Hook\PingLimiterHook;
 use MediaWiki\User\User;
 use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\IPUtils;
-use Wikimedia\Rdbms\Database;
 use Wikimedia\Rdbms\IExpression;
 use Wikimedia\Rdbms\LBFactory;
 use Wikimedia\Rdbms\LikeValue;
@@ -111,9 +110,8 @@ class ThrottleOverrideHooks implements
 				$hexIp
 			),
 			$this->cache::TTL_HOUR,
-			static function ( $cValue, &$ttl, &$setOpts, $asOf ) use ( $utils, $hexIp, $action, $fname ) {
+			static function ( $cValue, &$ttl ) use ( $utils, $hexIp, $action, $fname ) {
 				$dbr = $utils->getCentralDB( DB_REPLICA );
-				$setOpts += Database::getCacheSetOptions( $dbr );
 
 				$expiry = $dbr->newSelectQueryBuilder()
 					->select( 'thr_expiry' )
