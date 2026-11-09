@@ -24,7 +24,7 @@
 	"throttleoverride-types-actcreate": "ایجاد حساب",
 	"throttleoverride-types-edit": "ویرایش‌های صفحه",
 	"throttleoverride-types-move": "حرکات صفحه",
-	"throttleoverride-types-mailpassword": "ایمیل‌های بازیابی رمز عبور",
+	"throttleoverride-types-mailpassword": "ایمیل‌های بازیابی گذرواژه",
 	"throttleoverride-types-emailuser": "ایمیل‌های کاربر",
 	"throttleoverride-list-throttletype": "نوع گاز:",
 	"throttleoverride-list-legend": "فیلتر معافیت",
